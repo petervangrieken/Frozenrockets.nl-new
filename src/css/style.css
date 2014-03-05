@@ -24,6 +24,7 @@
 /**
  * Pull in all the settings we require for this project.
  */
+/* Sizes for media queries */
 /**
  * Create vendor-prefixed CSS in one go, e.g.
  * 
@@ -57,14 +58,20 @@ html {
 
 body {
   height: 100%;
+  margin: 0;
+  padding: 3% 5%;
   font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1.2em;
   line-height: 1.625;
-  margin: 0;
-  padding: 3% 5% 3% 30%;
   color: black;
   text-rendering: optimizeLegibility; }
+  @media only screen and (min-width: 30em) {
+    body {
+      padding-left: 40%; } }
+  @media only screen and (min-width: 50em) {
+    body {
+      padding-left: 30%; } }
 
 header, footer, article, section {
   display: block; }
@@ -170,6 +177,22 @@ small, .font_small {
     color: white;
     border: none; }
 
+.sidebar {
+  padding: 1em;
+  margin: -3% -6% 2em; }
+  @media only screen and (min-width: 30em) {
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 30;
+      width: 35%;
+      margin: 0; } }
+  @media only screen and (min-width: 50em) {
+    .sidebar {
+      width: 25%; } }
+
 /*------------------------------------*\
     #GUI
 \*------------------------------------*/
@@ -183,14 +206,7 @@ small, .font_small {
 /**
  * Pull in all our GUI components.
  */
-.screen {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 30;
-  width: 25%;
-  padding: 1em;
+.screen-home {
   background: url("./../images/8288106212_e10ecc6680_o.jpg") no-repeat 50% 50%;
   background-size: cover; }
 

@@ -1,0 +1,22 @@
+.sidebar {
+	padding: 1em;
+	margin: -3% -6% 2em;
+
+	@media only screen and (min-width: $lap) { 
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 30;
+
+		width: 35%;
+		margin: 0;
+	}
+
+	@media only screen and (min-width: $lap-wide) { 
+		width: 25%;
+	}
+
+
+
+}
