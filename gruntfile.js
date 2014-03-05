@@ -1,32 +1,45 @@
 module.exports = function(grunt) {
 
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         sass: {
             dist: {
                 options: {
-                    style: 'compressed'
+                    style: 'nested'
                 },
                 files: {
-                    'css/style.css': 'css/sass/style.scss'
+                    'src/css/style.css': 'src/css/sass/style.scss'
                 }
-            } 
+            }
         },
-
+        cssmin: {
+            combine: {
+                files: {
+                    'public/css/style.min.css': ['src/css/style.css']
+                }
+            }
+        },
+        imagemin: {
+            dynamic: {
+              files: [{
+                expand: true,
+                cwd: 'src/images',
+                src: ['**/*.{png,jpg,gif}'],
+                dest: 'public/images'
+              }]
+            }
+        },
         watch: {
             css: {
                 files: '**/*.scss',
-                tasks: ['sass']
+                tasks: ['sass', 'cssmin', 'imagemin']
             }
         }
 
     });
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['watch']);
-
+    grunt.registerTask('default', ['imagemin','watch']);
 };

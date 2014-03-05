@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.SCSS
+\*------------------------------------*/
+/**
+ * Here we start to pull everything together into one big stylesheet.
+ *
+ * SETUP............Settings, tools, mixins, etc.
+ * GENERIC..........normalize.css, reset, shared styles, etc.
+ * BASE.............Basic HTML elements.
+ * OBJECTS..........Objects, abstractions, design patterns.
+ * GUI..............Components and modules.
+ * TRUMPS...........Helpers, overrides, ‘trump-cards’.
+ */
+/*------------------------------------*\
+    #SETUP
+\*------------------------------------*/
+/**
+ * Settings, variables and tools.
+ */
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+/**
+ * Pull in all the settings we require for this project.
+ */
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ * 
+   `@include vendor(border-radius, 4px);`
+ * 
+ */
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
+/**
+ * These are far reaching styles that affect and underpin every element on the
+ * page, e.g. `* {}`.
+ */
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
+/**
+ * Pull in all our generic styles, e.g. resets.
+ */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  font-size: 100%;
+  background-color: white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 120%; }
+
+body {
+  height: 100%;
+  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  line-height: 1.625;
+  margin: 0;
+  padding: 3% 5% 3% 30%;
+  color: black;
+  text-rendering: optimizeLegibility; }
+
+header, footer, article, section {
+  display: block; }
+
+a {
+  color: #853371; }
+  a:hover, a:active {
+    color: #e34dbd; }
+  a:visited {
+    color: black; }
+
+h1 a, h2 a, h3 a, h4 a {
+  text-decoration: none; }
+
+p {
+  margin: 0 0 1.625rem; }
+
+h1, h2, h3, h4 {
+  margin: 0 0 1.625rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #853371; }
+
+h1 {
+  margin-top: 0;
+  font-size: 1.625rem; }
+
+h2 {
+  font-size: 1.424rem; }
+
+h3 {
+  font-size: 1.266rem; }
+
+h4 {
+  font-size: 1.125rem; }
+
+small, .font_small {
+  font-size: 0.889rem; }
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/**
+ * These are base HTML elements, things with no classes on them, e.g. `h1 {}`,
+ * `blockquote {}`.
+ */
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/**
+ * Pull in all the base files we want.
+ */
+/*
+@import "page",
+		"text",
+        "links";
+*/
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+/**
+ * These are design-free objects, abstractions and design patterns. These create
+ * constructs that you lay your designs over.
+ */
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+/**
+ * Pull in all our objects and abstractions.
+ */
+/*
+@import "layout",
+	"box",
+	"lists", 
+	"media";
+*/
+.highlight {
+  margin-bottom: 2rem;
+  position: relative; }
+
+.highlight--primary .component__content,
+.highlight--secondary .component__content {
+  padding: 1.3em; }
+
+.highlight--primary {
+  border-top: 1px solid #b0c4d8;
+  border-bottom: 1px solid #b0c4d8; }
+  .highlight--primary.overlay:before {
+    background-color: rgba(103, 196, 210, 0.8); }
+  .highlight--primary.overlay .component__content {
+    background-color: rgba(176, 196, 216, 0.8); }
+  .highlight--primary h1, .highlight--primary h2, .highlight--primary h3, .highlight--primary h4, .highlight--primary a, .highlight--primary ul {
+    color: black; }
+
+.highlight--secondary {
+  border-top: 1px solid #853371;
+  border-bottom: 1px solid #853371; }
+  .highlight--secondary.overlay::before {
+    background-color: rgba(176, 196, 216, 0.6); }
+  .highlight--secondary.overlay .component__content {
+    background-color: rgba(133, 51, 113, 0.6); }
+  .highlight--secondary h1, .highlight--secondary h2, .highlight--secondary h3, .highlight--secondary h4, .highlight--secondary a {
+    color: white;
+    border: none; }
+
+/*------------------------------------*\
+    #GUI
+\*------------------------------------*/
+/**
+ * These are your components and modules; things like buttons, accordions,
+ * carousels, etc.
+ */
+/*------------------------------------*\
+    #GUI
+\*------------------------------------*/
+/**
+ * Pull in all our GUI components.
+ */
+.screen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 30;
+  width: 25%;
+  padding: 1em;
+  background: url("./../images/8288106212_e10ecc6680_o.jpg") no-repeat 50% 50%;
+  background-size: cover; }
+
+/*------------------------------------*\
+    #TRUMPS
+\*------------------------------------*/
+/**
+ * These are helper classes and overrides that should take precedence over all
+ * other styles, e.g. `.float--left {}`.
+ */
+/*------------------------------------*\
+    #TRUMPS
+\*------------------------------------*/
+/**
+ * Pull in all our trumps and overrides.
+ */
+/*
+@import "";
+
+
+*/
