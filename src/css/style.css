@@ -197,6 +197,23 @@ small, .font_small {
     .sidebar {
       width: 25%; } }
 
+/*------------------------------------*\
+    #GUI
+\*------------------------------------*/
+/**
+ * These are your components and modules; things like buttons, accordions,
+ * carousels, etc.
+ */
+/*------------------------------------*\
+    #GUI
+\*------------------------------------*/
+/**
+ * Pull in all our GUI components.
+ */
+.screen-home {
+  background: url("./../images/screens/horizon.jpg") no-repeat 60% 50%;
+  background-size: cover; }
+
 .mainnav {
   list-style: none;
   padding: 0;
@@ -217,22 +234,15 @@ small, .font_small {
     .mainnav__item:hover a {
       color: black; }
 
-/*------------------------------------*\
-    #GUI
-\*------------------------------------*/
-/**
- * These are your components and modules; things like buttons, accordions,
- * carousels, etc.
- */
-/*------------------------------------*\
-    #GUI
-\*------------------------------------*/
-/**
- * Pull in all our GUI components.
- */
-.screen-home {
-  background: url("./../images/8288106212_e10ecc6680_o.jpg") no-repeat 50% 50%;
-  background-size: cover; }
+.mainnav__item--secondary {
+  border-bottom: 1px solid #853371; }
+  .mainnav__item--secondary a {
+    color: #853371;
+    text-decoration: none; }
+  .mainnav__item--secondary:hover {
+    background: #853371; }
+    .mainnav__item--secondary:hover a {
+      color: black; }
 
 /*------------------------------------*\
     #TRUMPS

@@ -26,3 +26,20 @@
 			} 
 		}
 	}
+
+	.mainnav__item--secondary {
+		border-bottom: 1px solid $color-text-pink-dark;
+
+		a {
+			color: $color-text-pink-dark;
+			text-decoration: none;
+		}
+
+		&:hover {
+			background: $color-text-pink-dark;
+
+			a {
+				color: $color-black;
+			} 
+		}
+	}
