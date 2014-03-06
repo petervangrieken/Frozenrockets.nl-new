@@ -62,34 +62,12 @@ h1, h2, h3, h4 {
 }
 
 
-p { margin: 0 0 1.625rem; }
+p { 
+	margin: 0 0 1.625em; 
 
-h1, h2, h3, h4 {
-	margin: 0 0 1.625rem;
-	line-height: 1.2;
-
-	font-weight: $font-weight-header;
-	color: $color-text-pink-dark;
-}
-
-h1 {
-	margin-top: 0;
-
-	font-size: $font-size-header-main;
-	font-weight: $font-weight-header-main;
-}
-
-
-h2 { 
-	font-size: 1.424rem;
-}
-
-h3 { 
-	font-size: 1.266rem; 
-}
-
-h4 { 
-	font-size: 1.125rem; 
+	&.intro {
+		font-weight: $font-weight-bold;
+	}
 }
 
 small, .font_small {

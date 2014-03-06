@@ -1,0 +1,20 @@
+.mainquote {
+	padding: $line-height-base 0 0;
+	margin-bottom: .6em;
+	font-style: italic;
+	text-align: center;
+
+	color: $color-text-blue-light;
+}
+	.quote-source {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: $line-height-base;
+		color: $color-text-blue-light;
+	}
+
+	.quote-source:before,
+	.quote-source:after {
+		content:"\2014";
+	}
