@@ -4,18 +4,18 @@ $font-weight-base: 			300;
 $font-weight-bold: 			500;
 $font-weight-extra-bold:	700;
 
-$font-size-small: 			0.8rem;
-$line-height-small: 		1.2;
 
 $font-size-base: 			1.2em;
-$line-height-base: 			2em;
+$line-height-base:			2em;
+
+$font-size-small: 			0.8em;
+$line-height-small: 		$line-height-base / 2;
 
 $font-size-header-main: 	2.4em;
 $font-weight-header-main: 	$font-weight-base;
-$line-height-header-main: 	1em;
 
 $font-size-header:			1.8em;
-$line-height-header:		2.888em / 1.8em;
 $font-weight-header:		$font-weight-bold;
+$line-height-header:		$line-height-base / 2;
 
 $font-size-huge: 			4.6rem;

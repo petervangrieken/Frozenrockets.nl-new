@@ -1,7 +1,7 @@
 .mainnav {
 	list-style: none;
 	padding: 0;
-	margin: $line-height-base 0 0 0;
+	margin: $spacing 0 0 0;
 
 	@media only screen and (min-width: $lap) { 
 		position: absolute;

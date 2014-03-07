@@ -9,7 +9,7 @@ body {
 }
 
 p { 
-	margin: 0 0 1.625em; 
+	margin: 0 0 $spacing-magic; 
 
 	&.intro {
 		font-weight: $font-weight-bold;
@@ -17,5 +17,6 @@ p {
 }
 
 small, .font_small {
-	font-size: 0.889rem;
+	font-size: $font-size-small;
+	line-height: $line-height-small;
 }

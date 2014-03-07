@@ -1,6 +1,6 @@
 .sidebar {
 	padding: 6%;
-	margin: -3% -6% 2em;
+	margin: -3% -6% $spacing-half;
 
 	@media only screen and (min-width: $lap) { 
 		position: fixed;

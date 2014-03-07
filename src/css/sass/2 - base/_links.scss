@@ -1,0 +1,11 @@
+a {
+	color: $color-text-pink-dark;
+
+	&:hover, &:active {
+		color: $color-text-pink-light;
+	}
+
+	&:visited {
+		color: $color-text-base;
+	}
+}

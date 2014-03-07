@@ -47,7 +47,8 @@
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0; }
 
 html {
   height: 100%;
@@ -70,13 +71,6 @@ body {
 header, footer, article, section {
   display: block; }
 
-a {
-  color: #853371; }
-  a:hover, a:active {
-    color: #e34dbd; }
-  a:visited {
-    color: black; }
-
 img {
   max-width: 100%; }
 
@@ -96,28 +90,6 @@ h1 a, h2 a, h3 a, h4 a {
 /**
  * Pull in all the base files we want.
  */
-h1, h2, h3, h4,
-.h1, .h2, .h3, .h4 {
-  margin: 0 0 1.625em;
-  line-height: 1.60444;
-  font-weight: 500;
-  color: #853371; }
-
-h1, .h1 {
-  margin-top: 0;
-  margin-bottom: .6em;
-  font-size: 2.4em;
-  font-weight: 300; }
-
-h2, .h2 {
-  font-size: 1.424em; }
-
-h3, .h3 {
-  font-size: 1.266em; }
-
-h4, .h4 {
-  font-size: 1.266em; }
-
 body {
   font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -132,7 +104,37 @@ p {
     font-weight: 500; }
 
 small, .font_small {
-  font-size: 0.889rem; }
+  font-size: 0.8em;
+  line-height: 1em; }
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  margin: 0 0 1.625em;
+  font-weight: 500;
+  line-height: 1em;
+  color: #853371; }
+
+h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.8125em;
+  font-size: 2.4em;
+  font-weight: 300; }
+
+h2, .h2 {
+  font-size: 1.424em; }
+
+h3, .h3 {
+  font-size: 1.266em; }
+
+h4, .h4 {
+  font-size: 1.266em; }
+
+a {
+  color: #853371; }
+  a:hover, a:active {
+    color: #e34dbd; }
+  a:visited {
+    color: black; }
 
 /*------------------------------------*\
     #OBJECTS
@@ -154,7 +156,7 @@ small, .font_small {
 	"media";
 */
 .highlight {
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
   position: relative;
   float: right;
   max-width: 40%;
@@ -175,7 +177,7 @@ small, .font_small {
 
 .sidebar {
   padding: 6%;
-  margin: -3% -6% 2em; }
+  margin: -3% -6% 1em; }
   @media only screen and (min-width: 30em) {
     .sidebar {
       position: fixed;
@@ -192,7 +194,7 @@ small, .font_small {
 
 .mainquote {
   padding: 2em 0 0;
-  margin: 0 .6em .6em;
+  margin: 0 0.8125em 0.8125em;
   font-style: italic;
   text-align: center;
   color: #b0c4d8; }
