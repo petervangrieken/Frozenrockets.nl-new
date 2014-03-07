@@ -1,0 +1,21 @@
+body {
+	font-family: $font-family;
+	font-weight: $font-weight-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $color-text-base;
+
+	text-rendering: optimizeLegibility;
+}
+
+p { 
+	margin: 0 0 1.625em; 
+
+	&.intro {
+		font-weight: $font-weight-bold;
+	}
+}
+
+small, .font_small {
+	font-size: 0.889rem;
+}
