@@ -1,0 +1,15 @@
+.aside {
+	position:relative;
+
+	@media only screen and (min-width: $lap) { 
+		float: right;
+		max-width: 40%;
+		margin-left: $spacing-half;
+	}
+}
+
+	.aside--quote {
+		border-top: 1px solid $color-text-blue-light;
+		border-bottom: 1px solid $color-text-blue-light;
+
+	}

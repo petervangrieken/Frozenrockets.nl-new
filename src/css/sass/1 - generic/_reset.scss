@@ -4,7 +4,7 @@
   box-sizing: border-box;
 
   margin: 0;
- }
+}
 
 html {
 	height: 100%;
@@ -44,4 +44,6 @@ h1, h2, h3, h4 {
 	}
 }
 
-
+figure {
+	margin-bottom: $spacing;
+}

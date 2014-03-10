@@ -1,0 +1,29 @@
+.marker {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	max-width: 8em;
+
+	border-radius: 50%;
+	border: 1em solid $color-text-pink-dark;
+	
+	&::after {
+		content: '';
+		position: absolute;
+
+		top: 95%;
+		left: 1px;
+
+		width: 0; 
+		height: 0; 
+
+		/* Arrow pointing down */
+		border-left: 3em solid transparent;
+		border-right: 3em solid transparent;
+		border-top: 3em solid $color-text-pink-dark;
+	}
+}
+	.marker__image {
+		position: relative;
+		z-index: 9;
+	}

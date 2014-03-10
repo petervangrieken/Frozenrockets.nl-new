@@ -77,6 +77,9 @@ img {
 h1 a, h2 a, h3 a, h4 a {
   text-decoration: none; }
 
+figure {
+  margin-bottom: 2em; }
+
 /*------------------------------------*\
     #BASE
 \*------------------------------------*/
@@ -103,7 +106,7 @@ p {
   p.intro {
     font-weight: 500; }
 
-small, .font_small {
+small, .font-small {
   font-size: 0.8em;
   line-height: 1em; }
 
@@ -111,7 +114,7 @@ h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
   margin: 0 0 1.625em;
   font-weight: 500;
-  line-height: 1em;
+  line-height: 1.33333em;
   color: #853371; }
 
 h1, .h1 {
@@ -155,13 +158,6 @@ a {
 	"lists", 
 	"media";
 */
-.highlight {
-  margin-bottom: 1em;
-  position: relative;
-  float: right;
-  max-width: 40%;
-  margin-left: 1em; }
-
 .highlight--primary {
   border-top: 1px solid #b0c4d8;
   border-bottom: 1px solid #b0c4d8; }
@@ -192,8 +188,20 @@ a {
     .sidebar {
       width: 25%; } }
 
+.aside {
+  position: relative; }
+  @media only screen and (min-width: 30em) {
+    .aside {
+      float: right;
+      max-width: 40%;
+      margin-left: 1em; } }
+
+.aside--quote {
+  border-top: 1px solid #b0c4d8;
+  border-bottom: 1px solid #b0c4d8; }
+
 .mainquote {
-  padding: 2em 0 0;
+  padding: 1em 0 0;
   margin: 0 0.8125em 0.8125em;
   font-style: italic;
   text-align: center;
@@ -210,6 +218,33 @@ a {
 .quote-source:after {
   content: "\2014"; }
 
+.marker {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  max-width: 8em;
+  border-radius: 50%;
+  border: 1em solid #853371; }
+  .marker::after {
+    content: '';
+    position: absolute;
+    top: 95%;
+    left: 1px;
+    width: 0;
+    height: 0;
+    /* Arrow pointing down */
+    border-left: 3em solid transparent;
+    border-right: 3em solid transparent;
+    border-top: 3em solid #853371; }
+
+.marker__image {
+  position: relative;
+  z-index: 9; }
+
+.profile-pic {
+  display: block;
+  border-radius: 50%; }
+
 /*------------------------------------*\
     #GUI
 \*------------------------------------*/
@@ -224,6 +259,10 @@ a {
  * Pull in all our GUI components.
  */
 .screen-home {
+  background: url("./../images/screens/baustelle_blau.jpg") no-repeat 100% 50%;
+  background-size: cover; }
+
+.screen-project {
   background: url("./../images/screens/horizon.jpg") no-repeat 60% 50%;
   background-size: cover; }
 
@@ -239,7 +278,8 @@ a {
       margin-top: 0; } }
 
 .mainnav__item {
-  border-bottom: 1px solid #67c4d2; }
+  border-bottom: 1px solid #67c4d2;
+  font-size: 0.8em; }
   .mainnav__item a {
     color: #67c4d2;
     text-decoration: none; }

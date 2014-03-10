@@ -37,7 +37,8 @@ module.exports = function(grunt) {
         bake: {
             build: {
                 files: {
-                    "public/index.html": "src/index.html"
+                    "public/index.html": "src/index.html",
+                    "public/project-nuon20.html": "src/project-nuon20.html",
                 }
             }
         },
