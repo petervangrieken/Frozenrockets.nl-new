@@ -1,0 +1,10 @@
+
+.page--home {
+	@media only screen and (min-width: $lap) { 
+		padding-left: 55%;
+	}
+
+	@media only screen and (min-width: $lap-wide) { 
+		padding-left: 55%;
+	}
+}

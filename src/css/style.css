@@ -139,6 +139,37 @@ a {
   a:visited {
     color: black; }
 
+.grid {
+  text-align: justify;
+  text-align-last: justify; }
+  .grid::after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
+
+.grid__column {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  text-align-last: left; }
+  .grid__column--1of2 {
+    width: 48%; }
+  .grid__column--1of3 {
+    width: 30%; }
+  .grid__column--2of3 {
+    width: 65%; }
+  .grid__column--1of4 {
+    width: 24%; }
+  .grid__column--3of4 {
+    width: 74%; }
+
+@media only screen and (min-width: 30em) {
+  .page--home {
+    padding-left: 55%; } }
+@media only screen and (min-width: 50em) {
+  .page--home {
+    padding-left: 55%; } }
+
 /*------------------------------------*\
     #OBJECTS
 \*------------------------------------*/
@@ -173,7 +204,8 @@ a {
 
 .sidebar {
   padding: 6%;
-  margin: -3% -6% 1em; }
+  margin: -3% -6% 1em;
+  position: relative; }
   @media only screen and (min-width: 30em) {
     .sidebar {
       position: fixed;
@@ -187,6 +219,22 @@ a {
   @media only screen and (min-width: 50em) {
     .sidebar {
       width: 25%; } }
+  .sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0; }
+
+@media only screen and (min-width: 30em) {
+  .sidebar--wide {
+    width: 50%; } }
+@media only screen and (min-width: 50em) {
+  .sidebar--wide {
+    width: 50%; } }
 
 .aside {
   position: relative; }
@@ -220,10 +268,12 @@ a {
 
 .marker {
   position: relative;
+  display: inline-block;
   margin-bottom: 2em;
   max-width: 8em;
   border-radius: 50%;
-  border: 1em solid #853371; }
+  border: 1em solid #853371;
+  text-align: left; }
   .marker::after {
     content: '';
     position: absolute;
@@ -242,6 +292,10 @@ a {
 .profile-pic {
   display: block;
   border-radius: 50%; }
+
+.logo {
+  position: relative;
+  z-index: 5; }
 
 /*------------------------------------*\
     #GUI
@@ -265,6 +319,8 @@ a {
   background-size: cover; }
 
 .mainnav {
+  position: relative;
+  z-index: 5;
   list-style: none;
   padding: 0;
   margin: 2em 0 0 0; }
@@ -272,7 +328,8 @@ a {
     .mainnav {
       position: absolute;
       bottom: 5%;
-      width: 76%;
+      left: 5%;
+      right: 5%;
       margin-top: 0; } }
 
 .mainnav__item {
@@ -309,8 +366,5 @@ a {
 /**
  * Pull in all our trumps and overrides.
  */
-/*
-@import "";
-
-
-*/
+.center-content {
+  text-align: center; }

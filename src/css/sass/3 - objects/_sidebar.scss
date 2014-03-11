@@ -1,6 +1,7 @@
 .sidebar {
 	padding: 6%;
 	margin: -3% -6% $spacing-half;
+	position: relative;
 
 	@media only screen and (min-width: $lap) { 
 		position: fixed;
@@ -18,4 +19,25 @@
 		width: 25%;
 	}
 
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0,.5);
+		z-index: 0;
+	}
 }
+
+	.sidebar--wide {
+
+		@media only screen and (min-width: $lap) { 
+			width: 50%;
+		}
+
+		@media only screen and (min-width: $lap-wide) { 
+			width: 50%;
+		}
+	}

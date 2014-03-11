@@ -1,11 +1,14 @@
 .marker {
 	position: relative;
+	display: inline-block;
 	margin-bottom: $spacing;
 	max-width: 8em;
 
 	border-radius: 50%;
 	border: 1em solid $color-text-pink-dark;
 	
+	text-align: left;
+
 	&::after {
 		content: '';
 		position: absolute;
