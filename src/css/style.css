@@ -220,16 +220,14 @@ a {
 
 .marker {
   position: relative;
-  padding: 0;
-  margin: 0;
+  margin-bottom: 2em;
   max-width: 8em;
   border-radius: 50%;
   border: 1em solid #853371; }
   .marker::after {
     content: '';
     position: absolute;
-    top: 95%;
-    left: 1px;
+    top: 94%;
     width: 0;
     height: 0;
     /* Arrow pointing down */
