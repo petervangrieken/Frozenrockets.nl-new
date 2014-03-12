@@ -36,10 +36,16 @@ module.exports = function(grunt) {
         },
         bake: {
             build: {
-                files: {
-                    "public/index.html": "src/index.html",
-                    "public/project-nuon20.html": "src/project-nuon20.html",
-                }
+                options: {
+                    content: "src/pagesettings.json"
+                },
+                files: [{
+                    expand: true,
+                    cwd: './src',
+                    src: ['*.html'],
+                    dest: './public',
+                    ext: '.html'
+                }]
             }
         },
         watch: {

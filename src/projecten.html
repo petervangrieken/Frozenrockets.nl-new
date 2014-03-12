@@ -1,14 +1,14 @@
-<!--(bake html_includes/head.html)-->
+<!--(bake html_includes/head.html _section="projecten")-->
 
-<body class="home">
+<body class="{{ projecten.pageclass }}">
 
-	<div class="sidebar screen-project">
+	<div class="sidebar {{ projecten.sidebarclass }}">
 		<img class="logo" src="./images/fr-logo.svg" alt="Frozen Rockets">
 
 		<!--(bake html_includes/mainnavigation.html)-->
 	</div>
 
-			<h1>Projecten</h1>
+		<h1>{{ projecten.title }}</h1>
 
 
 

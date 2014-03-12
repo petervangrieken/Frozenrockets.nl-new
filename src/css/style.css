@@ -343,11 +343,15 @@ a {
 /**
  * Pull in all our GUI components.
  */
-.screen-home {
+.screen--home {
   background: url("./../images/screens/baustelle_blau.jpg") no-repeat 100% 50%;
   background-size: cover; }
 
-.screen-project {
+.screen--projecten {
+  background: url("./../images/screens/10720790233_0dcc8f2df1_o.jpg") no-repeat 60% 50%;
+  background-size: cover; }
+
+.screen--single-project {
   background: url("./../images/screens/horizon.jpg") no-repeat 60% 50%;
   background-size: cover; }
 
