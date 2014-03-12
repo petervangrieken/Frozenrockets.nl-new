@@ -331,7 +331,8 @@ a {
   z-index: 5; }
 
 .blocks {
-  margin: -2%; }
+  margin: 0 -2% 5%;
+  overflow: hidden; }
   .blocks__item {
     position: relative;
     float: left;
@@ -372,7 +373,7 @@ a {
 
 .block-2x2 {
   width: 62%;
-  padding-bottom: 63%; }
+  padding-bottom: 62.5%; }
 
 /*------------------------------------*\
     #GUI

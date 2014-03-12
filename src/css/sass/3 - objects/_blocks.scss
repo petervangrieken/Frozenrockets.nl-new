@@ -1,5 +1,6 @@
 .blocks {
-	margin: -2%;
+	margin: 0 -2% 5%;
+	overflow: hidden;
 
 	&__item {
 		position: relative;
@@ -31,7 +32,6 @@
 		display: block;
 		text-align: center;
 		
-		
 		&::before {
 			content: '';
 			height: 100%;
@@ -43,7 +43,6 @@
 			width: 50%;
 			display: inline-block;
 			vertical-align: middle;
-
 		}
 	}
 }
@@ -55,6 +54,5 @@
 
 	.block-2x2 {
 		width: 62%;
-		padding-bottom: 63%;
-		//height: 200px;
+		padding-bottom: 62.5%;
 	}
