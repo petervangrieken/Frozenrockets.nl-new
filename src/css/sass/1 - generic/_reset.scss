@@ -18,15 +18,6 @@ html {
 body {
 	height: 100%;
 	margin: 0;
-	padding: 3% 5%;
-
-	@media only screen and (min-width: $lap) { 
-		padding-left: 40%;
-	}
-
-	@media only screen and (min-width: $lap-wide) { 
-		padding-left: 30%;
-	}
 }
 
 header, footer, article, section {

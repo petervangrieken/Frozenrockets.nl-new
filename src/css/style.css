@@ -59,14 +59,7 @@ html {
 
 body {
   height: 100%;
-  margin: 0;
-  padding: 3% 5%; }
-  @media only screen and (min-width: 30em) {
-    body {
-      padding-left: 40%; } }
-  @media only screen and (min-width: 50em) {
-    body {
-      padding-left: 30%; } }
+  margin: 0; }
 
 header, footer, article, section {
   display: block; }
@@ -163,12 +156,23 @@ a {
   .grid__column--3of4 {
     width: 74%; }
 
-@media only screen and (min-width: 30em) {
-  .page--home {
-    padding-left: 55%; } }
-@media only screen and (min-width: 50em) {
-  .page--home {
-    padding-left: 55%; } }
+.page {
+  padding: 3% 5%; }
+  @media only screen and (min-width: 30em) {
+    .page {
+      padding-left: 40%; } }
+  @media only screen and (min-width: 50em) {
+    .page {
+      padding-left: 30%; } }
+
+.page--home {
+  padding-top: 10%; }
+  @media only screen and (min-width: 30em) {
+    .page--home {
+      padding-left: 55%; } }
+  @media only screen and (min-width: 50em) {
+    .page--home {
+      padding-left: 55%; } }
 
 /*------------------------------------*\
     #OBJECTS
