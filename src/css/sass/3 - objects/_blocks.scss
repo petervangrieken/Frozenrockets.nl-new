@@ -48,11 +48,21 @@
 }
 
 	.block-1x1 {
-		width: 29%;	
-		padding-bottom: 29.5%;
+		width: 44%;	
+		padding-bottom: 44%;
+
+		@media only screen and (min-width: $lap-wide) { 
+			width: 29%;	
+			padding-bottom: 29.5%;
+		}
 	}
 
 	.block-2x2 {
-		width: 62%;
-		padding-bottom: 62.5%;
+		width: 44%;	
+		padding-bottom: 44%;
+
+		@media only screen and (min-width: $lap-wide) { 
+			width: 62%;
+			padding-bottom: 62.5%;
+		}
 	}
