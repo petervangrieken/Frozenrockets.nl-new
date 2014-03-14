@@ -281,6 +281,10 @@ a {
       max-width: 40%;
       margin-left: 1em; } }
 
+.aside--nuon {
+  background-color: #632e82;
+  color: #fbe200; }
+
 .aside--wvnl {
   padding: 0;
   background-color: none; }
