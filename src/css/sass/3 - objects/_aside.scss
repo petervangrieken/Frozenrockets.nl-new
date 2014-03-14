@@ -1,5 +1,9 @@
 .aside {
 	position:relative;
+	text-align: center;
+	background-color: $color-text-blue-light;
+	padding: .2em;
+	border-radius: 2px;
 
 	@media only screen and (min-width: $lap) { 
 		float: right;
@@ -8,8 +12,48 @@
 	}
 }
 
-	.aside--quote {
-		border-top: 1px solid $color-text-blue-light;
-		border-bottom: 1px solid $color-text-blue-light;
+	.aside--wvnl {
+		padding: 0;
+		background-color: none;
 
+		&::before {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			border-radius: 3px;
+			content: "";
+			height: 100%;
+			width: 100%;
+
+			background-color: $color-text-pink-dark;
+
+			@include vendor(transform, rotate(2deg));
+			
+
+		}
+
+		.aside__content {
+			position: relative;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			background-color: $color-white;
+
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.3);
+			padding: 10px;
+			position: relative;
+		}
+	}
+
+
+	.aside__content {
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background-color: $color-white;
 	}

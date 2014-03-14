@@ -45,6 +45,13 @@
 			vertical-align: middle;
 		}
 	}
+
+	&__link {
+
+		&:hover {
+			background-color: rgba($color-text-pink-dark, .5);
+		}
+	}
 }
 
 	.block-1x1 {
