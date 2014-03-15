@@ -450,8 +450,10 @@ a {
       width: 50%;
       display: inline-block;
       vertical-align: middle; }
-  .blocks__link:hover {
-    background-color: rgba(133, 51, 113, 0.5); }
+  .blocks__link {
+    text-decoration: none; }
+    .blocks__link:hover {
+      background-color: rgba(133, 51, 113, 0.5); }
 
 .block-1x1 {
   width: 44%;

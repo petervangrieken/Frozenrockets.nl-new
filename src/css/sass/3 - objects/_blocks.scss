@@ -47,7 +47,8 @@
 	}
 
 	&__link {
-
+		text-decoration: none;
+		
 		&:hover {
 			background-color: rgba($color-text-pink-dark, .5);
 		}
