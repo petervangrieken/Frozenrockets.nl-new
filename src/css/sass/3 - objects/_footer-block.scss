@@ -1,0 +1,17 @@
+.footer-block {
+	background-color: $color-text-blue-light;
+	padding: $spacing-magic;
+
+	&__header {
+		color: $color-black;
+		margin-bottom: $spacing-magic-half;
+	}
+
+	&__list {
+		list-style-position: inside;
+		padding-left: 0;
+	}
+
+
+
+}

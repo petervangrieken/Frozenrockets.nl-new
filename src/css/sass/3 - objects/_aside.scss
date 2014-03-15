@@ -1,25 +1,42 @@
 .aside {
 	position:relative;
+	padding: .2em;
+	margin-bottom: $spacing-magic;
+	border-radius: 2px;
 	text-align: center;
 	background-color: $color-text-blue-light;
-	padding: .2em;
-	border-radius: 2px;
 
-	@media only screen and (min-width: $lap) { 
+	@media only screen and (min-width: $lap-wide) { 
 		float: right;
 		max-width: 40%;
-		margin-left: $spacing-half;
+		margin-left: $spacing-magic;
+		
 	}
+
 }
 
+	.aside__content {
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background-color: $color-white;
+	}
+
+
+
 	.aside--nuon {
-		background-color: rgb(99,46,130);
-		color: rgb(251,226,0);
+		background-color: rgb(239, 233, 243);
+		color: rgb(83, 50, 130);
+		font-family: Arial, sans-serif;
+		font-weight: $font-weight-bold;
+		line-height: 1.45em;
+		border-radius: 0;
 	}
 
 	.aside--wvnl {
 		padding: 0;
-		background-color: none;
+		background-color: transparent;
 
 		&::before {
 			position: absolute;
@@ -54,11 +71,33 @@
 		}
 	}
 
+	.aside--sidekick {
+		padding: 0;
+		
+		background-color: rgb(202, 216, 219);
+		border-radius: 8px;
+		border: 8px solid rgb(202, 216, 219);
 
-	.aside__content {
-		position: relative;
-		top: 0;
-		left: 0;
-		z-index: 2;
-		background-color: $color-white;
+		.aside__content {
+			border-radius: 4px;
+			background-color: rgb(240, 246, 247);
+			box-shadow: 0 0 9px 1px $color-white inset;
+		}
+
+		.mainquote {
+			margin-bottom: 0;
+			padding-bottom: $spacing-magic-half;
+
+			border-bottom: 1px solid rgb(222, 231, 234);
+		}
+
+		.quote-source {
+			width: auto;
+			padding-top: $spacing-magic-half;
+			margin: 0 $spacing-magic-half;
+
+			border-top: 1px solid $color-white;
+		}
 	}
+
+

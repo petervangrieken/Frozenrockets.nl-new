@@ -51,14 +51,12 @@
   margin: 0; }
 
 html {
-  height: 100%;
   font-size: 100%;
   background-color: white;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
 body {
-  height: 100%;
   margin: 0; }
 
 article,
@@ -203,6 +201,28 @@ a {
     .page--home {
       padding-left: 55%; } }
 
+.image {
+  display: block;
+  clear: both;
+  text-align: center;
+  border-top: 1px solid #b0c4d8;
+  border-bottom: 1px solid #b0c4d8;
+  padding: 2em; }
+
+.videowrapper {
+  width: 100%;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 56.25%; }
+  .videowrapper iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+
 /*------------------------------------*\
     #OBJECTS
 \*------------------------------------*/
@@ -271,23 +291,35 @@ a {
 
 .aside {
   position: relative;
-  text-align: center;
-  background-color: #b0c4d8;
   padding: .2em;
-  border-radius: 2px; }
-  @media only screen and (min-width: 30em) {
+  margin-bottom: 1.625em;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #b0c4d8; }
+  @media only screen and (min-width: 50em) {
     .aside {
       float: right;
       max-width: 40%;
-      margin-left: 1em; } }
+      margin-left: 1.625em; } }
+
+.aside__content {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white; }
 
 .aside--nuon {
-  background-color: #632e82;
-  color: #fbe200; }
+  background-color: #efe9f3;
+  color: #533282;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.45em;
+  border-radius: 0; }
 
 .aside--wvnl {
   padding: 0;
-  background-color: none; }
+  background-color: transparent; }
   .aside--wvnl::before {
     position: absolute;
     left: 0;
@@ -316,12 +348,24 @@ a {
     padding: 10px;
     position: relative; }
 
-.aside__content {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  background-color: white; }
+.aside--sidekick {
+  padding: 0;
+  background-color: #cad8db;
+  border-radius: 8px;
+  border: 8px solid #cad8db; }
+  .aside--sidekick .aside__content {
+    border-radius: 4px;
+    background-color: #f0f6f7;
+    box-shadow: 0 0 9px 1px white inset; }
+  .aside--sidekick .mainquote {
+    margin-bottom: 0;
+    padding-bottom: 0.8125em;
+    border-bottom: 1px solid #dee7ea; }
+  .aside--sidekick .quote-source {
+    width: auto;
+    padding-top: 0.8125em;
+    margin: 0 0.8125em;
+    border-top: 1px solid white; }
 
 .mainquote {
   padding: 1em 0 0;
@@ -424,6 +468,16 @@ a {
     .block-2x2 {
       width: 62%;
       padding-bottom: 62.5%; } }
+
+.footer-block {
+  background-color: #b0c4d8;
+  padding: 1.625em; }
+  .footer-block__header {
+    color: black;
+    margin-bottom: 0.8125em; }
+  .footer-block__list {
+    list-style-position: inside;
+    padding-left: 0; }
 
 /*------------------------------------*\
     #GUI
