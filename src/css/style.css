@@ -192,14 +192,12 @@ a {
     .page {
       padding-left: 30%; } }
 
-.page--home {
-  padding-top: 10%; }
-  @media only screen and (min-width: 30em) {
-    .page--home {
-      padding-left: 55%; } }
-  @media only screen and (min-width: 50em) {
-    .page--home {
-      padding-left: 55%; } }
+@media only screen and (min-width: 30em) {
+  .page--home {
+    padding-left: 45%; } }
+@media only screen and (min-width: 50em) {
+  .page--home {
+    padding-left: 45%; } }
 
 .image {
   display: block;
@@ -284,10 +282,10 @@ a {
 
 @media only screen and (min-width: 30em) {
   .sidebar--wide {
-    width: 50%; } }
+    width: 40%; } }
 @media only screen and (min-width: 50em) {
   .sidebar--wide {
-    width: 50%; } }
+    width: 40%; } }
 
 .aside {
   position: relative;
@@ -422,7 +420,7 @@ a {
     float: left;
     height: 0;
     margin: 2%;
-    background: url(./../images/screens/238403main_moon.jpg) no-repeat left top fixed;
+    background: url(./../images/screens/238403main_moon.jpg) no-repeat 0 0 fixed;
     background-size: cover; }
     .blocks__item::after {
       content: '';
@@ -451,7 +449,13 @@ a {
       display: inline-block;
       vertical-align: middle; }
   .blocks__link {
-    text-decoration: none; }
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-transition: background-color 0.1s linear;
+    -moz-transition: background-color 0.1s linear;
+    -ms-transition: background-color 0.1s linear;
+    -o-transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear; }
     .blocks__link:hover {
       background-color: rgba(133, 51, 113, 0.5); }
 
@@ -506,6 +510,10 @@ a {
   background: url("./../images/screens/horizon.jpg") no-repeat 60% 50%;
   background-size: cover; }
 
+.screen--about {
+  background: url("./../images/screens/lander.jpg") no-repeat 30% 50%;
+  background-size: cover; }
+
 .mainnav {
   position: relative;
   z-index: 5;
@@ -522,15 +530,21 @@ a {
 
 .mainnav__item {
   border-bottom: 1px solid #67c4d2;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear; }
   .mainnav__item a {
     color: #67c4d2;
     text-decoration: none;
     display: block;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    padding-left: .5em; }
   .mainnav__item:hover {
-    background: #67c4d2; }
+    background: rgba(103, 196, 210, 0.8); }
     .mainnav__item:hover a {
       color: black; }
 
@@ -540,7 +554,7 @@ a {
     color: #853371;
     text-decoration: none; }
   .mainnav__item--secondary:hover {
-    background: #853371; }
+    background: rgba(133, 51, 113, 0.8); }
     .mainnav__item--secondary:hover a {
       color: black; }
 

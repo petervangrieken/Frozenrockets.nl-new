@@ -12,13 +12,12 @@
 
 
 .page--home {
-	padding-top: 10%;
 
 	@media only screen and (min-width: $lap) { 
-		padding-left: 55%;
+		padding-left: 45%;
 	}
 
 	@media only screen and (min-width: $lap-wide) { 
-		padding-left: 55%;
+		padding-left: 45%;
 	}
 }

@@ -17,6 +17,7 @@
 	.mainnav__item {
 		border-bottom: 1px solid $color-text-green;
 		font-size: $font-size-small;
+		@include vendor(transition, background-color .2s linear);
 
 		a {
 			color: $color-text-green;
@@ -24,10 +25,11 @@
 			display: block;
 			width: 100%;
 			height: 100%;
+			padding-left: .5em;
 		}
 
 		&:hover {
-			background: $color-text-green;
+			background: rgba($color-text-green, .8);
 
 			a {
 				color: $color-black;
@@ -44,7 +46,7 @@
 		}
 
 		&:hover {
-			background: $color-text-pink-dark;
+			background: rgba($color-text-pink-dark,.8);
 
 			a {
 				color: $color-black;
