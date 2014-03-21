@@ -4,12 +4,13 @@ body {
 	font-size: $font-size-base;
 	line-height: $line-height-base;
 	color: $color-text-base;
+	letter-spacing: .02em;
 
 	text-rendering: optimizeLegibility;
 }
 
 p { 
-	margin: 0 0 $spacing-magic; 
+	margin: 0 0 1.3em;
 
 	&.intro {
 		font-weight: $font-weight-bold;

@@ -1,5 +1,3 @@
-$spacing-half: 			$line-height-base / 2;
-$spacing:				$line-height-base;
-$spacing-double: 		$line-height-base * 2;
-$spacing-magic:			$spacing-half * 1.625;
-$spacing-magic-half:	$spacing-magic / 2;
+$spacing-half: 			($line-height-base / 2) 	* 1em;
+$spacing:				($line-height-base) 		* 1em;
+$spacing-double: 		($line-height-base * 2) 	* 1em;

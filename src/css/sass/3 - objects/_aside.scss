@@ -1,7 +1,7 @@
 .aside {
 	position:relative;
 	padding: .2em;
-	margin-bottom: $spacing-magic;
+	margin-bottom: $spacing;
 	border-radius: 2px;
 	text-align: center;
 	background-color: $color-text-blue-light;
@@ -9,7 +9,7 @@
 	@media only screen and (min-width: $lap-wide) { 
 		float: right;
 		max-width: 40%;
-		margin-left: $spacing-magic;
+		margin-left: $spacing;
 		
 	}
 
@@ -86,15 +86,15 @@
 
 		.mainquote {
 			margin-bottom: 0;
-			padding-bottom: $spacing-magic-half;
+			padding-bottom: $spacing-half;
 
 			border-bottom: 1px solid rgb(222, 231, 234);
 		}
 
 		.quote-source {
 			width: auto;
-			padding-top: $spacing-magic-half;
-			margin: 0 $spacing-magic-half;
+			padding-top: $spacing-half;
+			margin: 0 $spacing-half;
 
 			border-top: 1px solid $color-white;
 		}

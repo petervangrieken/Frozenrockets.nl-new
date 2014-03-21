@@ -17,11 +17,13 @@
 	.mainnav__item {
 		border-bottom: 1px solid $color-text-green;
 		font-size: $font-size-small;
+		padding: $spacing-half;
 		@include vendor(transition, background-color .2s linear);
 
 		a {
 			color: $color-text-green;
 			text-decoration: none;
+			border:none;
 			display: block;
 			width: 100%;
 			height: 100%;

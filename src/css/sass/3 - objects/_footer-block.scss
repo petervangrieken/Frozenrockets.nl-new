@@ -1,11 +1,12 @@
 .footer-block {
 	background-color: $color-text-blue-light;
-	padding: $spacing-magic;
+	padding: $spacing;
 	border-radius: 3px;
+	margin: $spacing-double 0;
 
 	&__header {
 		color: $color-black;
-		margin-bottom: $spacing-magic-half;
+		margin-bottom: $spacing-half;
 	}
 
 	&__list {
