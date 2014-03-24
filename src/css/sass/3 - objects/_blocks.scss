@@ -46,10 +46,13 @@
 	&__link {
 		text-decoration: none;
 		background-color: transparent;
-		@include vendor(transition, background-color .1s linear);
+		color: transparent;
+		@include vendor(transition, background-color .5s linear);
 		
 		&:hover {
 			background-color: rgba($color-text-pink-dark, .5);
+			color: transparent;
+			@include vendor(transition, background-color .05s linear);
 		}
 	}
 }
