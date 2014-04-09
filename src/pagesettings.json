@@ -16,5 +16,9 @@
     "about": {
         "pageclass": "page--about",
         "sidebarclass": "screen--about"
+    },
+    "perspective": {
+        "pageclass": "page--perspective",
+        "sidebarclass": "screen--perspective"
     }
 }
