@@ -15,27 +15,61 @@
 }
 
 	.mainnav__item {
+		position: relative;
+		height: $spacing-double;
+		overflow-x: hidden;
 		border-bottom: 1px solid $color-text-green;
 		font-size: $font-size-small;
-		padding: $spacing-half;
-		@include vendor(transition, background-color .2s linear);
+
+		//@include vendor(transition, all .5s linear);
 
 		a {
-			color: $color-text-green;
-			text-decoration: none;
-			border:none;
+			position: absolute;
+			top: 0;
+
 			display: block;
 			width: 100%;
 			height: 100%;
-			padding-left: .5em;
+			z-index: 2;
+			padding: $spacing-half;
+
+			color: $color-text-green;
+			text-decoration: none;
+			border:none;
+
+			@include vendor(transition, all .5s linear);
+		}
+
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 100%;
+
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: $spacing-half;
+
+			//background: rgba($color-black, .8);
+			background: rgba($color-text-green, .8);
+
+			@include vendor(transition, all .3s linear);
 		}
 
 		&:hover {
-			background: rgba($color-text-green, .8);
-
+			//background: rgba($color-text-green, .8);
 			a {
-				color: $color-black;
+				color: $color-white;
 			} 
+
+			&::after {
+				@include vendor(transform, translateY(-210%));
+			}
+		}
+
+		&:last-child {
+			border-bottom: none;
 		}
 	}
 
