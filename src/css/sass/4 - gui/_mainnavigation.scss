@@ -37,7 +37,7 @@
 			text-decoration: none;
 			border:none;
 
-			@include vendor(transition, all .5s linear);
+			@include vendor(transition, all .2s linear);
 		}
 
 		&::after {
@@ -53,18 +53,18 @@
 
 			//background: rgba($color-black, .8);
 			background: rgba($color-text-green, .8);
-
-			@include vendor(transition, all .3s linear);
+			@include vendor(transition, none);
+			
 		}
 
 		&:hover {
-			//background: rgba($color-text-green, .8);
 			a {
 				color: $color-white;
 			} 
 
 			&::after {
 				@include vendor(transform, translateY(-210%));
+				@include vendor(transition, all .3s linear);
 			}
 		}
 
