@@ -549,6 +549,10 @@ a {
   background: url("./../images/screens/lander.jpg") no-repeat 30% 50%;
   background-size: cover; }
 
+.screen--contact {
+  background: url("./../images/screens/capsule.jpg") no-repeat 50%;
+  background-size: cover; }
+
 .mainnav {
   position: relative;
   z-index: 5;

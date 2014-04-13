@@ -17,6 +17,10 @@
         "pageclass": "page--about",
         "sidebarclass": "screen--about"
     },
+    "contact": {
+        "pageclass": "page--contact",
+        "sidebarclass": "screen--contact"
+    },
     "perspective": {
         "pageclass": "page--perspective",
         "sidebarclass": "screen--perspective"
