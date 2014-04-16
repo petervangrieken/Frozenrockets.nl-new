@@ -6,14 +6,15 @@
   margin: 0;
 }
 
+
 html {
-	font-size: 85%;
+	font-size: 87.5%;
 	background-color: $color-page-background;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 
   @media only screen and (min-width: $lap-wide) { 
-    font-size: 100%;
+    //font-size: 100%;
   }
 }
 
@@ -21,6 +22,15 @@ html {
 body {
 	margin: 0;
 }
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 
 article,
 aside,

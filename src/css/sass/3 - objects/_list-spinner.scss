@@ -1,0 +1,135 @@
+$spinner-line-height: $spacing * 3;
+
+.list-spinner {
+	position: relative;
+	height: $spinner-line-height - .1em;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 75%;
+	line-height: $spinner-line-height;
+	//vertical-align: middle;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		line-height: $spinner-line-height;
+
+		@include vendor(animation, spinner 15s steps(1) infinite);
+
+		&:hover {
+			@include vendor(animation-play-state, paused);
+		}
+	}
+
+
+
+	li {
+
+		position: relative;
+		width: 100%;
+		height: $spacing-double;
+		padding: 0 $spacing-double 0 $spacing;
+		line-height: $spacing;
+
+		color: $color-white;
+		background-color: rgba($color-text-pink-dark ,.1);
+		//background-image: linear-gradient(90deg, rgba($color-text-pink-dark,.4) 0%, transparent 70%);
+		text-shadow: 0 0 1px $color-black;
+
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			
+			right: 0;
+			z-index: 9;
+			height: $spacing;
+			width: $spacing;
+			
+			background-color: rgba($color-text-pink-dark,.8);
+			
+		}
+
+		&:nth-child(1) {
+			&::before {
+				top: 0;
+				width: $spacing-double;
+			}
+
+			&::after {
+				top: $spacing;
+				width: $spacing;
+			}
+		}
+
+		&:nth-child(2) {
+			&::before {
+				top: 0;
+				width: $spacing;
+			}
+
+			&::after {
+				top: $spacing;
+				width: $spacing-double;
+			}
+		}
+
+
+		&:nth-child(3) {
+			&::before {
+				top: 0;
+				right: $spacing;
+				width: $spacing;
+			}
+
+			&::after {
+				top: $spacing;
+				width: $spacing-double;
+			}
+		}
+
+
+
+		&:nth-child(4) {
+			&::before {
+				top: 0;
+				right: 0;
+				width: $spacing;
+			}
+
+			&::after {
+				bottom: 0;
+				width: $spacing-double;
+			}
+		}
+
+	}
+	
+}
+
+
+
+@keyframes spinner {
+  0% {	margin-top: 0;		}
+  24% {	margin-top: 0;		}
+  25% {	margin-top: -($spinner-line-height);	}
+  49% {	margin-top: -($spinner-line-height);	}
+  50% {	margin-top: -($spinner-line-height) * 2;	}
+  74% {	margin-top: -($spinner-line-height) * 2;	}
+  75% {	margin-top: -($spinner-line-height) * 3;	}
+  99% {	margin-top: -($spinner-line-height) * 3;	}
+  100% { margin-top: 0em;	}
+}
+
+@-webkit-keyframes spinner {
+  0% {	margin-top: 0;		}
+  24% {	margin-top: 0;		}
+  25% {	margin-top: -($spinner-line-height);	}
+  49% {	margin-top: -($spinner-line-height);	}
+  50% {	margin-top: -($spinner-line-height) * 2;	}
+  74% {	margin-top: -($spinner-line-height) * 2;	}
+  75% {	margin-top: -($spinner-line-height) * 3;	}
+  99% {	margin-top: -($spinner-line-height) * 3;	}
+  100% { margin-top: 0em;	}
+}

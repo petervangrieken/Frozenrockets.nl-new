@@ -1,5 +1,6 @@
 .page {
-	padding: 3% 5%;
+	padding: 5%;
+	max-width: 80em;
 	background-color: $color-white;
 
 	@media only screen and (min-width: $lap) { 
@@ -13,11 +14,21 @@
 
 
 .page--home {
-	@media only screen and (min-width: $lap) { 
-		padding-left: 45%;
+	@extend .screen--home;
+	
+	max-width: none;
+	padding-top: 24%;
+
+	&::after {
+		//content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0,0,0,.3); 
+		//background-size: 2px 2px;
+		z-index: 0;
 	}
 
-	@media only screen and (min-width: $lap-wide) { 
-		padding-left: 45%;
-	}
 }

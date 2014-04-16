@@ -2,30 +2,37 @@
     "home": {
         "title":        "Frozen Rockets",
         "pageclass":    "page--home",
-        "sidebarclass": "sidebar--wide  screen--home"
+        "sidebarclass": "sidebar--home",
+        "hassidebar": true
     },
     "projecten": {
         "title": "Projecten van Frozen Rockets",
         "pageclass": "page--projecten",
-        "sidebarclass": "screen--projecten"
+        "sidebarclass": "screen--projecten",
+        "hassidebar": true,
+        "invertedlogo": false
     },
     "project": {
         "title": "Project",
         "pageclass": "page--single-project",
-        "sidebarclass": "screen--single-project"
+        "sidebarclass": "screen--single-project",
+        "hassidebar": true
     },
     "about": {
         "title": "Over Frozen Rockets",
         "pageclass": "page--about",
-        "sidebarclass": "screen--about"
+        "sidebarclass": "screen--about",
+        "hassidebar": true
     },
     "contact": {
         "title": "Neem contact op met Frozen Rockets",
         "pageclass": "page--contact",
-        "sidebarclass": "screen--contact"
+        "sidebarclass": "screen--contact",
+        "hassidebar": true
     },
     "perspective": {
         "pageclass": "page--perspective",
-        "sidebarclass": "screen--perspective"
+        "sidebarclass": "screen--perspective",
+        "hassidebar": true
     }
 }

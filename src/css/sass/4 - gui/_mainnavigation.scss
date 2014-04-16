@@ -3,13 +3,13 @@
 	z-index: 5;
 	list-style: none;
 	padding: 0;
-	margin: $spacing 0 0 0;
+	margin: .5rem 0 0 0;
 
 	@media only screen and (min-width: $lap) { 
 		position: absolute;
-		bottom: 5%;
-		left: 5%;
-		right: 5%;
+		bottom: 1rem;
+		left: .5rem;
+		right: .5rem;
 		margin-top: 0;
 	}
 }
@@ -17,7 +17,7 @@
 	.mainnav__item {
 		position: relative;
 		height: $spacing-double;
-		overflow-x: hidden;
+		overflow: hidden;
 		border-bottom: 1px solid $color-text-green;
 		font-size: $font-size-small;
 
@@ -31,7 +31,7 @@
 			width: 100%;
 			height: 100%;
 			z-index: 2;
-			padding: $spacing-half;
+			padding: .5rem;
 
 			color: $color-text-green;
 			text-decoration: none;
