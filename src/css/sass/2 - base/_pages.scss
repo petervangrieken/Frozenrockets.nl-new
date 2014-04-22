@@ -17,7 +17,10 @@
 	@extend .screen--home;
 	
 	max-width: none;
-	padding-top: 24%;
+
+	@media only screen and (min-width: $lap) { 
+		padding-top: 30%;
+	}
 
 	&::after {
 		//content: '';

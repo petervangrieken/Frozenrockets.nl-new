@@ -212,8 +212,10 @@ a {
       padding-left: 30%; } }
 
 .page--home {
-  max-width: none;
-  padding-top: 24%; }
+  max-width: none; }
+  @media only screen and (min-width: 30em) {
+    .page--home {
+      padding-top: 30%; } }
   .page--home::after {
     position: absolute;
     top: 0;
@@ -563,22 +565,34 @@ a {
 
 .list-spinner {
   position: relative;
-  height: 4.1em;
-  overflow: hidden;
   margin: 0;
   padding: 0;
-  width: 75%;
-  line-height: 4.2em; }
+  width: 100%;
+  line-height: 4.2em;
+  overflow: hidden;
+  height: 4.2em; }
+  @media screen and (min-width: 50em) {
+    .list-spinner {
+      width: 75%;
+      overflow: hidden;
+      height: 4.2em; } }
   .list-spinner ul {
     margin: 0;
     padding: 0;
     list-style: none;
     line-height: 4.2em;
-    -webkit-animation: spinner 15s steps(1) infinite;
-    -moz-animation: spinner 15s steps(1) infinite;
-    -ms-animation: spinner 15s steps(1) infinite;
-    -o-animation: spinner 15s steps(1) infinite;
-    animation: spinner 15s steps(1) infinite; }
+    -webkit-animation: spinner-large 15s steps(1) infinite;
+    -moz-animation: spinner-large 15s steps(1) infinite;
+    -ms-animation: spinner-large 15s steps(1) infinite;
+    -o-animation: spinner-large 15s steps(1) infinite;
+    animation: spinner-large 15s steps(1) infinite; }
+    @media screen and (min-width: 50em) {
+      .list-spinner ul {
+        -webkit-animation: spinner 15s steps(1) infinite;
+        -moz-animation: spinner 15s steps(1) infinite;
+        -ms-animation: spinner 15s steps(1) infinite;
+        -o-animation: spinner 15s steps(1) infinite;
+        animation: spinner 15s steps(1) infinite; } }
     .list-spinner ul:hover {
       -webkit-animation-play-state: paused;
       -moz-animation-play-state: paused;
@@ -588,12 +602,17 @@ a {
   .list-spinner li {
     position: relative;
     width: 100%;
-    height: 2.8em;
-    padding: 0 2.8em 0 1.4em;
+    padding: 0 4.2em 0 0.7em;
     line-height: 1.4em;
     color: white;
-    background-color: rgba(133, 51, 113, 0.1);
-    text-shadow: 0 0 1px black; }
+    background-color: rgba(133, 51, 113, 0.35);
+    margin-bottom: 2.8em;
+    height: 5.6em;
+    margin-bottom: 0.7em; }
+    @media screen and (min-width: 50em) {
+      .list-spinner li {
+        height: 2.8em;
+        margin-bottom: 1.4em; } }
     .list-spinner li::before, .list-spinner li::after {
       content: '';
       position: absolute;
@@ -622,11 +641,11 @@ a {
       top: 1.4em;
       width: 2.8em; }
     .list-spinner li:nth-child(4)::before {
-      top: 0;
-      right: 0;
+      top: 1.4em;
+      right: 1.4em;
       width: 1.4em; }
     .list-spinner li:nth-child(4)::after {
-      bottom: 0;
+      top: 0;
       width: 2.8em; }
 
 @keyframes spinner {
@@ -680,6 +699,60 @@ a {
 
   99% {
     margin-top: -12.6em; }
+
+  100% {
+    margin-top: 0em; } }
+@keyframes spinner-large {
+  0% {
+    margin-top: 0; }
+
+  24% {
+    margin-top: 0; }
+
+  25% {
+    margin-top: -6.3em; }
+
+  49% {
+    margin-top: -6.3em; }
+
+  50% {
+    margin-top: -12.6em; }
+
+  74% {
+    margin-top: -12.6em; }
+
+  75% {
+    margin-top: -18.9em; }
+
+  99% {
+    margin-top: -18.9em; }
+
+  100% {
+    margin-top: 0em; } }
+@-webkit-keyframes spinner-large {
+  0% {
+    margin-top: 0; }
+
+  24% {
+    margin-top: 0; }
+
+  25% {
+    margin-top: -6.3em; }
+
+  49% {
+    margin-top: -6.3em; }
+
+  50% {
+    margin-top: -12.6em; }
+
+  74% {
+    margin-top: -12.6em; }
+
+  75% {
+    margin-top: -18.9em; }
+
+  99% {
+    margin-top: -18.9em; }
 
   100% {
     margin-top: 0em; } }

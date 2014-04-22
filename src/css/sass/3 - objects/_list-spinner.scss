@@ -2,13 +2,23 @@ $spinner-line-height: $spacing * 3;
 
 .list-spinner {
 	position: relative;
-	height: $spinner-line-height - .1em;
-	overflow: hidden;
+	
 	margin: 0;
 	padding: 0;
-	width: 75%;
+	width: 100%;
 	line-height: $spinner-line-height;
 	//vertical-align: middle;
+
+	//@media screen and (min-width: $lap) {
+		overflow: hidden;
+		height: $spinner-line-height;
+	//}
+
+	@media screen and (min-width: $lap-wide) {
+		width: 75%;
+		overflow: hidden;
+		height: $spinner-line-height;
+	}
 
 	ul {
 		margin: 0;
@@ -16,7 +26,14 @@ $spinner-line-height: $spacing * 3;
 		list-style: none;
 		line-height: $spinner-line-height;
 
-		@include vendor(animation, spinner 15s steps(1) infinite);
+		//@media screen and (min-width: $lap) {
+			@include vendor(animation, spinner-large 15s steps(1) infinite);
+		//}
+
+		@media screen and (min-width: $lap-wide) {
+			@include vendor(animation, spinner 15s steps(1) infinite);
+		}
+
 
 		&:hover {
 			@include vendor(animation-play-state, paused);
@@ -29,14 +46,25 @@ $spinner-line-height: $spacing * 3;
 
 		position: relative;
 		width: 100%;
-		height: $spacing-double;
-		padding: 0 $spacing-double 0 $spacing;
+		
+		padding: 0 $spacing-double+$spacing 0 $spacing-half;
 		line-height: $spacing;
 
 		color: $color-white;
-		background-color: rgba($color-text-pink-dark ,.1);
+		background-color: rgba($color-text-pink-dark ,.35);
 		//background-image: linear-gradient(90deg, rgba($color-text-pink-dark,.4) 0%, transparent 70%);
-		text-shadow: 0 0 1px $color-black;
+		//text-shadow: 0 0 1px $color-black;
+		margin-bottom: $spacing-double;
+
+		//@media screen and (min-width: $lap) {
+			height: $spacing-double * 2;
+			margin-bottom: $spacing-half;
+		//}
+
+		@media screen and (min-width: $lap-wide) {
+			height: $spacing-double;
+			margin-bottom: $spacing;
+		}
 
 		&::before, &::after {
 			content: '';
@@ -93,13 +121,13 @@ $spinner-line-height: $spacing * 3;
 
 		&:nth-child(4) {
 			&::before {
-				top: 0;
-				right: 0;
+				top: $spacing;
+				right: $spacing;
 				width: $spacing;
 			}
 
 			&::after {
-				bottom: 0;
+				top: 0;
 				width: $spacing-double;
 			}
 		}
@@ -131,5 +159,30 @@ $spinner-line-height: $spacing * 3;
   74% {	margin-top: -($spinner-line-height) * 2;	}
   75% {	margin-top: -($spinner-line-height) * 3;	}
   99% {	margin-top: -($spinner-line-height) * 3;	}
+  100% { margin-top: 0em;	}
+}
+
+
+@keyframes spinner-large {
+  0% {	margin-top: 0;		}
+  24% {	margin-top: 0;		}
+  25% {	margin-top: -($spinner-line-height * 1.5);	}
+  49% {	margin-top: -($spinner-line-height * 1.5);	}
+  50% {	margin-top: -($spinner-line-height * 1.5) * 2;	}
+  74% {	margin-top: -($spinner-line-height * 1.5) * 2;	}
+  75% {	margin-top: -($spinner-line-height * 1.5) * 3;	}
+  99% {	margin-top: -($spinner-line-height * 1.5) * 3;	}
+  100% { margin-top: 0em;	}
+}
+
+@-webkit-keyframes spinner-large {
+  0% {	margin-top: 0;		}
+  24% {	margin-top: 0;		}
+  25% {	margin-top: -($spinner-line-height * 1.5);	}
+  49% {	margin-top: -($spinner-line-height * 1.5);	}
+  50% {	margin-top: -($spinner-line-height * 1.5) * 2;	}
+  74% {	margin-top: -($spinner-line-height * 1.5) * 2;	}
+  75% {	margin-top: -($spinner-line-height * 1.5) * 3;	}
+  99% {	margin-top: -($spinner-line-height * 1.5) * 3;	}
   100% { margin-top: 0em;	}
 }
