@@ -12,9 +12,13 @@
 
 	&__list {
 		list-style-position: inside;
+		list-style-type: square;
 		padding-left: 0;
 	}
 
+	a {
+		color: $color-black;
+	}
 
 
 }

@@ -202,7 +202,6 @@ a {
 
 .page {
   padding: 5%;
-  max-width: 80em;
   background-color: white; }
   @media only screen and (min-width: 30em) {
     .page {
@@ -281,8 +280,9 @@ a {
 
 .sidebar {
   padding: 6%;
-  margin: -3% -6% 0.7em;
-  position: relative; }
+  margin: -6% -6% 2.8em;
+  position: relative;
+  background-color: black; }
   @media only screen and (min-width: 30em) {
     .sidebar {
       position: fixed;
@@ -303,8 +303,13 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.8) 100%);
-    z-index: -1; }
+    background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.3) 100%); }
+    @media only screen and (min-width: 30em) {
+      .sidebar::after {
+        z-index: -1; } }
+
+.sidebar--home::after {
+  background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.8) 100%); }
 
 @media only screen and (min-width: 30em) {
   .sidebar--wide {
@@ -561,7 +566,10 @@ a {
     margin-bottom: 0.7em; }
   .footer-block__list {
     list-style-position: inside;
+    list-style-type: square;
     padding-left: 0; }
+  .footer-block a {
+    color: black; }
 
 .list-spinner {
   position: relative;
@@ -770,23 +778,33 @@ a {
  * Pull in all our GUI components.
  */
 .screen--home, .page--home {
-  background: url("./../images/screens/baustelle_blau.jpg") no-repeat 100% 50%;
+  background-image: url("./../images/screens/baustelle_blau.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
   background-size: cover; }
 
 .screen--projecten {
-  background: url("./../images/screens/launch-2.jpg") no-repeat 60% 50%;
+  background-image: url("./../images/screens/launch-2.jpg");
+  background-repeat: no-repeat;
+  background-position: 60% 50%;
   background-size: cover; }
 
 .screen--single-project {
-  background: url("./../images/screens/horizon.jpg") no-repeat 60% 50%;
+  background-image: url("./../images/screens/horizon.jpg");
+  background-repeat: no-repeat;
+  background-position: 60% 50%;
   background-size: cover; }
 
 .screen--about {
-  background: url("./../images/screens/lander.jpg") no-repeat 30% 50%;
+  background-image: url("./../images/screens/lander.jpg");
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
   background-size: cover; }
 
 .screen--contact {
-  background: url("./../images/screens/capsule.jpg") no-repeat 50%;
+  background-image: url("./../images/screens/capsule.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
   background-size: cover; }
 
 .mainnav {
@@ -825,6 +843,8 @@ a {
     -ms-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear; }
+    .mainnav__item a:hover, .mainnav__item a:active {
+      color: white; }
   .mainnav__item::after {
     content: '';
     position: absolute;
@@ -839,8 +859,6 @@ a {
     -ms-transition: none;
     -o-transition: none;
     transition: none; }
-  .mainnav__item:hover a {
-    color: white; }
   .mainnav__item:hover::after {
     -webkit-transform: translateY(-210%);
     -moz-transform: translateY(-210%);

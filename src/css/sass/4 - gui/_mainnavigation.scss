@@ -38,6 +38,10 @@
 			border:none;
 
 			@include vendor(transition, all .2s linear);
+
+			&:hover, &:active {
+				color: $color-white;
+			}
 		}
 
 		&::after {
@@ -58,9 +62,6 @@
 		}
 
 		&:hover {
-			a {
-				color: $color-white;
-			} 
 
 			&::after {
 				@include vendor(transform, translateY(-210%));

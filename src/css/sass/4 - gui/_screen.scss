@@ -1,23 +1,33 @@
 .screen--home {
-	background: url('./../images/screens/baustelle_blau.jpg') no-repeat 100% 50%;
+	background-image: url('./../images/screens/baustelle_blau.jpg');
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
 	background-size: cover;
 }
 .screen--projecten {
-	background: url('./../images/screens/launch-2.jpg') no-repeat 60% 50%;
+	background-image: url('./../images/screens/launch-2.jpg');
+	background-repeat: no-repeat;
+	background-position: 60% 50%;
 	background-size: cover;
 }
 
 .screen--single-project {
-	background: url('./../images/screens/horizon.jpg') no-repeat 60% 50%;
+	background-image: url('./../images/screens/horizon.jpg');
+	background-repeat: no-repeat;
+	background-position: 60% 50%;
 	background-size: cover;
 }
 
 .screen--about {
-	background: url('./../images/screens/lander.jpg') no-repeat 30% 50%;
+	background-image: url('./../images/screens/lander.jpg');
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
 	background-size: cover;
 }
 
 .screen--contact {
-	background: url('./../images/screens/capsule.jpg') no-repeat 50%;
+	background-image: url('./../images/screens/capsule.jpg');
+	background-repeat: no-repeat;
+	background-position: 50%;
 	background-size: cover;
 }
