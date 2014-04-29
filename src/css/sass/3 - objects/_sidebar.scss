@@ -40,8 +40,9 @@
 }
 
 .sidebar--home {
+	background-color: transparent;
 	&::after {
-		background-image: linear-gradient(transparent 0%, transparent 75%, rgba($color-black,.8) 100%);
+		background-image: linear-gradient(transparent 0%, transparent 75%, rgba($color-black,.75) 96%);
 	}
 }
 

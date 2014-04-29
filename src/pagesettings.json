@@ -9,8 +9,7 @@
         "title": "Projecten van Frozen Rockets",
         "pageclass": "page--projecten",
         "sidebarclass": "screen--projecten",
-        "hassidebar": true,
-        "invertedlogo": false
+        "hassidebar": true
     },
     "project": {
         "title": "Project",
@@ -22,6 +21,12 @@
         "title": "Over Frozen Rockets",
         "pageclass": "page--about",
         "sidebarclass": "screen--about",
+        "hassidebar": true
+    },
+    "about-detail": {
+        "title": "",
+        "pageclass": "page--about-detail",
+        "sidebarclass": "screen--about-detail",
         "hassidebar": true
     },
     "contact": {

@@ -308,8 +308,10 @@ a {
       .sidebar::after {
         z-index: -1; } }
 
-.sidebar--home::after {
-  background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.8) 100%); }
+.sidebar--home {
+  background-color: transparent; }
+  .sidebar--home::after {
+    background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.75) 96%); }
 
 @media only screen and (min-width: 30em) {
   .sidebar--wide {
@@ -797,6 +799,12 @@ a {
 
 .screen--about {
   background-image: url("./../images/screens/lander.jpg");
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+  background-size: cover; }
+
+.screen--about-detail {
+  background-image: url("./../images/screens/GPN-2000-001124.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
   background-size: cover; }
