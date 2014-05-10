@@ -1,14 +1,33 @@
-a {
+a, .link {
 	color: $color-text-pink-dark;
 	text-decoration: none;
 	border-bottom: 1px solid;
 
 
 	&:hover, &:active {
-		color: $color-text-pink-light;
+		color: $color-text-green;
 	}
 
 	&:visited {
 		color: $color-text-base;
+	}
+}
+
+.linkblock {
+	display: block;
+	color: inherit;
+	border: none;
+
+	&:hover, &:active {
+		color: inherit;
+	}
+
+ 	&:focus {
+ 		color: $color-text-pink-dark;
+ 	}
+
+
+	&:visited {
+		color: inherit;
 	}
 }

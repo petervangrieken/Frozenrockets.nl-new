@@ -1,0 +1,17 @@
+.credits-link {
+	position: absolute;
+
+	@media only screen and (min-width: $lap) { 
+		position: fixed;
+	}
+	bottom: $spacing-half;
+	right: $spacing-half;
+	font-size: $font-size-small;
+	color: $color-text-green;
+	text-decoration: none;
+	border:none;
+
+	&:hover, &:focus, &:visited {
+		color: $color-white;
+	}
+}

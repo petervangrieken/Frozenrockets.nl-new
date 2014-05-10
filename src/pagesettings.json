@@ -35,9 +35,9 @@
         "sidebarclass": "screen--contact",
         "hassidebar": true
     },
-    "perspective": {
-        "pageclass": "page--perspective",
-        "sidebarclass": "screen--perspective",
+    "credits": {
+        "pageclass": "page--credits",
+        "sidebarclass": "screen--credits",
         "hassidebar": true
     }
 }

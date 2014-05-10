@@ -56,6 +56,10 @@ module.exports = function(grunt) {
             html: {
                 files: ['src/*.html'],
                 tasks: ['bake']
+            },
+            image: {
+                files: ['src/**/*.{png,jpg,gif}'],
+                tasks: ['imagemin']
             }
         }
 

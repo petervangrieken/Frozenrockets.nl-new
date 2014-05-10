@@ -5,12 +5,7 @@
  * Pull in all our objects and abstractions.
  */
 
-/*
-@import "layout",
-	"box",
-	"lists", 
-	"media";
-*/
+
 
 @import "highlight",
 		"sidebar",
@@ -21,4 +16,6 @@
 		"logo",
 		"blocks",
 		"footer-block",
-		"list-spinner";
+		"list-spinner",
+		"mediaobject",
+		"credits";

@@ -1,0 +1,33 @@
+
+.media-object, .media-object__body {
+	overflow:hidden; 
+	_overflow:visible; 
+	zoom:1;
+	margin-bottom: $spacing-double;
+}
+
+	.media-object__img {
+		position: relative;
+		float:left;
+		margin-right: $spacing;
+		max-width: 20%;
+
+		@media only screen and (min-width: $lap-wide) { 
+			max-width: 10%;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 9;
+			height: 50%;
+			width: 50%;
+			background-color: $color-white;
+		}
+		
+		img{
+			display:block;
+		}
+	}

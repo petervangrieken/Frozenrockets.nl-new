@@ -83,6 +83,14 @@ figure {
 	margin-bottom: $spacing;
 }
 
+hr {
+  display: block;
+  border: none;
+  margin: $spacing-double 0;
+  height: 1px;
+  background-color: $color-text-pink-dark;
+}
+
 .borderless {
   border: none;
 }

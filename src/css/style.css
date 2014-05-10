@@ -107,6 +107,13 @@ h1 a, h2 a, h3 a, h4 a {
 figure {
   margin-bottom: 1.4em; }
 
+hr {
+  display: block;
+  border: none;
+  margin: 2.8em 0;
+  height: 1px;
+  background-color: #853371; }
+
 .borderless {
   border: none; }
 
@@ -167,14 +174,25 @@ h3, .h3 {
 h4, .h4 {
   font-size: 1.1; }
 
-a {
+a, .link {
   color: #853371;
   text-decoration: none;
   border-bottom: 1px solid; }
-  a:hover, a:active {
-    color: #e34dbd; }
-  a:visited {
+  a:hover, a:active, .link:hover, .link:active {
+    color: #67c4d2; }
+  a:visited, .link:visited {
     color: black; }
+
+.linkblock {
+  display: block;
+  color: inherit;
+  border: none; }
+  .linkblock:hover, .linkblock:active {
+    color: inherit; }
+  .linkblock:focus {
+    color: #853371; }
+  .linkblock:visited {
+    color: inherit; }
 
 .grid {
   text-align: justify;
@@ -266,12 +284,6 @@ a {
 /**
  * Pull in all our objects and abstractions.
  */
-/*
-@import "layout",
-	"box",
-	"lists", 
-	"media";
-*/
 .highlight--primary {
   border-top: 1px solid #b0c4d8;
   border-bottom: 1px solid #b0c4d8; }
@@ -773,6 +785,46 @@ a {
 
   100% {
     margin-top: 0em; } }
+.media-object, .media-object__body {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+  margin-bottom: 2.8em; }
+
+.media-object__img {
+  position: relative;
+  float: left;
+  margin-right: 1.4em;
+  max-width: 20%; }
+  @media only screen and (min-width: 50em) {
+    .media-object__img {
+      max-width: 10%; } }
+  .media-object__img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    height: 50%;
+    width: 50%;
+    background-color: white; }
+  .media-object__img img {
+    display: block; }
+
+.credits-link {
+  position: absolute;
+  bottom: 0.7em;
+  right: 0.7em;
+  font-size: 0.8em;
+  color: #67c4d2;
+  text-decoration: none;
+  border: none; }
+  @media only screen and (min-width: 30em) {
+    .credits-link {
+      position: fixed; } }
+  .credits-link:hover, .credits-link:focus, .credits-link:visited {
+    color: white; }
+
 /*------------------------------------*\
     #GUI
 \*------------------------------------*/
@@ -822,6 +874,12 @@ a {
   background-position: 50%;
   background-size: cover; }
 
+.screen--credits {
+  background-image: url("./../images/screens/clouds.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover; }
+
 .mainnav {
   position: relative;
   z-index: 5;
@@ -858,7 +916,7 @@ a {
     -ms-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear; }
-    .mainnav__item a:hover, .mainnav__item a:active {
+    .mainnav__item a:hover, .mainnav__item a:focus {
       color: white; }
   .mainnav__item::after {
     content: '';
@@ -906,7 +964,7 @@ a {
   .seethrough--moon {
     background-image: url(./../images/screens/238403main_moon.jpg); }
   .seethrough--launch {
-    background-image: url(./../images/screens/clouds.jpg); }
+    background-image: url(./../images/screens/above-clouds.jpg); }
   .seethrough--cloud {
     background-image: url(./../images/screens/Ngc1999.jpg); }
 
@@ -923,5 +981,5 @@ a {
 /**
  * Pull in all our trumps and overrides.
  */
-.center-content {
-  text-align: center; }
+.text--green {
+  color: #67c4d2; }
