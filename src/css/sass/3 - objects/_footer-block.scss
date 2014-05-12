@@ -1,5 +1,5 @@
 .footer-block {
-	padding: $spacing;
+	padding: $spacing 0 0 $spacing;
 	margin: $spacing-double 0;
 	background-color: $color-text-blue-light;
 	border-radius: 3px;
@@ -7,18 +7,22 @@
 
 	&__header {
 		color: $color-black;
-		margin-bottom: $spacing-half;
+		padding-bottom: $spacing-half;
 	}
 
 	&__list {
 		list-style-position: inside;
 		list-style-type: square;
 		padding-left: 0;
+		margin-bottom: $spacing;
 	}
 
 	a {
-		color: $color-black;
+		//color: $color-black;
 	}
-
-
 }
+
+	.footer-block__secondary {
+		background-color: $color-text-pink-dark;
+		color: $color-white;
+	}

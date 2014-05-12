@@ -4,12 +4,12 @@ a, .link {
 	border-bottom: 1px solid;
 
 
-	&:hover, &:active {
+	&:hover, &:active, &:focus {
 		color: $color-text-green;
 	}
 
 	&:visited {
-		color: $color-text-base;
+		//color: $color-text-base;
 	}
 }
 
@@ -29,5 +29,22 @@ a, .link {
 
 	&:visited {
 		color: inherit;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: $spacing-half $spacing;
+	margin: 0 $spacing-half $spacing 0;
+
+	background-color: $color-text-pink-light;
+	color: $color-white;
+	border-bottom: none;
+	border-radius: 3px;
+	transition: all .2s linear;
+
+	&:hover {
+		color: $color-white;
+		background-color: darken($color-text-pink-light, 10%);
 	}
 }

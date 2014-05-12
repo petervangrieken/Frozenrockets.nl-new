@@ -178,10 +178,8 @@ a, .link {
   color: #853371;
   text-decoration: none;
   border-bottom: 1px solid; }
-  a:hover, a:active, .link:hover, .link:active {
+  a:hover, a:active, a:focus, .link:hover, .link:active, .link:focus {
     color: #67c4d2; }
-  a:visited, .link:visited {
-    color: black; }
 
 .linkblock {
   display: block;
@@ -193,6 +191,19 @@ a, .link {
     color: #853371; }
   .linkblock:visited {
     color: inherit; }
+
+.button {
+  display: inline-block;
+  padding: 0.7em 1.4em;
+  margin: 0 0.7em 1.4em 0;
+  background-color: #e34dbd;
+  color: white;
+  border-bottom: none;
+  border-radius: 3px;
+  transition: all .2s linear; }
+  .button:hover {
+    color: white;
+    background-color: #db22ac; }
 
 .grid {
   text-align: justify;
@@ -322,7 +333,7 @@ a, .link {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.3) 100%); }
+    background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.75) 96%); }
     @media only screen and (min-width: 30em) {
       .sidebar::after {
         z-index: -1; } }
@@ -538,9 +549,9 @@ a, .link {
       -ms-transition: all 0.1s ease-in;
       -o-transition: all 0.1s ease-in;
       transition: all 0.1s ease-in; }
-    .blocks__link:hover, .blocks__link:active {
+    .blocks__link:hover, .blocks__link:focus {
       color: transparent; }
-      .blocks__link:hover::after, .blocks__link:active::after {
+      .blocks__link:hover::after, .blocks__link:focus::after {
         -webkit-transform: translate3d(0%, -100%, 0);
         -moz-transform: translate3d(0%, -100%, 0);
         -ms-transform: translate3d(0%, -100%, 0);
@@ -577,20 +588,23 @@ a, .link {
       padding-bottom: 20%; } }
 
 .footer-block {
-  padding: 1.4em;
+  padding: 1.4em 0 0 1.4em;
   margin: 2.8em 0;
   background-color: #b0c4d8;
   border-radius: 3px;
   font-size: 80%; }
   .footer-block__header {
     color: black;
-    margin-bottom: 0.7em; }
+    padding-bottom: 0.7em; }
   .footer-block__list {
     list-style-position: inside;
     list-style-type: square;
-    padding-left: 0; }
-  .footer-block a {
-    color: black; }
+    padding-left: 0;
+    margin-bottom: 1.4em; }
+
+.footer-block__secondary {
+  background-color: #853371;
+  color: white; }
 
 .list-spinner {
   position: relative;
@@ -815,7 +829,7 @@ a, .link {
   position: absolute;
   bottom: 0.7em;
   right: 0.7em;
-  font-size: 0.8em;
+  font-size: 62.5%;
   color: #67c4d2;
   text-decoration: none;
   border: none; }

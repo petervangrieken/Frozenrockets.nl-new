@@ -1,43 +1,55 @@
 {
     "home": {
-        "title":        "Frozen Rockets",
-        "pageclass":    "page--home",
-        "sidebarclass": "sidebar--home",
-        "hassidebar": true
+        "title": "Frozen Rockets",
+        "pageclass": "page--home",
+        "sidebarclass": "sidebar--home"
     },
     "projecten": {
         "title": "Projecten van Frozen Rockets",
         "pageclass": "page--projecten",
-        "sidebarclass": "screen--projecten",
-        "hassidebar": true
+        "sidebarclass": "screen--projecten"
     },
     "project": {
         "title": "Project",
         "pageclass": "page--single-project",
-        "sidebarclass": "screen--single-project",
-        "hassidebar": true
+        "sidebarclass": "screen--single-project"
     },
     "about": {
         "title": "Over Frozen Rockets",
         "pageclass": "page--about",
-        "sidebarclass": "screen--about",
-        "hassidebar": true
+        "sidebarclass": "screen--about"
     },
     "about-detail": {
-        "title": "",
+        "title": "Over Frozen Rockets",
         "pageclass": "page--about-detail",
-        "sidebarclass": "screen--about-detail",
-        "hassidebar": true
+        "sidebarclass": "screen--about-detail"
     },
     "contact": {
         "title": "Neem contact op met Frozen Rockets",
         "pageclass": "page--contact",
-        "sidebarclass": "screen--contact",
-        "hassidebar": true
+        "sidebarclass": "screen--contact"
     },
     "credits": {
+        "title": "Foto credits",
         "pageclass": "page--credits",
-        "sidebarclass": "screen--credits",
-        "hassidebar": true
+        "sidebarclass": "screen--credits"
+    },
+    "responsivedesign": {
+        "title": " Responsive Design",
+        "pageclass": "page--about-detail",
+        "sidebarclass": "screen--about-detail",
+        "ctatitle": "Wilt u weten hoe Frozen Rockets u kan helpen met Responsive Design?"
+    },
+    "frontenddevelopment": {
+        "title": "Frontend Development",
+        "pageclass": "page--about-detail",
+        "sidebarclass": "screen--about-detail",
+        "ctatitle": "Wilt u meer weten over frontend development van Frozen Rockets?"
+    },
+    "inclusivedesign": {
+        "title": "Inclusive Design",
+        "pageclass": "page--about-detail",
+        "sidebarclass": "screen--about-detail",
+        "ctatitle": "Frozen Rockets helpt u graag met het nadenken hoe Inclusive Design voor u belangrijk kan zijn."
     }
 }
