@@ -9,16 +9,44 @@
 			Ik bel of mail zo snel mogelijk terug.
 		</p>
 
-		<iframe height="497" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://frozenrockets.wufoo.com/embed/z11rvrlq1gy9nxk/"><a href="https://frozenrockets.wufoo.com/forms/z11rvrlq1gy9nxk/">Fill out my Wufoo form!</a></iframe>
+
+		<form>
+
+			<label>
+				<span>Naam</span>
+
+				<input type="text" name="name" pattern="[a-zA-Z ]+" required>
+			</label>
+
+			<label>
+				<span>E-mailadres</span>
+
+				<input type="email" name="email" required>
+			</label>
+
+			<label>
+
+				<span>Uw bericht</span>
+
+				<textarea name="message" required></textarea>
+
+			</label>
+
+
+			<input type="submit" value="Verstuur" class="button button--primary">
+		</form>
+
+
+		<!--iframe height="497" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://frozenrockets.wufoo.com/embed/z11rvrlq1gy9nxk/"><a href="https://frozenrockets.wufoo.com/forms/z11rvrlq1gy9nxk/">Fill out my Wufoo form!</a></iframe-->
 
 
 		<section class="secondary">
-			<ul>
+			<ul class="list--unstyled">
 				<li>
-					<a href="http://nl.linkedin.com/in/petervangrieken" class="iconlink iconlink--linkedin">LinkedIn</a>
+					<a href="http://nl.linkedin.com/in/petervangrieken" class="button button--secondary iconlink iconlink--linkedin">LinkedIn</a>
 				</li>
 				<li>
-					<a href="http://twitter.com/frozenrockets" class="iconlink iconlink--twitter">Twitter</a>
+					<a href="http://twitter.com/frozenrockets" class="button button--secondary iconlink iconlink--twitter">Twitter</a>
 				</li>
 			</ul>
 		</section>

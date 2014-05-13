@@ -14,11 +14,11 @@
 		list-style-position: inside;
 		list-style-type: square;
 		padding-left: 0;
-		margin-bottom: $spacing;
+		padding-bottom: $spacing;
 	}
 
-	a {
-		//color: $color-black;
+	a:hover {
+		color: $color-black;
 	}
 }
 

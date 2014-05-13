@@ -38,13 +38,24 @@ a, .link {
 	margin: 0 $spacing-half $spacing 0;
 
 	background-color: $color-text-pink-light;
+	background-image: linear-gradient(transparent 90%,  rgba(0,0,0,.3) 92%);
 	color: $color-white;
-	border-bottom: none;
+	text-shadow: 0 0 5px 0px rgba(0,0,0,.3);
+	border: none;
 	border-radius: 3px;
 	transition: all .2s linear;
 
-	&:hover {
+	&:hover, &:focus {
 		color: $color-white;
-		background-color: darken($color-text-pink-light, 10%);
+		background-color: darken($color-text-blue-light, 10%);
 	}
 }
+
+	.button--secondary {
+		background-color: $color-text-green;
+
+		&:hover, &:focus {
+			background-color: darken($color-text-blue-light, 10%);
+		}
+	}
+
