@@ -29,8 +29,6 @@
 
 	<main>
 
-	<section>
-
 		<h1>Contact?</h1>
 
 		<p>
@@ -39,19 +37,19 @@
 		</p>
 
 
-		<form>
+		<form method="POST" action="sendMail.php">
 
 			<label>
 				<span>Naam</span>
 
-				<input type="text" name="name" pattern="^[a-zA-Z-\' ]{3,50}$" required>
+				<input type="text" name="name" id="contact-name" pattern="^[a-zA-Z-\' ]{3,50}$" required>
 				<span class="validation"></span>
 			</label>
 
 			<label>
 				<span>E-mailadres</span>
 
-				<input type="email" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,5}" required>
+				<input type="email" name="email" id="contact-email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,5}" required>
 				<span class="validation"></span>
 			</label>
 
@@ -59,20 +57,37 @@
 
 				<span>Uw bericht</span>
 
-				<textarea name="message" required></textarea>
+				<textarea name="message" id="contact-message" required></textarea>
 
 			</label>
 
 
-			<input type="submit" value="Verstuur" class="button button--secondary">
+			<input type="submit" value="Verstuur" class="button button--secondary js-submit-contact">
 		</form>
 
 
-		<!--iframe height="497" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://frozenrockets.wufoo.com/embed/z11rvrlq1gy9nxk/"><a href="https://frozenrockets.wufoo.com/forms/z11rvrlq1gy9nxk/">Fill out my Wufoo form!</a></iframe-->
-
-
-
   </main>
+
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+  $('.js-submit-contact').on('click', function(e) {
+    e.preventDefault();
+    data= $(this).closest('form').serialize();
+
+    $.post( "sendMail.php", data, function( data ) {
+      console.log(data);
+      if(data === 0) {
+        $('form').prepend('<p class="Error">Oeps! Het lijkt er op dat niet alle velden ingevuld zijn.</p>');
+      }
+      if(data === -1) {
+        $('form').prepend('<p class="Error">Oeps! Er ging iets mis aan mijn kant. Kunt u het nog eens proberen?</p>');
+      }
+    });
+
+  });
+
+</script>
 
 
 <!-- Piwik -->

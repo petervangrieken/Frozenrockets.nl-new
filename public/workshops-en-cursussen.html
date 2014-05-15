@@ -29,8 +29,9 @@
 
 	<main>
 
+	<a href="./over-peter-van-grieken" class="font-small link--unstyled">&lsaquo; Terug</a>
 	<section>
-		<h2>Workshops en cursussen</h2>
+		<h1>Workshops en cursussen</h1>
 
 		<p>
 			Dit is een greep uit de workshops en cursussen die ik in de afgelopen jaren gevolgd heb.
@@ -38,14 +39,14 @@
 
 		<ul>
 			<li>
-				<h3>Designing for Touch, door Josh Clark</h3>
+				<h2>Designing for Touch, door Josh Clark</h2>
 				<p>
 					<i lang="nl">"This workshop takes a hands-on approach to touchscreen design with practical guidelines, rich examples, exercises, and a bunch of new rules that bust the "settled" conventions of the desktop."</i>
 				</p>
 			</li>
 
 			<li>
-				<h3>Inclusive Design, door Jeroen Hulscher</h3>
+				<h2>Inclusive Design, door Jeroen Hulscher</h2>
 				<p>
 					<i>"In deze workshop kijken we onder de motorkap van het internet en zoomen we in op de gelaagdheid van onze producten. Hoe zorgen we ervoor dat onze boodschap bij iedereen overkomt zoals ze bedoeld is, ongeacht technologische of menselijke beperkingen?"</i>
 
@@ -53,14 +54,14 @@
 			</li>
 
 			<li>
-				<h3>Planning and building a big front-end, door Harry Roberts</h3>
+				<h2>Planning and building a big front-end, door Harry Roberts</h2>
 				<p>
 					<i lang="en">"In this workshop we shall look at some simple and small steps we can take to lay the foundations on which to build maintainable, scalable and big front-ends. From code organisation and structure to naming conventions, performance tips to effective usage of Sass, development paradigms to CSS techniques"</i>
 				</p>
 			</li>
 
 			<li>
-				<h3>Scrum Master in interactieve projecten, door Scrum Academy</h3>
+				<h2>Scrum Master in interactieve projecten, door Scrum Academy</h2>
 				<p>
 					<i>"Deze workshop behandelt de theorie van Scrummen. Dus wat de kern van de methode is. Welke verschillende rollen er zijn en waar de verschillende begrippen voor staan. Daarnaast is er veel aandacht voor de vaardigheden die je nodig hebt als Scrummaster en hoe je die in de praktijk moet toepassen, zoals Backlog management en het leiden van een ‘standup’."</i>
 				</p>
@@ -72,6 +73,27 @@
 
 
   </main>
+
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+  $('.js-submit-contact').on('click', function(e) {
+    e.preventDefault();
+    data= $(this).closest('form').serialize();
+
+    $.post( "sendMail.php", data, function( data ) {
+      console.log(data);
+      if(data === 0) {
+        $('form').prepend('<p class="Error">Oeps! Het lijkt er op dat niet alle velden ingevuld zijn.</p>');
+      }
+      if(data === -1) {
+        $('form').prepend('<p class="Error">Oeps! Er ging iets mis aan mijn kant. Kunt u het nog eens proberen?</p>');
+      }
+    });
+
+  });
+
+</script>
 
 
 <!-- Piwik -->

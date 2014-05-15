@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Project</title>
+	<title>Frontend design voor Karwei</title>
 
 	<link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
@@ -29,18 +29,59 @@
 
 	<main>
 
-	<h1>Frontend design voor Karwei.nl</h1>
+	<a href="./projecten" class="font-small link--unstyled">&lsaquo; Terug</a>
 
-	<p class="intro">
-		Voor Fabrique mocht ik in 2012 meewerken aan de nieuwe website voor Karwei. In een Scrumteam met Interaction- en Visual designers van Fabrique, schoof ik aan als frontend developer.
-	</p>
-	<p>
-		Samen met Charis Rooda van <a href="http://imakewebsites.nl">I Make Websites</a>, en designers en developers van Fabrique en Strawberries was ik verantwoordelijk voor de implementatie van het design van Karwei.nl.
-	</p>
+	<article>
+		<h1>Frontend design voor Karwei.nl</h1>
+
+		<p class="intro">
+			Voor Fabrique mocht ik in 2012 meewerken aan de nieuwe website voor Karwei. In een Scrumteam met Interaction- en Visual designers van Fabrique, schoof ik aan als frontend developer.
+		</p>
+
+		<figure class="image">
+			<img src="./images/projects/karwei/homepage.png" alt="Een screenshot van de nieuwe homepage van Karwei">
+			<figcaption class="font-small">De nieuwe homepage van Karwei</figcaption>
+		</figure>
+
+		<p>
+			Samen met Charis Rooda van <a href="http://imakewebsites.nl">I Make Websites</a>, en designers en developers van Fabrique en Strawberries was ik verantwoordelijk voor de implementatie van het design van Karwei.nl.
+		</p>
+
+		<div class="footer-block footer-block__secondary">
+			<p>
+				Een Scrum aanpak laat de verschillende disciplines intensief samenwerken.
+			</p>
+			<p>
+				<a href="./contact.html" class="button">Neem contact op</a>
+			</p>
+		</div>
+
+	</article>
 
 
 
   </main>
+
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+  $('.js-submit-contact').on('click', function(e) {
+    e.preventDefault();
+    data= $(this).closest('form').serialize();
+
+    $.post( "sendMail.php", data, function( data ) {
+      console.log(data);
+      if(data === 0) {
+        $('form').prepend('<p class="Error">Oeps! Het lijkt er op dat niet alle velden ingevuld zijn.</p>');
+      }
+      if(data === -1) {
+        $('form').prepend('<p class="Error">Oeps! Er ging iets mis aan mijn kant. Kunt u het nog eens proberen?</p>');
+      }
+    });
+
+  });
+
+</script>
 
 
 <!-- Piwik -->

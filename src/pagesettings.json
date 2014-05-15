@@ -14,11 +14,43 @@
         "pageclass": "page--single-project",
         "sidebarclass": "screen--single-project"
     },
-    "project-nuon": {
+    "project-nuon20": {
         "title": "Een nieuwe website voor Nuon",
         "pageclass": "page--single-project",
         "sidebarclass": "screen--single-project",
         "ctatitle": "Wilt u ook profiteren van een snellere en beter onderhoudbare website?"
+    },
+    "project-werkenvoornederland": {
+        "title": "Werken voor Nederland voor iedereen toegankelijk",
+        "pageclass": "page--single-project",
+        "sidebarclass": "screen--single-project",
+        "ctatitle": "Wilt u ook een website die voldoet aan de Webrichtlijnen?"
+    },
+    "project-karwei": {
+        "title": "Frontend design voor Karwei",
+        "pageclass": "page--single-project",
+        "sidebarclass": "screen--single-project",
+        "ctatitle": "Een Scrum aanpak laat de verschillende disciplines intensief samenwerken."
+    },
+    "project-nos": {
+        "title": "Diverse projecten voor NOS",
+        "pageclass": "page--single-project",
+        "sidebarclass": "screen--single-project"
+    },
+    "project-prinsjesdag": {
+        "title": "Prinsjesdag gaat digitaal",
+        "pageclass": "page--single-project",
+        "sidebarclass": "screen--single-project"
+    },
+    "project-sidekick": {
+        "title": "Eredivisie Live Sidekick",
+        "pageclass": "page--single-project",
+        "sidebarclass": "screen--single-project"
+    },
+    "project-diverse": {
+        "title": "Diverse projecten",
+        "pageclass": "page--single-project",
+        "sidebarclass": "screen--single-project"
     },
     "about": {
         "title": "Over Frozen Rockets",

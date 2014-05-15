@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Project</title>
+	<title>Diverse projecten</title>
 
 	<link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
@@ -29,10 +29,10 @@
 
 	<main>
 
+	<a href="./projecten" class="font-small link--unstyled">&lsaquo; Terug</a>
+
 	<h1>Diverse projecten</h1>
 
-
-	
 
 	<div class="media-object">
 		<div class="media-object__img">
@@ -80,6 +80,27 @@
 
 
   </main>
+
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+  $('.js-submit-contact').on('click', function(e) {
+    e.preventDefault();
+    data= $(this).closest('form').serialize();
+
+    $.post( "sendMail.php", data, function( data ) {
+      console.log(data);
+      if(data === 0) {
+        $('form').prepend('<p class="Error">Oeps! Het lijkt er op dat niet alle velden ingevuld zijn.</p>');
+      }
+      if(data === -1) {
+        $('form').prepend('<p class="Error">Oeps! Er ging iets mis aan mijn kant. Kunt u het nog eens proberen?</p>');
+      }
+    });
+
+  });
+
+</script>
 
 
 <!-- Piwik -->

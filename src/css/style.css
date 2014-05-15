@@ -150,6 +150,9 @@ small, .font-small {
 .text--negative {
   color: white; }
 
+.pull-right {
+  float: right; }
+
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
   margin: 0 0 0.75em 0;
@@ -181,6 +184,9 @@ a, .link {
   a:hover, a:active, a:focus, .link:hover, .link:active, .link:focus {
     color: #67c4d2; }
 
+.link--unstyled {
+  border-bottom: none; }
+
 .linkblock {
   display: block;
   color: inherit;
@@ -209,7 +215,8 @@ a, .link {
     background-color: #8eabc7; }
 
 .button--secondary {
-  background-color: #67c4d2; }
+  background-color: #67c4d2;
+  color: black; }
   .button--secondary:hover, .button--secondary:focus {
     background-color: #8eabc7; }
 
