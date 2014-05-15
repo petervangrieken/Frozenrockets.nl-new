@@ -16,7 +16,7 @@
 			max-width: 10%;
 		}
 
-		&::after {
+		&.branding::after {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -27,7 +27,7 @@
 			background-color: $color-white;
 		}
 		
-		img{
+		img {
 			display:block;
 		}
 	}

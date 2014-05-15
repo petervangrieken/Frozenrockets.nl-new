@@ -15,13 +15,15 @@
 			<label>
 				<span>Naam</span>
 
-				<input type="text" name="name" pattern="[a-zA-Z ]+" required>
+				<input type="text" name="name" pattern="^[a-zA-Z-\' ]{3,50}$" required>
+				<span class="validation"></span>
 			</label>
 
 			<label>
 				<span>E-mailadres</span>
 
-				<input type="email" name="email" required>
+				<input type="email" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,5}" required>
+				<span class="validation"></span>
 			</label>
 
 			<label>
@@ -33,23 +35,12 @@
 			</label>
 
 
-			<input type="submit" value="Verstuur" class="button button--primary">
+			<input type="submit" value="Verstuur" class="button button--secondary">
 		</form>
 
 
 		<!--iframe height="497" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://frozenrockets.wufoo.com/embed/z11rvrlq1gy9nxk/"><a href="https://frozenrockets.wufoo.com/forms/z11rvrlq1gy9nxk/">Fill out my Wufoo form!</a></iframe-->
 
-
-		<section class="secondary">
-			<ul class="list--unstyled">
-				<li>
-					<a href="http://nl.linkedin.com/in/petervangrieken" class="button button--secondary iconlink iconlink--linkedin">LinkedIn</a>
-				</li>
-				<li>
-					<a href="http://twitter.com/frozenrockets" class="button button--secondary iconlink iconlink--twitter">Twitter</a>
-				</li>
-			</ul>
-		</section>
 
 
 <!--(bake html_includes/footer.html)-->

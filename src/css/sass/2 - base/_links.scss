@@ -44,6 +44,7 @@ a, .link {
 	border: none;
 	border-radius: 3px;
 	transition: all .2s linear;
+	cursor: pointer;
 
 	&:hover, &:focus {
 		color: $color-white;
