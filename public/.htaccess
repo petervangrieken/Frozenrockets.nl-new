@@ -9,6 +9,7 @@ AddDefaultCharset UTF-8
 #for css, js
 AddType 'text/css; charset=UTF-8' css
 AddType 'application/x-javascript; charset=UTF-8' js
+AddType application/x-httpd-php .html
 
 # cache images/pdf docs for 100 days
 <FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif)$">

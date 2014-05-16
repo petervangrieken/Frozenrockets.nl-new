@@ -75,27 +75,6 @@
   </main>
 
 
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script>
-  $('.js-submit-contact').on('click', function(e) {
-    e.preventDefault();
-    data= $(this).closest('form').serialize();
-
-    $.post( "sendMail.php", data, function( data ) {
-      console.log(data);
-      if(data === 0) {
-        $('form').prepend('<p class="Error">Oeps! Het lijkt er op dat niet alle velden ingevuld zijn.</p>');
-      }
-      if(data === -1) {
-        $('form').prepend('<p class="Error">Oeps! Er ging iets mis aan mijn kant. Kunt u het nog eens proberen?</p>');
-      }
-    });
-
-  });
-
-</script>
-
-
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];

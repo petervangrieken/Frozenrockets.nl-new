@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 function cleanInput($input) {
 	$search = array(
 		'@<script[^>]*?>.*?</script>@si',   // Strip out javascript
@@ -28,19 +26,6 @@ if(empty($_POST)) {
 	$status= -1;
 	$preventSend= false;
 
-	if (isset($_SESSION['lastsend'])) {
-		echo time();
-		echo "-".$_SESSION['lastsend'];
-		if(time() - $_SESSION['lastsend'] < 60) {
-			echo " : Yes";
-			$status= -2;
-			$preventSend= true;
-		} else {
-			unset($_SESSION['lastsend']);
-		}
-	}
-
-
 	$name= cleanInput($_POST['name']);
 	$email= cleanInput($_POST['email']);
 	$message= cleanInput($_POST['message']);
@@ -60,8 +45,6 @@ if(empty($_POST)) {
 
 
 	if(!$preventSend) {
-		$_SESSION['lastsend']= time();
-
 		$mailBody= "Van: ".$name."\n E-mail: ".$email."\n Bericht: \n".$message;
 
 		if( mail('hi@frozenrockets.nl', 'Mail van contactformulier', $mailBody )) {
@@ -72,26 +55,55 @@ if(empty($_POST)) {
 	}
 }
 ?>
-<!--(bake html_includes/head.html _section="contact")-->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Neem contact op met Frozen Rockets</title>
+
+	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="page page--contact">
+
+
+	<div class="sidebar screen--contact">
+
+		<a href="./index" class="borderless"><img class="logo" src="./images/fr-logo.svg" alt="Frozen Rockets"></a>
+
+		<ol class="mainnav">
+			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
+			<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
+			<li class="mainnav__item"><a href="./contact">Contact</a></li>
+		</ol>
+	</div>
+
+	<main>
+
 
 		<h1>Contact?</h1>
 
 
-		<form method="POST" action="contact">
+		<form method="POST" action="confirmation" novalidate>
 
 <?php
       if ($status === 0) {
         echo '<p class="status error">Oeps! Het lijkt er op dat niet alle velden ingevuld zijn.</p>';
-      } elseif ($status === -1) {
+      }elseif ($status === -1) {
         echo '<p class="status error">Oeps! Er ging iets mis aan mijn kant. Kunt u het nog eens proberen?</p>';
-      } elseif ($status === -2) {
-        echo '<p class="status error">Je stuurt 2 berichten in korte tijd (binnen 1 minuut), om spam tegen te gaan mag dat helaas niet.</p>';
       } elseif ($status === 1) {
-      	echo '<p class="status success">Je bericht is verzonden. Ik zal zo snel mogelijk contact opnemen.</p>';
+      	echo '<p class="status success">Je bericht is verzonden.</p>';
       	$hideForm= true;
       }
 
       if(!$hideForm) {
+
 ?>
 			<p>
 				De snelste manier om contact op te nemen, is door middel van onderstaand formulier.
@@ -129,4 +141,26 @@ if(empty($_POST)) {
 ?>
 		</form>
 
-<!--(bake html_includes/footer.html)-->
+
+
+  </main>
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://frozenrockets.nl/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+
+</script>
+<noscript><p><img src="http://frozenrockets.nl/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</body>
+</html>

@@ -14,7 +14,6 @@ label {
 	left: 0;
 	bottom: 0;
 	padding: $spacing / 4;
-
 }
 
 input, textarea {
@@ -47,16 +46,12 @@ input, textarea {
 		}
 	}
 
-
-
 	&:focus {
 		color: $color-text-pink-dark;
 		border: 1px solid currentColor;
 		box-shadow: 0 0 4px rgba($color-text-pink-dark, .8);
-
 	}
 }
-
 
 textarea {
 	min-height: $spacing * 8;
@@ -69,12 +64,39 @@ textarea {
 	&:focus {
 		padding-left: $spacing / 4;
 	}
-
-
 }
 
 input[type="submit"] {
 	font-family: $font-family;
 	font-size: $font-size-base;
 	font-weight: $font-weight-base;
+}
+
+
+form {
+	.status {
+		padding: $spacing-half;
+
+		&.error {
+			color: $color-white;
+			background-color: red;
+			border-radius: 3px;
+
+			&::before {
+				content: '⨉ ';
+			}
+		}
+
+		&.success {
+			padding: $spacing;
+			color: $color-black;
+			background-color: $color-text-green;
+			border-radius: 3px;
+
+			&::before {
+				content: '✓ ';
+			}
+		}
+	}
+
 }

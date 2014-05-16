@@ -297,6 +297,22 @@ input[type="submit"] {
   font-size: 1.25em;
   font-weight: 300; }
 
+form .status {
+  padding: 0.75em; }
+  form .status.error {
+    color: white;
+    background-color: red;
+    border-radius: 3px; }
+    form .status.error::before {
+      content: '⨉ '; }
+  form .status.success {
+    padding: 1.5em;
+    color: black;
+    background-color: #67c4d2;
+    border-radius: 3px; }
+    form .status.success::before {
+      content: '✓ '; }
+
 .page {
   padding: 5%;
   background-color: white; }
