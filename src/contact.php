@@ -77,7 +77,7 @@ if(empty($_POST)) {
 		<h1>Contact?</h1>
 
 
-		<form method="POST" action="contact">
+		<form method="POST" action="contact.php">
 
 <?php
       if ($status === 0) {

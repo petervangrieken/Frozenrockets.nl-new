@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 function cleanInput($input) {
 	$search = array(
 		'@<script[^>]*?>.*?</script>@si',   // Strip out javascript
@@ -26,6 +28,16 @@ if(empty($_POST)) {
 	$status= -1;
 	$preventSend= false;
 
+	if (isset($_SESSION['lastsend'])) {
+		if(time() - $_SESSION['lastsend'] < 60) {
+			$status= -2;
+			$preventSend= true;
+		} else {
+			unset($_SESSION['lastsend']);
+		}
+	}
+
+
 	$name= cleanInput($_POST['name']);
 	$email= cleanInput($_POST['email']);
 	$message= cleanInput($_POST['message']);
@@ -45,6 +57,8 @@ if(empty($_POST)) {
 
 
 	if(!$preventSend) {
+		$_SESSION['lastsend']= time();
+
 		$mailBody= "Van: ".$name."\n E-mail: ".$email."\n Bericht: \n".$message;
 
 		if( mail('hi@frozenrockets.nl', 'Mail van contactformulier', $mailBody )) {
@@ -86,24 +100,24 @@ if(empty($_POST)) {
 
 	<main>
 
-
 		<h1>Contact?</h1>
 
 
-		<form method="POST" action="confirmation" novalidate>
+		<form method="POST" action="contact.php">
 
 <?php
       if ($status === 0) {
         echo '<p class="status error">Oeps! Het lijkt er op dat niet alle velden ingevuld zijn.</p>';
-      }elseif ($status === -1) {
+      } elseif ($status === -1) {
         echo '<p class="status error">Oeps! Er ging iets mis aan mijn kant. Kunt u het nog eens proberen?</p>';
+      } elseif ($status === -2) {
+        echo '<p class="status error">Je stuurt 2 berichten in korte tijd (binnen 1 minuut), om spam tegen te gaan mag dat helaas niet.</p>';
       } elseif ($status === 1) {
-      	echo '<p class="status success">Je bericht is verzonden.</p>';
+      	echo '<p class="status success">Je bericht is verzonden. Ik zal zo snel mogelijk contact opnemen.</p>';
       	$hideForm= true;
       }
 
       if(!$hideForm) {
-
 ?>
 			<p>
 				De snelste manier om contact op te nemen, is door middel van onderstaand formulier.
@@ -140,8 +154,6 @@ if(empty($_POST)) {
 		}
 ?>
 		</form>
-
-
 
   </main>
 
