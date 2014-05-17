@@ -7,6 +7,11 @@
 	border-bottom: 1px solid $color-text-blue-light;
 	padding: $spacing;
 
+	img {
+		box-shadow: 0 0 3em rgba($color-black, 0.2);
+		margin-bottom: $spacing-half;
+	}
+
 	@media only screen and (min-width: $lap-wide) { 
 		img {
 			max-width: 75%;

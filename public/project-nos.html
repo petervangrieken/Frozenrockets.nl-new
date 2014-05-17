@@ -8,7 +8,7 @@
 
 	<title>Diverse projecten voor NOS</title>
 
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?1.01">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -18,7 +18,7 @@
 
 	<div class="sidebar screen--single-project">
 
-		<a href="./index" class="borderless"><img class="logo" src="./images/fr-logo.svg" alt="Frozen Rockets"></a>
+		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
 		<ol class="mainnav">
 			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
@@ -35,7 +35,7 @@
 		<h1>Diverse projecten voor NOS</h1>
 
 		<p class="intro">
-			Voor NOS heb ik verschillende projecten mogen doen, onder andere het eerste Tweede Scherm WK Voetbal 2010, het Tweede Scherm Tour de France en <wbr>NOS op 3.
+			Voor NOS heb ik verschillende projecten mogen doen, onder andere NOS op 3, het eerste Tweede Scherm WK Voetbal 2010, het Tweede Scherm Tour de France.
 		</p>
 
 
@@ -50,10 +50,10 @@
 
 		<h2>Tweede Scherm WK Voetbal 2010</h2>
 		<p>
-			In 2010, toen de iPad ongeveer 2 maanden uit was in de VS, besloot de NOS als eerste in Nederland een experiment aan te gaan, een <i>second screen</i> voor het WK Voetbal wat in dat jaar gehouden werd.
+			In 2010, toen de iPad ongeveer 2 maanden uit was in de VS, besloot de NOS als eerste in Nederland een experiment aan te gaan, een <i lang="en">second screen</i> voor het WK Voetbal wat in dat jaar gehouden werd.
 		</p>
 		<p>
-			Het eerste tweede scherm in Nederland (<a href="http://tweedescherm.nl">http://tweedescherm.nl</a> werd er voor vastgelegd) werd als webapp gebouwd met een design wat geoptimaliseerd werd voor het gebruik op touch-devices. Hiermee was de app niet alleen met de iPad te bekijken, maar iedereen met een browser kon gebruik maken van <i>het Tweede Scherm</i> waarop statistieken
+			Het eerste <i>Tweede Scherm</i> in Nederland (<a href="http://tweedescherm.nl">http://tweedescherm.nl</a> werd er voor vastgelegd) werd als webapp gebouwd met een design wat geoptimaliseerd werd voor het gebruik op touch-devices. Hiermee was de app niet alleen met de iPad te bekijken, maar iedereen met een browser kon gebruik maken van <i>het Tweede Scherm</i> waarop statistieken
 			te zien waren bij de wedstrijden die op TV (het eerste scherm) werden uitgezonden.
 		</p>
 		<p>
@@ -74,6 +74,25 @@
 
   </main>
 
+<script type="text/javascript">
+  var htmlElement= document.getElementsByTagName('html')[0];  
+  var isSafari = /constructor/i.test(window.HTMLElement);
+  
+  if(isSafari) {
+    if (htmlElement.classList) {
+      htmlElement.classList.add('is-safari');
+    } else {
+      htmlElement.className += ' is-safari';
+    }
+  }
+
+  if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+    mainLogo= document.getElementById("main-logo-image");
+    mainLogo.setAttribute('src', './images/fr-logo.svg');
+  }
+
+
+</script>
 
 <!-- Piwik -->
 <script type="text/javascript">

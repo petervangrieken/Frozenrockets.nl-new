@@ -8,7 +8,7 @@
 
 	<title> Responsive Design</title>
 
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?1.01">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -18,7 +18,7 @@
 
 	<div class="sidebar screen--about-detail-1">
 
-		<a href="./index" class="borderless"><img class="logo" src="./images/fr-logo.svg" alt="Frozen Rockets"></a>
+		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
 		<ol class="mainnav">
 			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
@@ -41,7 +41,7 @@
 
 		<p>
 			Bij responsive design wordt in de eerste plaats vaak gedacht aan <abbr>CSS</abbr> en <i>media queries</i>, maar begint bij een goed proces waarin content en nadenken over prioriteiten centraal staan.
-			Een <i>mobile first</i> aanpak kan hier bij helpen. Door vanaf het begin uit te gaan van kleine schermen en van daaruit uit te breiden, worden alle partijen gedwongen worden om keuzes te maken. Zowel in de ontwerpfase bij het bepalen van de content en functionaliteit, als bij de implementatie om de <abbr>CSS</abbr> compact en goed onderhoudbaar te houden.
+			Een <i>mobile first</i> aanpak kan hier bij helpen. Door vanaf het begin uit te gaan van kleine schermen en van daaruit uit te breiden, worden alle partijen gedwongen om keuzes te maken. Zowel in de ontwerpfase bij het bepalen van de content en functionaliteit, als bij de implementatie om de <abbr>CSS</abbr> compact en goed onderhoudbaar te houden.
 		</p>
 
 		<p>
@@ -62,6 +62,25 @@
 
   </main>
 
+<script type="text/javascript">
+  var htmlElement= document.getElementsByTagName('html')[0];  
+  var isSafari = /constructor/i.test(window.HTMLElement);
+  
+  if(isSafari) {
+    if (htmlElement.classList) {
+      htmlElement.classList.add('is-safari');
+    } else {
+      htmlElement.className += ' is-safari';
+    }
+  }
+
+  if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+    mainLogo= document.getElementById("main-logo-image");
+    mainLogo.setAttribute('src', './images/fr-logo.svg');
+  }
+
+
+</script>
 
 <!-- Piwik -->
 <script type="text/javascript">

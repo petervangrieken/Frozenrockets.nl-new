@@ -21,6 +21,7 @@
 		border-bottom: 1px solid $color-text-green;
 		font-size: $font-size-small;
 
+
 		//@include vendor(transition, all .5s linear);
 
 		a {
@@ -36,6 +37,7 @@
 			color: $color-text-green;
 			text-decoration: none;
 			border:none;
+
 
 			@include vendor(transition, all .2s linear);
 

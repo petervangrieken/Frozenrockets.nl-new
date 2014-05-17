@@ -8,7 +8,7 @@
 
 	<title>Diverse projecten</title>
 
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?1.01">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -18,7 +18,7 @@
 
 	<div class="sidebar screen--single-project">
 
-		<a href="./index" class="borderless"><img class="logo" src="./images/fr-logo.svg" alt="Frozen Rockets"></a>
+		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
 		<ol class="mainnav">
 			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
@@ -43,7 +43,7 @@
 			<h2>Omroep Brabant</h2>
 			
 			<p>
-				Met Usevine heb ik verschillende usability-onderzoeken gedaan voor Omroep Brabant. Naast expert reviews op basis van onze eigen expertise, voerden we tests uit met een testpanel. Op basis van deze onderzoeken en onze aanbevelingen zijn belangrijke wijzigingen doorgevoerd in het (interactie)ontwerp van <a href="http://omroepbrabant.nl">omroepbrabant.nl</a>.
+				Met Usevine heb ik verschillende usability-onderzoeken gedaan voor Omroep Brabant. Naast <i lang="en">expert reviews</i> op basis van onze eigen expertise, voerden we tests uit met een testpanel. Op basis van deze onderzoeken en onze aanbevelingen zijn belangrijke wijzigingen doorgevoerd in het (interactie)ontwerp van <a href="http://omroepbrabant.nl">Omroepbrabant.nl</a>.
 			</p>
 		</div>
 	</div>
@@ -71,7 +71,7 @@
 			<h2>P1</h2>
 			
 			<p>
-				In samenwerking met creatief collectief <a href="">Goesting</a>, verzorgde ik de frontend voor <a href="http://p1.nl">parkeerbedrijf P1</a>. De nadruk in dit project lag op cross-browser compatibility.
+				In samenwerking met creatief collectief <a href="http://goesting.com">Goesting</a>, verzorgde ik de frontend voor <a href="http://p1.nl">parkeerbedrijf P1</a>. De nadruk in dit project lag op <i>cross-browser compatibility</i>.
 			</p>
 		</div>
 	</div>
@@ -81,6 +81,25 @@
 
   </main>
 
+<script type="text/javascript">
+  var htmlElement= document.getElementsByTagName('html')[0];  
+  var isSafari = /constructor/i.test(window.HTMLElement);
+  
+  if(isSafari) {
+    if (htmlElement.classList) {
+      htmlElement.classList.add('is-safari');
+    } else {
+      htmlElement.className += ' is-safari';
+    }
+  }
+
+  if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+    mainLogo= document.getElementById("main-logo-image");
+    mainLogo.setAttribute('src', './images/fr-logo.svg');
+  }
+
+
+</script>
 
 <!-- Piwik -->
 <script type="text/javascript">

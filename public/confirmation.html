@@ -65,7 +65,7 @@ if(empty($_POST)) {
 
 	<title>Neem contact op met Frozen Rockets</title>
 
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?1.01">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -75,7 +75,7 @@ if(empty($_POST)) {
 
 	<div class="sidebar screen--contact">
 
-		<a href="./index" class="borderless"><img class="logo" src="./images/fr-logo.svg" alt="Frozen Rockets"></a>
+		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
 		<ol class="mainnav">
 			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
@@ -145,6 +145,25 @@ if(empty($_POST)) {
 
   </main>
 
+<script type="text/javascript">
+  var htmlElement= document.getElementsByTagName('html')[0];  
+  var isSafari = /constructor/i.test(window.HTMLElement);
+  
+  if(isSafari) {
+    if (htmlElement.classList) {
+      htmlElement.classList.add('is-safari');
+    } else {
+      htmlElement.className += ' is-safari';
+    }
+  }
+
+  if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+    mainLogo= document.getElementById("main-logo-image");
+    mainLogo.setAttribute('src', './images/fr-logo.svg');
+  }
+
+
+</script>
 
 <!-- Piwik -->
 <script type="text/javascript">

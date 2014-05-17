@@ -8,7 +8,7 @@
 
 	<title>Inclusive Design</title>
 
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?1.01">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -18,7 +18,7 @@
 
 	<div class="sidebar screen--about-detail-2">
 
-		<a href="./index" class="borderless"><img class="logo" src="./images/fr-logo.svg" alt="Frozen Rockets"></a>
+		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
 		<ol class="mainnav">
 			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
@@ -35,7 +35,7 @@
 		<h1>Inclusive design</h1>
 
 		<p class="intro">
-			E&eacute;n van de sterke punten van het web is de mogelijkheid om iets te maken wat door een zo groot mogelijk publiek bekeken of gebruikt kan worden. Mijn uitgangspunt is dan ook dat een website toegankelijk moet voor een zo groot mogelijk publiek.
+			E&eacute;n van de sterke punten van het web is de mogelijkheid om iets te maken wat door een zo groot mogelijk publiek bekeken of gebruikt kan worden. Mijn uitgangspunt is dan ook dat een website toegankelijk moet zijn voor een zo groot mogelijk publiek.
 		</p>
 
 		<p>
@@ -68,6 +68,25 @@
 
   </main>
 
+<script type="text/javascript">
+  var htmlElement= document.getElementsByTagName('html')[0];  
+  var isSafari = /constructor/i.test(window.HTMLElement);
+  
+  if(isSafari) {
+    if (htmlElement.classList) {
+      htmlElement.classList.add('is-safari');
+    } else {
+      htmlElement.className += ' is-safari';
+    }
+  }
+
+  if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+    mainLogo= document.getElementById("main-logo-image");
+    mainLogo.setAttribute('src', './images/fr-logo.svg');
+  }
+
+
+</script>
 
 <!-- Piwik -->
 <script type="text/javascript">

@@ -51,7 +51,7 @@
   margin: 0; }
 
 html {
-  font-size: 87.5%;
+  font-size: 100%;
   background-color: white;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
@@ -133,7 +133,7 @@ hr {
 body {
   font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 1.5;
   color: black;
   text-rendering: optimizeLegibility; }
@@ -161,7 +161,7 @@ h1, h2, h3, h4,
   color: #853371; }
 
 p + h1, p + h2, p + h3, p + h4 {
-  margin-top: 3em; }
+  margin-top: 1.5em; }
 
 h1, .h1 {
   font-size: 2.1em;
@@ -178,9 +178,11 @@ h4, .h4 {
   font-size: 1.1; }
 
 a, .link {
-  color: #853371;
+  color: #e34dbd;
   text-decoration: none;
   border-bottom: 1px solid; }
+  a[href^="http"], .link[href^="http"] {
+    color: #853371; }
   a:hover, a:active, a:focus, .link:hover, .link:active, .link:focus {
     color: #67c4d2; }
 
@@ -209,7 +211,8 @@ a, .link {
   border: none;
   border-radius: 3px;
   transition: all .2s linear;
-  cursor: pointer; }
+  cursor: pointer;
+  width: auto; }
   .button:hover, .button:focus {
     color: white;
     background-color: #8eabc7; }
@@ -228,21 +231,22 @@ a, .link {
     display: inline-block;
     width: 100%; }
 
-.grid__column {
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
-  text-align-last: left; }
-  .grid__column--1of2 {
-    width: 48%; }
-  .grid__column--1of3 {
-    width: 30%; }
-  .grid__column--2of3 {
-    width: 65%; }
-  .grid__column--1of4 {
-    width: 24%; }
-  .grid__column--3of4 {
-    width: 74%; }
+@media only screen and (min-width: 50em) {
+  .grid__column {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    text-align-last: left; }
+    .grid__column--1of2 {
+      width: 48%; }
+    .grid__column--1of3 {
+      width: 30%; }
+    .grid__column--2of3 {
+      width: 65%; }
+    .grid__column--1of4 {
+      width: 24%; }
+    .grid__column--3of4 {
+      width: 74%; } }
 
 label {
   display: block;
@@ -264,7 +268,7 @@ input, textarea {
   margin-bottom: 1.5em;
   padding: 0.375em;
   width: 100%;
-  font-size: 1.25em;
+  font-size: 1em;
   font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: black;
@@ -294,7 +298,7 @@ textarea {
 
 input[type="submit"] {
   font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 300; }
 
 form .status {
@@ -344,6 +348,9 @@ form .status {
   border-top: 1px solid #b0c4d8;
   border-bottom: 1px solid #b0c4d8;
   padding: 1.5em; }
+  .image img {
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.75em; }
   @media only screen and (min-width: 50em) {
     .image img {
       max-width: 75%; } }
@@ -426,15 +433,22 @@ form .status {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.75) 96%); }
+    background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 96%); }
     @media only screen and (min-width: 30em) {
       .sidebar::after {
+        background-image: linear-gradient(transparent 0%, transparent 50%, rgba(0, 0, 0, 0.5) 96%);
         z-index: -1; } }
 
 .sidebar--home {
   background-color: transparent; }
   .sidebar--home::after {
-    background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.75) 96%); }
+    background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 96%); }
+    @media only screen and (min-width: 30em) {
+      .sidebar--home::after {
+        background-image: linear-gradient(transparent 0%, transparent 30%, rgba(0, 0, 0, 0.75) 96%); } }
+    @media only screen and (min-width: 50em) {
+      .sidebar--home::after {
+        background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.75) 96%); } }
 
 @media only screen and (min-width: 30em) {
   .sidebar--wide {
@@ -585,7 +599,9 @@ form .status {
 
 .logo {
   position: relative;
-  z-index: 5; }
+  top: 0;
+  z-index: 5;
+  display: block; }
 
 .blocks {
   margin: 0 -4% 5% 0;
@@ -708,18 +724,17 @@ form .status {
   width: 100%;
   line-height: 4.5em;
   overflow: hidden;
-  height: 4.5em; }
+  height: 4.5em;
+  background-color: rgba(133, 51, 113, 0.35); }
   @media screen and (min-width: 50em) {
     .list-spinner {
       width: 75%;
-      overflow: hidden;
-      height: 4.5em; } }
+      height: 3em; } }
   .list-spinner ul {
     margin: 0;
     padding: 0;
     list-style: none;
     line-height: 4.5em;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     -webkit-animation: spinner-large 15s steps(1) infinite;
     -moz-animation: spinner-large 15s steps(1) infinite;
     -ms-animation: spinner-large 15s steps(1) infinite;
@@ -739,19 +754,21 @@ form .status {
       -o-animation-play-state: paused;
       animation-play-state: paused; }
   .list-spinner li {
+    display: block;
     position: relative;
+    overflow: hidden;
     width: 100%;
-    padding: 0 4.5em 0 0.75em;
-    line-height: 1.5em;
-    color: white;
-    background-color: rgba(133, 51, 113, 0.35);
-    margin-bottom: 3em;
     height: 6em;
-    margin-bottom: 0.75em; }
+    margin-bottom: 0.75em;
+    padding: 2px 4.5em 2px 0.75em;
+    line-height: 1.5em;
+    color: white; }
     @media screen and (min-width: 50em) {
       .list-spinner li {
         height: 3em;
-        margin-bottom: 1.5em; } }
+        margin-bottom: 1.5em; }
+        .is-safari .list-spinner li {
+          margin-bottom: 1.515em; } }
     .list-spinner li::before, .list-spinner li::after {
       content: '';
       position: absolute;
@@ -909,15 +926,26 @@ form .status {
   @media only screen and (min-width: 50em) {
     .media-object__img {
       max-width: 10%; } }
-  .media-object__img.branding::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 9;
-    height: 50%;
-    width: 50%;
-    background-color: white; }
+  .media-object__img.branding {
+    width: 3em;
+    height: 3em;
+    position: relative; }
+    .media-object__img.branding::before {
+      content: '';
+      background-color: #b0c4d8;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 50%; }
+    .media-object__img.branding::after {
+      content: '';
+      background-color: #b0c4d8;
+      position: absolute;
+      right: 0;
+      width: 50%;
+      height: 50%;
+      top: 50%; }
   .media-object__img img {
     display: block; }
 
@@ -933,7 +961,7 @@ form .status {
     .credits-link {
       position: fixed; } }
   .credits-link:hover, .credits-link:focus, .credits-link:visited {
-    color: white; }
+    color: #67c4d2; }
 
 .iconlink {
   display: inline-block; }
@@ -955,55 +983,64 @@ form .status {
   background-image: url("./../images/screens/baustelle_blau.jpg");
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .screen--projecten {
   background-image: url("./../images/screens/launch-2.jpg");
   background-repeat: no-repeat;
   background-position: 60% 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .screen--single-project {
   background-image: url("./../images/screens/horizon.jpg");
   background-repeat: no-repeat;
   background-position: 60% 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .screen--about {
   background-image: url("./../images/screens/lander.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .screen--about-detail {
   background-image: url("./../images/screens/crab-nebula.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .screen--about-detail-1 {
   background-image: url("./../images/screens/starsinthesky.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .screen--about-detail-2 {
   background-image: url("./../images/screens/nebula.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .screen--contact {
   background-image: url("./../images/screens/capsule.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .screen--credits {
   background-image: url("./../images/screens/clouds.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-color: black; }
 
 .mainnav {
   position: relative;

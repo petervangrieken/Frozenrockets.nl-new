@@ -11,16 +11,18 @@
 }
 
 .grid__column {
-	display: inline-block;
-	vertical-align: top;
-	text-align: left;
-	text-align-last: left;
+	@media only screen and (min-width: $lap-wide) { 
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		text-align-last: left;
 
-	&--1of2 { width: 48%; }
+		&--1of2 { width: 48%; }
 
-	&--1of3 { width: 30%; }
-	&--2of3 { width: 65%; }
+		&--1of3 { width: 30%; }
+		&--2of3 { width: 65%; }
 
-	&--1of4 { width: 24%; }
-	&--3of4 { width: 74%; }
+		&--1of4 { width: 24%; }
+		&--3of4 { width: 74%; }
+	}
 }
