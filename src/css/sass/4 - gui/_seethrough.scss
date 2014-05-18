@@ -4,16 +4,12 @@
 	background-repeat: no-repeat;
 	background-size: cover;	
 
-	&--moon {
-		background-image: url(./../images/screens/238403main_moon.jpg)
-	}
-
-	&--launch {
-		background-image: url(./../images/screens/above-clouds.jpg)
-	}
-
 	&--cloud {
-		background-image: url(./../images/screens/Ngc1999.jpg)
+		background-image: url('./../images/screens/above-clouds.jpg');
+
+		@media only screen and (min-width: $lap) {
+			background-image: url('./../images/screens/above-clouds.jpg');
+		}
 	}
 	
 }

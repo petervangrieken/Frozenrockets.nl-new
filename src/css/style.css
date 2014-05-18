@@ -361,7 +361,6 @@ form .status {
   width: 20%;
   float: left;
   margin-right: 1em;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 3%; }
 
 .videowrapper {
@@ -934,24 +933,26 @@ form .status {
     width: 3em;
     height: 3em;
     position: relative; }
-    .media-object__img.branding::before {
+    .media-object__img.branding::before, .media-object__img.branding::after {
       content: '';
       background-color: #b0c4d8;
       position: absolute;
       right: 0;
+      transition: all .3s linear; }
+    .media-object__img.branding::before {
       top: 0;
       width: 100%;
       height: 50%; }
     .media-object__img.branding::after {
-      content: '';
-      background-color: #b0c4d8;
-      position: absolute;
-      right: 0;
+      top: 50%;
       width: 50%;
-      height: 50%;
-      top: 50%; }
+      height: 50%; }
   .media-object__img img {
     display: block; }
+
+.media-object:hover .branding::before,
+.media-object:hover .branding::after {
+  background-color: #853371; }
 
 .credits-link {
   position: absolute;
@@ -984,67 +985,94 @@ form .status {
  * Pull in all our GUI components.
  */
 .screen--home, .page--home {
-  background-image: url("./../images/screens/baustelle_blau.jpg");
+  background-image: url("./../images/screens/baustelle_blau-small.jpg");
   background-repeat: no-repeat;
   background-position: 100% 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--home, .page--home {
+      background-image: url("./../images/screens/baustelle_blau.jpg"); } }
 
 .screen--projecten {
-  background-image: url("./../images/screens/launch-2.jpg");
+  background-image: url("./../images/screens/launch-2-small.jpg");
   background-repeat: no-repeat;
   background-position: 60% 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--projecten {
+      background-image: url("./../images/screens/launch-2.jpg"); } }
 
 .screen--single-project {
-  background-image: url("./../images/screens/horizon.jpg");
+  background-image: url("./../images/screens/horizon-small.jpg");
   background-repeat: no-repeat;
   background-position: 60% 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--single-project {
+      background-image: url("./../images/screens/horizon.jpg"); } }
 
 .screen--about {
-  background-image: url("./../images/screens/lander.jpg");
+  background-image: url("./../images/screens/lander-small-small.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--about {
+      background-image: url("./../images/screens/lander.jpg"); } }
 
 .screen--about-detail {
-  background-image: url("./../images/screens/crab-nebula.jpg");
+  background-image: url("./../images/screens/crab-nebula-small.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--about-detail {
+      background-image: url("./../images/screens/crab-nebula.jpg"); } }
 
 .screen--about-detail-1 {
-  background-image: url("./../images/screens/starsinthesky.jpg");
+  background-image: url("./../images/screens/starsinthesky-small.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--about-detail-1 {
+      background-image: url("./../images/screens/starsinthesky.jpg"); } }
 
 .screen--about-detail-2 {
-  background-image: url("./../images/screens/nebula.jpg");
+  background-image: url("./../images/screens/nebula-small.jpg");
   background-repeat: no-repeat;
   background-position: 30% 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--about-detail-2 {
+      background-image: url("./../images/screens/nebula.jpg"); } }
 
 .screen--contact {
-  background-image: url("./../images/screens/capsule.jpg");
+  background-image: url("./../images/screens/capsule-small.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--contact {
+      background-image: url("./../images/screens/capsule.jpg"); } }
 
 .screen--credits {
-  background-image: url("./../images/screens/clouds.jpg");
+  background-image: url("./../images/screens/clouds-small.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
   background-color: black; }
+  @media only screen and (min-width: 30em) {
+    .screen--credits {
+      background-image: url("./../images/screens/clouds.jpg"); } }
 
 .mainnav {
   position: relative;
@@ -1127,12 +1155,11 @@ form .status {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover; }
-  .seethrough--moon {
-    background-image: url(./../images/screens/238403main_moon.jpg); }
-  .seethrough--launch {
-    background-image: url(./../images/screens/above-clouds.jpg); }
   .seethrough--cloud {
-    background-image: url(./../images/screens/Ngc1999.jpg); }
+    background-image: url("./../images/screens/above-clouds.jpg"); }
+    @media only screen and (min-width: 30em) {
+      .seethrough--cloud {
+        background-image: url("./../images/screens/above-clouds.jpg"); } }
 
 /*------------------------------------*\
     #TRUMPS
