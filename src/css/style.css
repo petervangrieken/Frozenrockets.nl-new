@@ -220,6 +220,8 @@ a, .link {
 .button--secondary {
   background-color: #67c4d2;
   color: black; }
+  .button--secondary[href^="http"] {
+    color: black; }
   .button--secondary:hover, .button--secondary:focus {
     background-color: #8eabc7; }
 
@@ -358,7 +360,9 @@ form .status {
 .image--floating {
   width: 20%;
   float: left;
-  margin-right: 1em; }
+  margin-right: 1em;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  border-radius: 3%; }
 
 .videowrapper {
   width: 100%;

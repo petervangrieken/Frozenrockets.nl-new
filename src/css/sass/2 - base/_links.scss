@@ -63,6 +63,10 @@ a, .link {
 	.button--secondary {
 		background-color: $color-text-green;
 		color: $color-black;
+
+		&[href^="http"] {
+			color: $color-black;
+		}
 		
 		&:hover, &:focus {
 			background-color: darken($color-text-blue-light, 10%);

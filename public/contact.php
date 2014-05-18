@@ -113,9 +113,9 @@ if(empty($_POST)) {
 	      } elseif ($status === -1) {
 	        echo '<p class="status error">Oeps! Er ging iets mis aan mijn kant. Kunt u het nog eens proberen?</p>';
 	      } elseif ($status === -2) {
-	        echo '<p class="status error">Je stuurt 2 berichten in korte tijd (binnen 1 minuut), om spam tegen te gaan mag dat helaas niet.</p>';
+	        echo '<p class="status error">U stuurt 2 berichten in korte tijd (binnen 1 minuut), om spam tegen te gaan mag dat helaas niet.</p>';
 	      } elseif ($status === 1) {
-	      	echo '<p class="status success">Je bericht is verzonden. Ik zal zo snel mogelijk contact opnemen.</p>';
+	      	echo '<p class="status success">Uw bericht is verzonden. Ik zal zo snel mogelijk contact opnemen.</p>';
 	      	$hideForm= true;
 	      }
 
