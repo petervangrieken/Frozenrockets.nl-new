@@ -112,3 +112,12 @@
 	background-size: cover;
 	background-color: rgb(0,0,0);
 }
+
+
+.screen--article {
+	background-color: $color-white;
+
+	&::after {
+		content: none;
+	}
+}

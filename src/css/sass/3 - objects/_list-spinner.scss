@@ -16,7 +16,7 @@ $spinner-line-height: $spacing * 3;
 	background-color: rgba($color-text-pink-dark ,.35);
 
 	@media screen and (min-width: $lap-wide) {
-		width: 75%;
+		//width: 75%;
 		height: $spacing-double;
 		font-size: 2em;
 		@include vendor(transform, scale(0.6));

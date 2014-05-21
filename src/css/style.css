@@ -407,16 +407,31 @@ form .status {
   border: none;
   padding: 1.5em;
   border-radius: 3px;
-  transition: box-shadow 1s cubic-bezier(0, 0, 0.48, 1.41), background-color 0.3s linear;
+  transition: box-shadow 1s cubic-bezier(0, 0, 0.48, 1.41), all 0.3s linear;
   background-color: #b0c4d8;
-  color: black; }
+  color: black;
+  -webkit-perspective-origin: top;
+  -moz-perspective-origin: top;
+  -ms-perspective-origin: top;
+  -o-perspective-origin: top;
+  perspective-origin: top;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0; }
   .highlight h1, .highlight h2, .highlight h3, .highlight h4, .highlight a {
     border: none;
     color: black; }
   .highlight:hover, .highlight:focus {
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.6);
     background-color: #853371;
-    color: white; }
+    color: white;
+    -webkit-transform: perspective(40em) rotateX(2deg);
+    -moz-transform: perspective(40em) rotateX(2deg);
+    -ms-transform: perspective(40em) rotateX(2deg);
+    -o-transform: perspective(40em) rotateX(2deg);
+    transform: perspective(40em) rotateX(2deg); }
     .highlight:hover h1, .highlight:hover h2, .highlight:hover h3, .highlight:hover h4, .highlight:hover a, .highlight:hover:hover, .highlight:hover:active, .highlight:hover:focus,
     .highlight:hover .link, .highlight:focus h1, .highlight:focus h2, .highlight:focus h3, .highlight:focus h4, .highlight:focus a, .highlight:focus:hover, .highlight:focus:active, .highlight:focus:focus,
     .highlight:focus .link {
@@ -748,7 +763,6 @@ form .status {
   background-color: rgba(133, 51, 113, 0.35); }
   @media screen and (min-width: 50em) {
     .list-spinner {
-      width: 75%;
       height: 3em;
       font-size: 2em;
       -webkit-transform: scale(0.6);
@@ -1096,6 +1110,11 @@ form .status {
   @media only screen and (min-width: 30em) {
     .screen--credits {
       background-image: url("./../images/screens/clouds.jpg"); } }
+
+.screen--article {
+  background-color: white; }
+  .screen--article::after {
+    content: none; }
 
 .mainnav {
   position: relative;

@@ -89,5 +89,10 @@
         "pageclass": "page--about-detail",
         "sidebarclass": "screen--about-detail-2",
         "ctatitle": "Frozen Rockets helpt u graag met het verbeteren van de toegankelijkheid van uw website."
+    },
+    "article": {
+        "title": "Article",
+        "pageclass": "page--article",
+        "sidebarclass": "screen--article"
     }
 }
