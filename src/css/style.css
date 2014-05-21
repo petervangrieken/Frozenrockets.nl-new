@@ -131,7 +131,7 @@ hr {
  * Pull in all the base files we want.
  */
 body {
-  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5;
@@ -172,19 +172,21 @@ h2, .h2 {
   font-size: 1.2em; }
 
 h3, .h3 {
-  font-size: 1.1; }
+  font-size: 1.1em; }
 
 h4, .h4 {
-  font-size: 1.1; }
+  font-size: 1.1em; }
 
 a, .link {
   color: #af1b89;
   text-decoration: none;
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid;
+  cursor: pointer; }
   a[href^="http"], .link[href^="http"] {
     color: #853371; }
-  a:hover, a:active, a:focus, .link:hover, .link:active, .link:focus {
-    color: #67c4d2; }
+
+a:hover, a:active, a:focus {
+  color: #67c4d2; }
 
 .link--unstyled {
   border-bottom: none; }
@@ -227,29 +229,30 @@ a, .link {
     background-color: #8eabc7; }
 
 .grid {
-  text-align: justify;
-  text-align-last: justify; }
-  .grid::after {
-    content: '';
-    display: inline-block;
-    width: 100%; }
+  padding-top: 0.75em; }
+  @media only screen and (min-width: 50em) {
+    .grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch; } }
 
-@media only screen and (min-width: 50em) {
-  .grid__column {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    text-align-last: left; }
-    .grid__column--1of2 {
-      width: 48%; }
-    .grid__column--1of3 {
-      width: 30%; }
-    .grid__column--2of3 {
-      width: 65%; }
-    .grid__column--1of4 {
-      width: 24%; }
-    .grid__column--3of4 {
-      width: 74%; } }
+.grid__column {
+  margin-bottom: 0.375em; }
+  @media only screen and (min-width: 50em) {
+    .grid__column {
+      flex-grow: 0;
+      flex-basis: 32%;
+      box-shadow: none; }
+      .grid__column--1of2 {
+        flex-basis: 48%; }
+      .grid__column--1of3 {
+        flex-basis: 30%; }
+      .grid__column--2of3 {
+        flex-basis: 65%; }
+      .grid__column--1of4 {
+        flex-basis: 24%; }
+      .grid__column--3of4 {
+        flex-basis: 74%; } }
 
 label {
   display: block;
@@ -272,7 +275,7 @@ input, textarea {
   padding: 0.375em;
   width: 100%;
   font-size: 1em;
-  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: black;
   outline: none;
@@ -300,7 +303,7 @@ textarea {
     padding-left: 0.375em; }
 
 input[type="submit"] {
-  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: 300; }
 
@@ -334,7 +337,7 @@ form .status {
   max-width: none; }
   @media only screen and (min-width: 30em) {
     .page--home {
-      padding-top: 30%; } }
+      padding-top: 20%; } }
   .page--home::after {
     position: absolute;
     top: 0;
@@ -350,7 +353,7 @@ form .status {
   text-align: center;
   border-top: 1px solid #b0c4d8;
   border-bottom: 1px solid #b0c4d8;
-  padding: 1.5em; }
+  padding: 2.25em 1.5em 1.5em; }
   .image img {
     box-shadow: 0 0 3em rgba(0, 0, 0, 0.2);
     margin-bottom: 0.75em; }
@@ -399,18 +402,25 @@ form .status {
 /**
  * Pull in all our objects and abstractions.
  */
-.highlight--primary {
-  border-top: 1px solid #b0c4d8;
-  border-bottom: 1px solid #b0c4d8; }
-  .highlight--primary h1, .highlight--primary h2, .highlight--primary h3, .highlight--primary h4, .highlight--primary a, .highlight--primary ul {
+.highlight {
+  display: block;
+  border: none;
+  padding: 1.5em;
+  border-radius: 3px;
+  transition: box-shadow 1s cubic-bezier(0, 0, 0.48, 1.41), background-color 0.3s linear;
+  background-color: #b0c4d8;
+  color: black; }
+  .highlight h1, .highlight h2, .highlight h3, .highlight h4, .highlight a {
+    border: none;
     color: black; }
-
-.highlight--secondary {
-  border-top: 1px solid #853371;
-  border-bottom: 1px solid #853371; }
-  .highlight--secondary h1, .highlight--secondary h2, .highlight--secondary h3, .highlight--secondary h4, .highlight--secondary a {
-    color: white;
-    border: none; }
+  .highlight:hover, .highlight:focus {
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.6);
+    background-color: #853371;
+    color: white; }
+    .highlight:hover h1, .highlight:hover h2, .highlight:hover h3, .highlight:hover h4, .highlight:hover a, .highlight:hover:hover, .highlight:hover:active, .highlight:hover:focus,
+    .highlight:hover .link, .highlight:focus h1, .highlight:focus h2, .highlight:focus h3, .highlight:focus h4, .highlight:focus a, .highlight:focus:hover, .highlight:focus:active, .highlight:focus:focus,
+    .highlight:focus .link {
+      color: white; }
 
 .sidebar {
   padding: 6%;
@@ -468,7 +478,7 @@ form .status {
   border-radius: 4px;
   text-align: center;
   background-color: #b0c4d8;
-  box-shadow: 0 0 3em rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0 4em -1em rgba(0, 0, 0, 0.3); }
   @media only screen and (min-width: 50em) {
     .aside {
       float: right;
@@ -573,10 +583,10 @@ form .status {
   color: rgba(0, 0, 0, 0.7); }
 
 .quote-source:before {
-  content: "\2014 "; }
+  content: "\2014\00a0"; }
 
 .quote-source:after {
-  content: " \2014"; }
+  content: " \2014\00a0"; }
 
 .marker {
   position: relative;
@@ -727,17 +737,25 @@ form .status {
 
 .list-spinner {
   position: relative;
+  font-size: 1em;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   width: 100%;
-  line-height: 4.5em;
-  overflow: hidden;
   height: 4.5em;
+  overflow: hidden;
+  line-height: 4.5em;
   background-color: rgba(133, 51, 113, 0.35); }
   @media screen and (min-width: 50em) {
     .list-spinner {
       width: 75%;
-      height: 3em; } }
+      height: 3em;
+      font-size: 2em;
+      -webkit-transform: scale(0.6);
+      -moz-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      -o-transform: scale(0.6);
+      transform: scale(0.6); } }
   .list-spinner ul {
     margin: 0;
     padding: 0;

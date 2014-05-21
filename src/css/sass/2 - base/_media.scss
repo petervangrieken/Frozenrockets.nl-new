@@ -5,7 +5,7 @@
 
 	border-top: 1px solid $color-text-blue-light;
 	border-bottom: 1px solid $color-text-blue-light;
-	padding: $spacing;
+	padding: $spacing * 1.5 $spacing $spacing;
 
 	img {
 		box-shadow: 0 0 3em rgba($color-black, 0.2);

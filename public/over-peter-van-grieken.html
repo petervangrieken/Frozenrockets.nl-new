@@ -60,25 +60,6 @@
 
   </main>
 
-<script type="text/javascript">
-  var htmlElement= document.getElementsByTagName('html')[0];  
-  var isSafari = /constructor/i.test(window.HTMLElement);
-  
-  if(isSafari) {
-    if (htmlElement.classList) {
-      htmlElement.classList.add('is-safari');
-    } else {
-      htmlElement.className += ' is-safari';
-    }
-  }
-
-  if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
-    mainLogo= document.getElementById("main-logo-image");
-    mainLogo.setAttribute('src', './images/fr-logo.svg');
-  }
-
-
-</script>
 
 <!-- Piwik -->
 <script type="text/javascript">

@@ -5,7 +5,7 @@
 	border-radius: 4px;
 	text-align: center;
 	background-color: $color-text-blue-light;
-	box-shadow: 0 0 3em rgba(0,0,0,0.1);
+	box-shadow: 0 0 4em -1em rgba(0, 0, 0, 0.3);
 
 	@media only screen and (min-width: $lap-wide) { 
 		float: right;

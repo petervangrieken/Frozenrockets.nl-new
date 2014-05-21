@@ -2,20 +2,24 @@ $spinner-line-height: $spacing * 3;
 
 .list-spinner {
 	position: relative;
-	
+	font-size: 1em;
+	font-weight: 300;
+
+
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	line-height: $spinner-line-height;
-
-	overflow: hidden;
 	height: $spacing * 3;
-	background-color: rgba($color-text-pink-dark ,.35);
+	overflow: hidden;
 
+	line-height: $spinner-line-height;
+	background-color: rgba($color-text-pink-dark ,.35);
 
 	@media screen and (min-width: $lap-wide) {
 		width: 75%;
 		height: $spacing-double;
+		font-size: 2em;
+		@include vendor(transform, scale(0.6));
 	}
 
 	ul {

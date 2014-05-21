@@ -1,18 +1,28 @@
-	.highlight--primary {
-		border-top: 1px solid $color-text-blue-light;
-		border-bottom: 1px solid $color-text-blue-light;
+.highlight {
+	display: block;
+	border: none;
+	padding: $spacing;
+	border-radius: 3px;
+	transition: box-shadow 1s cubic-bezier(0,0,.48,1.41),
+				background-color .3s linear;
+	background-color: $color-text-blue-light;
+	color: $color-black;
 
-		h1, h2, h3, h4, a, ul {
-			color: $color-black;
-		}
+	h1, h2, h3, h4, a {
+		border: none;
+		color: $color-black;
 	}
 
-	.highlight--secondary {
-		border-top: 1px solid $color-text-pink-dark;
-		border-bottom: 1px solid $color-text-pink-dark;
+	&:hover, &:focus {
+		box-shadow: 0 0 2em rgba(0,0,0, .6);
+		background-color: $color-text-pink-dark;
+		color: $color-white;
 
-		h1, h2, h3, h4, a {
+		h1, h2, h3, h4, a,
+		&:hover, &:active, &:focus,
+		.link {
 			color: $color-white;
-			border: none;
 		}
 	}
+
+}
