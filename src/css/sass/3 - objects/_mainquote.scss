@@ -9,9 +9,13 @@
 		width: 100%;
 		text-align: center;
 		margin-bottom: $spacing;
+		color: rgba(0,0,0,.7);
+	}
+	
+	.quote-source:before {
+		content:"\2014 ";
 	}
 
-	.quote-source:before,
 	.quote-source:after {
-		content:"\2014";
+		content:" \2014";
 	}

@@ -212,7 +212,8 @@ a, .link {
   border-radius: 3px;
   transition: all .2s linear;
   cursor: pointer;
-  width: auto; }
+  width: auto;
+  box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.2); }
   .button:hover, .button:focus {
     color: white;
     background-color: #8eabc7; }
@@ -279,7 +280,7 @@ input, textarea {
   box-shadow: 0 0 10px rgba(133, 51, 113, 0);
   transition: all .2s linear; }
   input:empty, textarea:empty {
-    border: 1px solid currentColor; }
+    border: 1px solid rgba(0, 0, 0, 0.4); }
   input:valid, textarea:valid {
     border: none;
     padding-left: 1.5em; }
@@ -288,7 +289,7 @@ input, textarea {
   input:focus, textarea:focus {
     color: #853371;
     border: 1px solid currentColor;
-    box-shadow: 0 0 4px rgba(133, 51, 113, 0.8); }
+    box-shadow: 0 0 14px -4px rgba(133, 51, 113, 0.8); }
 
 textarea {
   min-height: 12em;
@@ -464,9 +465,10 @@ form .status {
   position: relative;
   padding: .2em;
   margin-bottom: 1.5em;
-  border-radius: 2px;
+  border-radius: 4px;
   text-align: center;
-  background-color: #b0c4d8; }
+  background-color: #b0c4d8;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.1); }
   @media only screen and (min-width: 50em) {
     .aside {
       float: right;
@@ -567,11 +569,14 @@ form .status {
   display: block;
   width: 100%;
   text-align: center;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  color: rgba(0, 0, 0, 0.7); }
 
-.quote-source:before,
+.quote-source:before {
+  content: "\2014 "; }
+
 .quote-source:after {
-  content: "\2014"; }
+  content: " \2014"; }
 
 .marker {
   position: relative;
