@@ -214,8 +214,7 @@ a:hover, a:active, a:focus {
   border-radius: 3px;
   transition: all .2s linear;
   cursor: pointer;
-  width: auto;
-  box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.2); }
+  width: auto; }
   .button:hover, .button:focus {
     color: white;
     background-color: #8eabc7; }
