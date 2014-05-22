@@ -63,7 +63,7 @@
 			height: 100%;
 			padding: $spacing-half;
 
-			background: rgba($color-text-pink-dark, .6);
+			background-color: rgba($color-text-pink-dark, 0);
 			
 			@include vendor(transition, all .1s ease-in);
 
@@ -73,6 +73,7 @@
 			color: transparent;
 
 			&::after {
+				background-color: rgba($color-text-pink-dark, .6);
 				@include vendor(transform, translate3d(0%, -100%, 0));
 				@include vendor(transition, all .3s ease-in);
 			}

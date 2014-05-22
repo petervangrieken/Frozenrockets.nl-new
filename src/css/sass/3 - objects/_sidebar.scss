@@ -50,13 +50,13 @@
 	}
 }
 
-	.sidebar--wide {
 
+.screen--article {
 		@media only screen and (min-width: $lap) { 
-			width: 40%;
-		}
-
-		@media only screen and (min-width: $lap-wide) { 
-			width: 40%;
-		}
+		width: 30%;
 	}
+
+	@media only screen and (min-width: $lap-wide) { 
+		width: 20%;
+	}
+}
