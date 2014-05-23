@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: './src',
-                    src: ['*.html'],
+                    src: ['*.html', 'articles/*.html'],
                     dest: './public',
                     ext: '.html'
                 }]
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                 tasks: ['sass:dist', 'sass:build']
             },
             html: {
-                files: ['src/*.html'],
+                files: ['src/**/*.html'],
                 tasks: ['bake']
             },
             image: {

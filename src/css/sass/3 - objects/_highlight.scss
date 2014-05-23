@@ -3,7 +3,7 @@
 	border: none;
 	padding: $spacing;
 	border-radius: 3px;
-	transition: all 2s cubic-bezier(0,0,.48,1.5);
+	transition: all .3s cubic-bezier(0,0,.48,1.5);
 	background-color: $color-text-blue-light;
 	color: $color-black;
 	@include vendor(perspective-origin, top);
@@ -19,7 +19,7 @@
 		box-shadow: 0 .5em 2em rgba(0,0,0, .4);
 		//background-color: $color-text-pink-dark;
 		color: $color-black;
-		@include vendor(transform, perspective(40em) rotateX(2deg) scale(1.02));
+		//@include vendor(transform, perspective(40em) rotateX(2deg) scale(1.02));
 
 
 		h3, a, .link {

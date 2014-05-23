@@ -406,7 +406,7 @@ form .status {
   border: none;
   padding: 1.5em;
   border-radius: 3px;
-  transition: all 2s cubic-bezier(0, 0, 0.48, 1.5);
+  transition: all 0.3s cubic-bezier(0, 0, 0.48, 1.5);
   background-color: #b0c4d8;
   color: black;
   -webkit-perspective-origin: top;
@@ -424,12 +424,7 @@ form .status {
     color: black; }
   .highlight:hover, .highlight:focus {
     box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.4);
-    color: black;
-    -webkit-transform: perspective(40em) rotateX(2deg) scale(1.02);
-    -moz-transform: perspective(40em) rotateX(2deg) scale(1.02);
-    -ms-transform: perspective(40em) rotateX(2deg) scale(1.02);
-    -o-transform: perspective(40em) rotateX(2deg) scale(1.02);
-    transform: perspective(40em) rotateX(2deg) scale(1.02); }
+    color: black; }
     .highlight:hover h3, .highlight:hover a, .highlight:hover .link, .highlight:focus h3, .highlight:focus a, .highlight:focus .link {
       color: black; }
 
@@ -1183,10 +1178,8 @@ form .status {
   .mainnav__item--secondary a {
     color: #853371;
     text-decoration: none; }
-  .mainnav__item--secondary:hover {
-    background: rgba(133, 51, 113, 0.8); }
-    .mainnav__item--secondary:hover a {
-      color: black; }
+  .mainnav__item--secondary:hover a {
+    color: black; }
 
 .seethrough {
   background-position: 0 0;
