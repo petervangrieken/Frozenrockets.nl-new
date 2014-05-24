@@ -15,11 +15,12 @@
 
 .page--home {
 	@extend .screen--home;
-	
+	min-height: 0;
+	height: 100%;
 	max-width: none;
 
 	@media only screen and (min-width: $lap) { 
-		padding-top: 20%;
+		padding-top: 25%;
 	}
 
 	&::after {
@@ -34,4 +35,10 @@
 		z-index: 0;
 	}
 
+}
+
+.page--article {
+	@media only screen and (min-width: $lap-wide) { 
+		padding: 5% 10% 5% 25%;
+	}
 }
