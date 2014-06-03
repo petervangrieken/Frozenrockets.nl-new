@@ -161,11 +161,15 @@ if(empty($_POST)) {
 
 		<div class="grid__column grid__column--1of3">
 
-			<h2>Adres</h2>
+			<h2>Frozen Rockets BV</h2>
 
 			<p>
 				Binckhorstlaan 36<br>
 				2516 BE Den Haag
+			</p>
+
+			<p>
+				KvK: 54419069
 			</p>
 
 			<h2>E-mail</h2>

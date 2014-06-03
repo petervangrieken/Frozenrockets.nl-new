@@ -154,6 +154,9 @@ if(empty($_POST)) {
 				<a href="http://nl.linkedin.com/in/petervangrieken">LinkedIn</a><br>
 				<a href="http://twitter.com/petervangrieken">Twitter</a>
 			</p>
+
+			<h2>KvK</h2>
+			<p>54419069</p>
 		</div>
 	</div>
 

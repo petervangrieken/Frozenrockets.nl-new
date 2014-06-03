@@ -231,10 +231,9 @@ a:hover, a:active, a:focus {
   padding-top: 0.75em; }
   @media only screen and (min-width: 50em) {
     .grid {
-      -webkit-display: flex;
-      -moz-display: flex;
-      -ms-display: flex;
-      -o-display: flex;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
       display: flex;
       -webkit-justify-content: space-between;
       -moz-justify-content: space-between;

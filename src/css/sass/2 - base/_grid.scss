@@ -2,7 +2,10 @@
 	padding-top: $spacing-half;
 
 	@media only screen and (min-width: $lap-wide) { 
-		@include vendor(display, flex);
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: flex;
 		@include vendor(justify-content, space-between);
 		@include vendor(align-items, stretch);
 	}
