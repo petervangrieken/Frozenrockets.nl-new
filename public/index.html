@@ -8,7 +8,7 @@
 
 	<title>Frozen Rockets</title>
 
-	<link rel="stylesheet" href="./css/style.min.css?1.01">
+	<link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -16,30 +16,38 @@
 <body class="page page--home">
 
 
-	<div class="sidebar sidebar--home">
+	<header role="banner" class="sidebar sidebar--home">
 
-		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
+		<a href="./" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
-		<ol class="mainnav">
-			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
-			<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
-			<li class="mainnav__item"><a href="./contact.php">Contact</a></li>
-		</ol>
-	</div>
+		<nav role="navigation">
+			<ol class="mainnav">
+				<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
+				<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
+				<li class="mainnav__item"><a href="http://blog.frozenrockets.nl">Artikelen</a></li>
+				<li class="mainnav__item"><a href="./contact.php">Contact</a></li>
+			</ol>
+		</nav>
+	</header>
 
-	<main>
+	<main role="main">
 
-	<div class="list-spinner">
+	<header class="tagline">
+		<h1 class="overline">Maakt u zich geen zorgen over alle nieuwe apparaten waar uw website op moet werken.</h1>
+		<small>* Dat doen wij al.</small> 
+	</header>
+
+	<!--div class="list-spinner">
 		<ul>
 			<li>Freelance Frontend Webdesign</li>
 			<li>Toegankelijke websites voor bezoekers met een beperking</li>
 			<li>Responsive design dat klaar is voor nieuwe apparaten</li>
 			<li>Snelle websites voor hoge conversie</li>
 		</ul>
-	</div>
+	</div-->
 
 
-	<a href="./credits" class="credits-link">Credits</a>
+	<a href="./credits" class="credits-link" role="contentinfo">Credits</a>
 
   </main>
 

@@ -2,21 +2,50 @@
 	display: block;
 	border: none;
 	padding: $spacing;
+	margin-bottom: $spacing;
+
 	border-radius: 3px;
-	transition: all .3s cubic-bezier(0,0,.48,1.5);
-	background-color: $color-text-blue-light;
+	//box-shadow: 0 0 1em rgba($color-black, .2);
+	border-top: 1px solid rgba($color-gray,.1);
+	border-bottom: 1px solid rgba($color-gray,.1);
+
 	color: $color-black;
-	@include vendor(perspective-origin, top);
-	@include vendor(transform-origin, top center);
+	//background-color: $color-white;
+	//background-image: linear-gradient($color-text-green 0%, $color-text-green 20%, $color-white 20%, $color-white 100%);
+
 	
+	&--sidebar {
+		@media only screen and (min-width: $lap-wide) { 
+			padding-top: 0;
+			box-shadow: -.2em 0em .2em -.2em rgba($color-black, .2);
+			background-image: none;
+			border: none;
+		}
+
+		h2 {
+			margin-top: $spacing;
+			margin-bottom: $spacing-half;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
 
 	h3, a {
 		border: none;
 		color: $color-black;
+
 	}
 
+	h3 {
+		margin-bottom: $spacing-double;
+	}
+
+
 	&:hover, &:focus {
-		box-shadow: 0 .5em 2em rgba(0,0,0, .4);
+		//box-shadow: 0 .5em 2em rgba(0,0,0, .4);
 		//background-color: $color-text-pink-dark;
 		color: $color-black;
 		//@include vendor(transform, perspective(40em) rotateX(2deg) scale(1.02));
@@ -25,6 +54,12 @@
 		h3, a, .link {
 			color: $color-black;
 		}
+	}
+
+	code {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
 	}
 
 }

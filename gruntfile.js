@@ -47,14 +47,23 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        validation: {
+            options: {
+                stoponerror: false,
+                remoteFiles: ['public/*.html'], 
+            }
+        },
+        stylestats: {
+            src: ['public/css/style.min.css']
+        },
         watch: {
             css: {
                 files: ['**/*.scss'],
-                tasks: ['sass:dist', 'sass:build']
+                tasks: ['sass:dist', 'sass:build', 'stylestats']
             },
             html: {
                 files: ['src/**/*.html'],
-                tasks: ['bake']
+                tasks: ['bake', 'validation']
             },
             image: {
                 files: ['src/**/*.{png,jpg,gif}'],
@@ -65,4 +74,5 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', ['imagemin','watch']);
+    grunt.registerTask('validate', ['validation']);
 };

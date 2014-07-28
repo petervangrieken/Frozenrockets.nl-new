@@ -20,13 +20,26 @@
 	max-width: none;
 
 	@media only screen and (min-width: $lap) { 
-		padding-top: 25%;
+		padding-top: 15%;
+	}
+
+	header {
+		color: $color-white;
 	}
 
 }
 
-.page--article {
+/*
+.page--article, .page--blog__article {
 	@media only screen and (min-width: $lap-wide) { 
 		padding: 5% 10% 5% 25%;
 	}
 }
+
+.page--blog {
+	padding-top: 1rem;
+	@media only screen and (min-width: $lap-wide) { 
+		padding: 5% 10% 5% 25%;
+	}
+}
+*/

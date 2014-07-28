@@ -8,7 +8,7 @@
 
 	<title>Prinsjesdag gaat digitaal</title>
 
-	<link rel="stylesheet" href="./css/style.min.css?1.01">
+	<link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -16,18 +16,21 @@
 <body class="page page--single-project">
 
 
-	<div class="sidebar screen--single-project">
+	<header role="banner" class="sidebar screen--single-project">
 
-		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
+		<a href="./" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
-		<ol class="mainnav">
-			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
-			<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
-			<li class="mainnav__item"><a href="./contact.php">Contact</a></li>
-		</ol>
-	</div>
+		<nav role="navigation">
+			<ol class="mainnav">
+				<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
+				<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
+				<li class="mainnav__item"><a href="http://blog.frozenrockets.nl">Artikelen</a></li>
+				<li class="mainnav__item"><a href="./contact.php">Contact</a></li>
+			</ol>
+		</nav>
+	</header>
 
-	<main>
+	<main role="main">
 
 
 	<a href="./projecten" class="font-small link--unstyled">&lsaquo; Terug</a>
@@ -35,21 +38,59 @@
 	<article>
 		<h1>Prinsjesdag gaat digitaal</h1>
 
-		<p>
-			In opdracht van Sharewire heb ik gewerkt aan de frontend van de offici&euml;le Prinsjesdag app. 
-			Voor het eerst in de geschiedenis werd de de Miljoenennota niet aangeboden als papieren versie, maar in de vorm van een app voor de iPad en Android tablets.
-		</p>
-		<p>
-			De app is volledig gebouwd in HTML, CSS en Javascript en werd als <i>webview</i> binnen de app getoond.
-		</p>
 
-		<p class="videocaption font-small">
-			Minister de Jager presenteert de app aan de Tweede Kamer
-		</p>
-		<div class="videowrapper">
-			<iframe src="http://nos.nl/embed/?id=e:420131&amp;autoplay=0" frameborder="0" scrolling="no" allowfullscreen="" id="player-420131"></iframe>
-		</div>
+		<div class="grid">
+			<div class="grid__column grid__column--2of3">
 
+				<p class="intro">
+					Voor het eerst in de geschiedenis werd de de Miljoenennota niet aangeboden als papieren versie, maar in de vorm van een app voor de iPad en Android tablets.
+					In opdracht van Sharewire heb ik gewerkt aan de frontend van de offici&euml;le Prinsjesdag app. 
+				</p>
+				<p>
+					Hoewel de app uit de App Store en de Andoid Market gedownload konden worden, fungeerde deze slechts als container van een website. Daarom is deze app volledig gebouwd in HTML, CSS en Javascript en werd als <i>webview</i> binnen de app getoond. Het primaire gebruik op mobiele platforms heeft ervoor gezorgd dat ik in dit project veel gebruik kon maken van de nieuwe mogelijkheden die HTML5 en CSS3 te bieden hebben.
+				</p>
+
+				<p class="videocaption font-small">
+					Minister de Jager presenteert de app aan de Tweede Kamer
+				</p>
+				<div class="videowrapper">
+					<iframe src="http://nos.nl/embed/?id=e:420131&amp;autoplay=0" frameborder="0" scrolling="no" allowfullscreen="" id="player-420131"></iframe>
+				</div>
+
+			</div>
+
+			<aside class="grid__column grid__column--1of3">
+
+				<div class="highlight highlight--sidebar">
+					<h2>Opdrachtgever</h2>
+
+					<p>
+						<img src="/images/logos/sharewire.png" alt="Sharewire">
+					</p>
+
+					<h2>Team</h2>
+
+					<ol class="list--unstyled">
+						<li>
+							<a href="http://frozenrockets.nl" class="media-object">
+								<div class="media-object__img">
+									<img src="/images/logos/frozenrockets.jpg" alt="Logo Frozen Rockets">
+								</div>
+								<div class="media-object__body">Frozen Rockets</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://sharewire.nl" class="media-object">
+								<div class="media-object__img">
+									<img src="/images/logos/sharewire.png" alt="Logo Sharewire">
+								</div>
+								<div class="media-object__body">Sharewire</div>
+							</a>
+						</li>
+					</ol>
+
+				</div>
+			</aside>
 
 
 	</article>

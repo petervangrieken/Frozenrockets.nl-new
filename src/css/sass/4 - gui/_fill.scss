@@ -1,0 +1,9 @@
+.fill {
+	padding: $spacing;
+	color: $color-white;
+	background-color: $color-text-pink-dark;
+
+	* {
+		color: $color-white;
+	}
+}

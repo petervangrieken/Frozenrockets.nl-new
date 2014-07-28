@@ -1,6 +1,6 @@
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
-	margin: 0 0 $spacing-half 0;
+	margin: 0 0 $spacing/4 0;
 	font-weight: $font-weight-header;
 	line-height: $line-height-header;
 	color: $color-text-pink-dark;
@@ -16,9 +16,23 @@ p {
 }
 
 h1, .h1 {
+	position: relative;
 	font-size: $font-size-header-main;
 	font-weight: $font-weight-header-main;
 	margin-bottom: .625em;
+
+	&.overline::before {
+		@media only screen and (min-width: $lap) {
+			content: '';
+			width: 25%;
+			height: .08em;
+			position: absolute;
+			left: 0;
+			top: -.4em;
+			z-index: 0;
+			background-color: $color-white;			
+		}
+	}
 }
 
 h2, .h2 { 
@@ -33,5 +47,17 @@ h4, .h4 {
 	font-size: 1.1em; 
 }
 
+
+.page--home {
+	.tagline {
+		background-color: rgba($color-black, .7);
+		padding: $spacing-half;
+	}
+
+	h1 {
+		margin-bottom: $spacing;
+		color: $color-text-pink-light;
+	}
+}
 
 

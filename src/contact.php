@@ -103,14 +103,16 @@ if(empty($_POST)) {
 				<label>
 					<span>Naam</span>
 
-					<input type="text" name="name" id="contact-name" pattern="^[a-zA-Z-\' ]{3,50}$" required value="<?php echo $name; ?>">
+					<input type="text" name="name" id="contact-name" pattern="^[a-zA-Z-\' ]{3,50}$" required value="<?php echo $name; ?>"
+					title="Vul uw naam in" x-moz-errormessage="Vul uw naam in">
 					<span class="validation"></span>
 				</label>
 
 				<label>
 					<span>E-mailadres</span>
 
-					<input type="email" name="email" id="contact-email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,5}" required value="<?php echo $email; ?>">
+					<input type="email" name="email" id="contact-email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,5}" required value="<?php echo $email; ?>"
+					title="Vul uw geldige e-mailadres in" x-moz-errormessage="Vul uw geldige e-mailadres in">
 					<span class="validation"></span>
 				</label>
 
@@ -118,12 +120,12 @@ if(empty($_POST)) {
 
 					<span>Uw bericht</span>
 
-					<textarea name="message" id="contact-message" required  value="<?php echo $$_POST['message']; ?>"></textarea>
+					<textarea name="message" id="contact-message" required  value="<?php echo $$_POST['message']; ?>" title="Vul uw bericht in" x-moz-errormessage="Vul uw bericht in"></textarea>
 
 				</label>
 
 
-				<input type="submit" value="Verstuur" class="button button--secondary js-submit-contact">
+				<button type="submit" class="button button--secondary js-submit-contact">Verstuur</button>
 
 
 	<?php

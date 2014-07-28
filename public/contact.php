@@ -87,25 +87,30 @@ if(empty($_POST)) {
 <body class="page page--contact">
 
 
-	<div class="sidebar screen--contact">
 
-		<a href="./index" class="borderless"><img class="logo" src="./images/fr-logo.svg" alt="Frozen Rockets"></a>
+	<header role="banner" class="sidebar screen--contact">
 
-		<ol class="mainnav">
-			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
-			<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
-			<li class="mainnav__item"><a href="./contact.php">Contact</a></li>
-		</ol>
-	</div>
+		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
-	<main>
+		<nav role="navigation">
+			<ol class="mainnav">
+				<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
+				<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
+				<li class="mainnav__item"><a href="http://blog.frozenrockets.nl">Artikelen</a></li>
+				<li class="mainnav__item"><a href="./contact.php">Contact</a></li>
+			</ol>
+		</nav>
+	</header>
+
+
+	<main role="main">
 
 	<h1>Contact</h1>
 
 
 	<div class="grid">
 		<div class="grid__column grid__column--2of3">
-			<form method="POST" action="contact.php">
+			<form method="POST" action="contact.php?send">
 
 	<?php
 	      if ($status === 0) {
@@ -129,14 +134,16 @@ if(empty($_POST)) {
 				<label>
 					<span>Naam</span>
 
-					<input type="text" name="name" id="contact-name" pattern="^[a-zA-Z-\' ]{3,50}$" required value="<?php echo $name; ?>">
+					<input type="text" name="name" id="contact-name" pattern="^[a-zA-Z-\' ]{3,50}$" required value="<?php echo $name; ?>"
+					title="Vul uw naam in" x-moz-errormessage="Vul uw naam in">
 					<span class="validation"></span>
 				</label>
 
 				<label>
 					<span>E-mailadres</span>
 
-					<input type="email" name="email" id="contact-email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,5}" required value="<?php echo $email; ?>">
+					<input type="email" name="email" id="contact-email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,5}" required value="<?php echo $email; ?>"
+					title="Vul uw geldige e-mailadres in" x-moz-errormessage="Vul uw geldige e-mailadres in">
 					<span class="validation"></span>
 				</label>
 
@@ -144,13 +151,12 @@ if(empty($_POST)) {
 
 					<span>Uw bericht</span>
 
-					<textarea name="message" id="contact-message" required  value="<?php echo $$_POST['message']; ?>"></textarea>
+					<textarea name="message" id="contact-message" required  value="<?php echo $$_POST['message']; ?>" title="Vul uw bericht in" x-moz-errormessage="Vul uw bericht in"></textarea>
 
 				</label>
 
 
 				<input type="submit" value="Verstuur" class="button button--secondary js-submit-contact">
-
 
 	<?php
 			}

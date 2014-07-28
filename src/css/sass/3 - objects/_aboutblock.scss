@@ -1,0 +1,60 @@
+.aboutblock {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+
+	@include vendor(flex-direction, column);
+	overflow: hidden;
+
+	border: 1px solid rgba($color-black, .1);
+	//background-color: rgba($color-black, .05);
+	//border-radius: 1em;
+	
+
+
+	&__header {
+		@include vendor(flex-basis, $spacing * 3);
+
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: flex;
+
+		background-color: $color-text-green;
+		color: $color-black;
+
+		text-align: center;
+		//box-shadow: 0 0 2px black;
+
+		&--green {
+			background-color: darken($color-text-green, 20%);
+			color: $color-white;
+			border-bottom: 10px solid $color-text-green;
+		}
+
+		&--blue-light {
+			background-color: darken($color-text-blue-light, 20%);
+			color: $color-white;
+			border-bottom: 10px solid $color-text-blue-light;
+
+		}
+
+		&--pink-light {
+			background-color: darken($color-text-pink-light, 20%);
+			color: $color-white;
+			border-bottom: 10px solid $color-text-pink-light;
+		}
+
+		span {
+			margin: auto;
+		}
+	}
+
+	&__body {
+		flex: 1;
+		padding: $spacing-half;
+		color: $color-black;
+	}
+
+}

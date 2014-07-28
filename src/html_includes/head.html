@@ -8,7 +8,7 @@
 
 	<title>{{ title }}</title>
 
-	<link rel="stylesheet" href="./css/style.min.css?1.01">
+	<link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -16,15 +16,18 @@
 <body class="page {{ pageclass }}">
 
 
-	<div class="sidebar {{ sidebarclass }}">
+	<header role="banner" class="sidebar {{ sidebarclass }}">
 
-		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
+		<a href="./" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
 
-		<ol class="mainnav">
-			<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
-			<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
-			<li class="mainnav__item"><a href="./contact.php">Contact</a></li>
-		</ol>
-	</div>
+		<nav role="navigation">
+			<ol class="mainnav">
+				<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
+				<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
+				<li class="mainnav__item"><a href="http://blog.frozenrockets.nl">Artikelen</a></li>
+				<li class="mainnav__item"><a href="./contact.php">Contact</a></li>
+			</ol>
+		</nav>
+	</header>
 
-	<main>
+	<main role="main">
