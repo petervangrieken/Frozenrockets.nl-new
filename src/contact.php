@@ -153,7 +153,7 @@ if(empty($_POST)) {
 			<h2>Social media</h2>
 
 			<p>
-				<a href="http://nl.linkedin.com/in/petervangrieken">LinkedIn</a><br>
+				<a href="http://nl.linkedin.com/in/petervangrieken">LinkedIn</a>
 				<a href="http://twitter.com/petervangrieken">Twitter</a>
 			</p>
 

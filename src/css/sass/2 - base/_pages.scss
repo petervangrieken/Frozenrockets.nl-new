@@ -1,15 +1,22 @@
 .page {
-	padding: 5%;
+	padding: 2%;
 	//max-width: 80em;
-	background-color: $color-white;
+	background-color: rgba($color-text-blue-light, .15);
 
 	@media only screen and (min-width: $lap) { 
-		padding-left: 40%;
+		padding-left: 37%;
 	}
 
 	@media only screen and (min-width: $lap-wide) { 
-		padding-left: 30%;
+		padding-left: 27%;
 	}
+}
+
+main {
+	padding: $spacing;
+	background-color: $color-white;
+	box-shadow: 0 0 2px rgba($color-black, .1);
+	border-radius: 5px;
 }
 
 
@@ -20,26 +27,19 @@
 	max-width: none;
 
 	@media only screen and (min-width: $lap) { 
-		padding-top: 15%;
+		padding-top: 10%;
 	}
 
 	header {
 		color: $color-white;
 	}
 
+	main {
+		background-color: transparent;
+		box-shadow: none;
+		border-radius: none;
+		padding: 0;
+	}
+
 }
 
-/*
-.page--article, .page--blog__article {
-	@media only screen and (min-width: $lap-wide) { 
-		padding: 5% 10% 5% 25%;
-	}
-}
-
-.page--blog {
-	padding-top: 1rem;
-	@media only screen and (min-width: $lap-wide) { 
-		padding: 5% 10% 5% 25%;
-	}
-}
-*/

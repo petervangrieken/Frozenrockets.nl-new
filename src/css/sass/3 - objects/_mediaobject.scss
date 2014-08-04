@@ -8,14 +8,26 @@
 }
 
 .media-object__body {
-	flex: 1 0 0;
+	@include vendor(flex-grow, 0);
 	margin: auto 0;
+
 }
 
 	.media-object__img {
 		display: inline-block;
 		margin: auto $spacing auto 0;
+		max-width: 100px;
 		@include vendor(flex-basis, 20%);
+		@include vendor(flex-grow, 0);
+		@include vendor(flex-shrink, 0);
+
+		&--top {
+			margin: 0 $spacing auto 0;
+		}
+
+		.round {
+			border-radius: 50%;
+		}
 	}
 
 

@@ -86,8 +86,9 @@ figure {
 hr {
   display: block;
   border: none;
-  margin: $spacing-double 0;
+  margin: $spacing-double auto;
   height: 1px;
+  width: 50%;
   background-color: $color-text-pink-dark;
 }
 

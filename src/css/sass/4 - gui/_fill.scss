@@ -3,6 +3,10 @@
 	color: $color-white;
 	background-color: $color-text-pink-dark;
 
+	@media only screen and (min-width: $lap) { 
+		padding: $spacing-half;
+	}
+
 	* {
 		color: $color-white;
 	}

@@ -17,15 +17,19 @@ p {
 
 h1, .h1 {
 	position: relative;
-	font-size: $font-size-header-main;
+	font-size: $font-size-header;
 	font-weight: $font-weight-header-main;
 	margin-bottom: .625em;
+
+	@media only screen and (min-width: $lap) { 
+		font-size: $font-size-header-main;
+	}
 
 	&.overline::before {
 		@media only screen and (min-width: $lap) {
 			content: '';
 			width: 25%;
-			height: .08em;
+			height: .1em;
 			position: absolute;
 			left: 0;
 			top: -.4em;
@@ -44,7 +48,8 @@ h3, .h3 {
 }
 
 h4, .h4 { 
-	font-size: 1.1em; 
+	font-size: 1em; 
+	color: $color-black;
 }
 
 
@@ -52,11 +57,22 @@ h4, .h4 {
 	.tagline {
 		background-color: rgba($color-black, .7);
 		padding: $spacing-half;
+		
+		@media only screen and (min-width: $lap) {
+			background-color: transparent;
+		}
 	}
 
 	h1 {
 		margin-bottom: $spacing;
 		color: $color-text-pink-light;
+		display: inline;
+	}
+
+	small {
+		display: inline-block;
+		margin-left: $spacing;
+		color: $color-text-blue-light;
 	}
 }
 

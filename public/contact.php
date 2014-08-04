@@ -87,7 +87,6 @@ if(empty($_POST)) {
 <body class="page page--contact">
 
 
-
 	<header role="banner" class="sidebar screen--contact">
 
 		<a href="./index" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
@@ -127,8 +126,7 @@ if(empty($_POST)) {
 	      if(!$hideForm) {
 	?>
 				<p>
-					De snelste manier om contact op te nemen, is door middel van onderstaand formulier.
-					Ik bel of mail zo snel mogelijk terug.
+					Als u onderstaand formulier invult, nemen wij zo snel mogelijk contact op.
 				</p>
 
 				<label>
@@ -187,8 +185,8 @@ if(empty($_POST)) {
 			<h2>Social media</h2>
 
 			<p>
-				<a href="http://nl.linkedin.com/in/petervangrieken">LinkedIn</a><br>
-				<a href="http://twitter.com/petervangrieken">Twitter</a>
+				<a href="http://nl.linkedin.com/in/petervangrieken"><span>LinkedIn</span></a>
+				<a href="http://twitter.com/petervangrieken"><span>Twitter</span></a>
 			</p>
 		</div>
 	</div>
