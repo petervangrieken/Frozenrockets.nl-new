@@ -600,7 +600,7 @@ li {
     background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 96%); }
     @media only screen and (min-width: 30em) {
       .sidebar::after {
-        background-image: linear-gradient(transparent 0%, transparent 50%, rgba(0, 0, 0, 0.5) 96%);
+        background-image: linear-gradient(transparent 0%, transparent 40%, rgba(0, 0, 0, 0.75) 96%);
         z-index: -1; } }
   .page--blog .sidebar {
     margin-bottom: 0; }
@@ -614,7 +614,7 @@ li {
         background-image: linear-gradient(transparent 0%, transparent 30%, rgba(0, 0, 0, 0.75) 96%); } }
     @media only screen and (min-width: 50em) {
       .sidebar--home::after {
-        background-image: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.75) 96%); } }
+        background-image: linear-gradient(transparent 0%, transparent 60%, rgba(0, 0, 0, 0.75) 96%); } }
 
 /*
 .screen--article {
@@ -1190,10 +1190,8 @@ li {
 .inset {
   padding: 1.5em; }
 
-.page--blog__article {
-  margin-bottom: 3em; }
-  .page--blog__article p:first-of-type {
-    font-weight: 500; }
+.page--blog__article p:first-of-type {
+  font-weight: 500; }
 
 /*------------------------------------*\
     #GUI
@@ -1320,6 +1318,7 @@ li {
 .mainnav__item {
   position: relative;
   height: 3em;
+  margin-bottom: 0;
   overflow: hidden;
   border-bottom: 1px solid #67c4d2;
   font-size: 0.8em; }

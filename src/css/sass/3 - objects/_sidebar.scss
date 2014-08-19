@@ -31,7 +31,7 @@
 		background-image: linear-gradient(transparent 0%, rgba($color-black,.50) 96%);
 
 		@media only screen and (min-width: $lap) { 
-			background-image: linear-gradient(transparent 0%, transparent 50%, rgba($color-black,.50) 96%);
+			background-image: linear-gradient(transparent 0%, transparent 40%, rgba($color-black,.75) 96%);
 			z-index: -1;
 		}
 	}
@@ -50,7 +50,7 @@
 			background-image: linear-gradient(transparent 0%, transparent 30%, rgba($color-black,.75) 96%);
 		}
 		@media only screen and (min-width: $lap-wide) { 
-			background-image: linear-gradient(transparent 0%, transparent 75%, rgba($color-black,.75) 96%);
+			background-image: linear-gradient(transparent 0%, transparent 60%, rgba($color-black,.75) 96%);
 		}
 	}
 }
