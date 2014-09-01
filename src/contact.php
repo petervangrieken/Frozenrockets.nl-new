@@ -29,10 +29,7 @@ if(empty($_POST)) {
 	$preventSend= false;
 
 	if (isset($_SESSION['lastsend'])) {
-		echo time();
-		echo "-".$_SESSION['lastsend'];
 		if(time() - $_SESSION['lastsend'] < 60) {
-			echo " : Yes";
 			$status= -2;
 			$preventSend= true;
 		} else {

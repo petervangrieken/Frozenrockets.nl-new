@@ -109,6 +109,17 @@ if(empty($_POST)) {
 
 	<div class="grid">
 		<div class="grid__column grid__column--2of3">
+
+
+			<img src="./images/bink36.png" alt="Foto van Bink36">
+
+			<p>
+				Frozen Rockets is gevestigd in Bink36, het voormalige pand van KPN en tegenwoordig de creatieve hotspot van Den Haag.
+			</p>
+
+
+
+
 			<form method="POST" action="contact.php?send">
 
 	<?php
@@ -185,8 +196,8 @@ if(empty($_POST)) {
 			<h2>Social media</h2>
 
 			<p>
-				<a href="http://nl.linkedin.com/in/petervangrieken"><span>LinkedIn</span></a>
-				<a href="http://twitter.com/petervangrieken"><span>Twitter</span></a>
+				<a href="https://www.linkedin.com/company/frozen-rockets"><span>LinkedIn</span></a>
+				<a href="http://twitter.com/frozenrockets"><span>Twitter</span></a>
 			</p>
 		</div>
 	</div>

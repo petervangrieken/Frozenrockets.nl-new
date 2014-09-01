@@ -258,6 +258,20 @@ a:hover, a:active, a:focus {
   .button:hover, .button:focus {
     color: white;
     background-color: #8eabc7; }
+  .button--unstyled {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    font-size: 1em;
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-weight: 300; }
+    .button--unstyled:hover, .button--unstyled:focus {
+      background-image: none;
+      background-color: transparent;
+      color: black;
+      text-decoration: underline; }
 
 .button--secondary {
   background-color: #67c4d2;
@@ -267,11 +281,20 @@ a:hover, a:active, a:focus {
   .button--secondary:hover, .button--secondary:focus {
     background-color: #8eabc7; }
 
+.button--tertiairy {
+  background-color: #853371;
+  color: white; }
+  .button--tertiairy[href^="http"] {
+    color: white; }
+  .button--tertiairy:hover, .button--tertiairy:focus {
+    background-color: #602552;
+    color: white; }
+
 a[href*="linkedin.com"] {
-  background: #b0c4d8 url(./../images/linkedin.png) no-repeat 50% 50%;
+  background: transparent url(./../images/linkedin.png) no-repeat 50% 50%;
   background-size: 50% 50%;
   border-radius: 50%;
-  border: none;
+  border: 1px solid black;
   height: 3em;
   width: 3em;
   display: inline-block;
@@ -280,10 +303,10 @@ a[href*="linkedin.com"] {
     display: none; }
 
 a[href*="twitter.com"] {
-  background: #b0c4d8 url(./../images/twitter.png) no-repeat 50% 50%;
+  background: transparent url(./../images/twitter.png) no-repeat 50% 50%;
   background-size: 50% 50%;
   border-radius: 50%;
-  border: none;
+  border: 1px solid black;
   height: 3em;
   width: 3em;
   display: inline-block; }
@@ -548,24 +571,41 @@ li {
   color: black; }
   @media only screen and (min-width: 50em) {
     .highlight--sidebar {
+      background-color: transparent;
       padding-top: 0;
-      box-shadow: -0.2em 0em 0.2em -0.2em rgba(0, 0, 0, 0.2);
       background-image: none;
-      border: none; } }
+      border: none; }
+      .highlight--sidebar h2 {
+        color: black; } }
   .highlight--sidebar h2 {
     margin-top: 1.5em;
     margin-bottom: 0.75em; }
     .highlight--sidebar h2:first-child {
       margin-top: 0; }
+  .highlight--sidebar li {
+    margin-bottom: 2em; }
+  @media only screen and (min-width: 50em) {
+    .highlight--bg {
+      background-color: #b0c4d8;
+      padding-top: 0;
+      background-image: none;
+      border: none;
+      padding: 0.75em 0.75em 0 0.75em; }
+      .highlight--bg h2 {
+        color: black; } }
+  .highlight--bg h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em; }
+    .highlight--bg h2:first-child {
+      margin-top: 0; }
+  .highlight--bg .button {
+    width: 100%; }
+    .highlight--bg .button:hover, .highlight--bg .button:focus {
+      color: white; }
   .highlight h3, .highlight a {
-    border: none;
-    color: black; }
+    border: none; }
   .highlight h3 {
     margin-bottom: 3em; }
-  .highlight:hover, .highlight:focus {
-    color: black; }
-    .highlight:hover h3, .highlight:hover a, .highlight:hover .link, .highlight:focus h3, .highlight:focus a, .highlight:focus .link {
-      color: black; }
   .highlight code {
     display: block;
     width: 100%;
