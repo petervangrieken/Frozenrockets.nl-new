@@ -163,6 +163,14 @@ small, .font-small {
 .pull-right {
   float: right; }
 
+.text--kvk {
+  background: transparent url(./../images/globe.png) no-repeat 0 0;
+  background-size: 1.5em 1.5em;
+  height: 3em;
+  border: 0;
+  display: inline-block;
+  padding-left: 2.25em; }
+
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
   margin: 0 0 0.375em 0;
@@ -219,11 +227,10 @@ h4, .h4 {
 
 a, .link {
   color: #af1b89;
+  color: #853371;
   text-decoration: none;
   border-bottom: 1px solid;
   cursor: pointer; }
-  a[href^="http"], .link[href^="http"] {
-    color: #853371; }
 
 a:hover, a:active, a:focus {
   color: #67c4d2; }
@@ -283,7 +290,8 @@ a:hover, a:active, a:focus {
 
 .button--tertiairy {
   background-color: #853371;
-  color: white; }
+  color: white;
+  padding: 0.375em 1.5em; }
   .button--tertiairy[href^="http"] {
     color: white; }
   .button--tertiairy:hover, .button--tertiairy:focus {
@@ -291,27 +299,31 @@ a:hover, a:active, a:focus {
     color: white; }
 
 a[href*="linkedin.com"] {
-  background: transparent url(./../images/linkedin.png) no-repeat 50% 50%;
-  background-size: 50% 50%;
-  border-radius: 50%;
-  border: 1px solid black;
+  background: transparent url(./../images/linkedin.png) no-repeat 0 0;
+  background-size: 1.5em 1.5em;
   height: 3em;
-  width: 3em;
+  border: 0;
   display: inline-block;
-  margin-right: 1.5em; }
-  a[href*="linkedin.com"] span {
-    display: none; }
+  padding-left: 2.25em;
+  margin-right: 2.25em; }
 
 a[href*="twitter.com"] {
-  background: transparent url(./../images/twitter.png) no-repeat 50% 50%;
-  background-size: 50% 50%;
-  border-radius: 50%;
-  border: 1px solid black;
+  background: transparent url(./../images/twitter.png) no-repeat 0 0;
+  background-size: 1.5em 1.5em;
   height: 3em;
-  width: 3em;
-  display: inline-block; }
-  a[href*="twitter.com"] span {
-    display: none; }
+  border: 0;
+  display: inline-block;
+  padding-left: 2.25em;
+  margin-right: 2.25em; }
+
+a.mailto {
+  background: transparent url(./../images/envelope.png) no-repeat 0 0.25em;
+  background-size: 1.5em auto;
+  height: 3em;
+  border: 0;
+  display: inline-block;
+  padding-left: 2.25em;
+  margin-right: 2.25em; }
 
 .grid {
   padding-top: 0.75em; }
@@ -584,24 +596,6 @@ li {
       margin-top: 0; }
   .highlight--sidebar li {
     margin-bottom: 2em; }
-  @media only screen and (min-width: 50em) {
-    .highlight--bg {
-      background-color: #b0c4d8;
-      padding-top: 0;
-      background-image: none;
-      border: none;
-      padding: 0.75em 0.75em 0 0.75em; }
-      .highlight--bg h2 {
-        color: black; } }
-  .highlight--bg h2 {
-    margin-top: 1.5em;
-    margin-bottom: 0.75em; }
-    .highlight--bg h2:first-child {
-      margin-top: 0; }
-  .highlight--bg .button {
-    width: 100%; }
-    .highlight--bg .button:hover, .highlight--bg .button:focus {
-      color: white; }
   .highlight h3, .highlight a {
     border: none; }
   .highlight h3 {
@@ -1229,6 +1223,24 @@ li {
 
 .inset {
   padding: 1.5em; }
+
+.address-card {
+  position: relative;
+  margin: 3em 0 1.5em 0; }
+  .address-card img {
+    display: block; }
+  .address-card__address {
+    background-color: rgba(176, 196, 216, 0.9);
+    padding: 3em 3em 0 3em; }
+    @media only screen and (min-width: 50em) {
+      .address-card__address {
+        position: absolute;
+        top: -1.5em;
+        right: 1.5em; } }
+    .address-card__address a:not(.button):hover, .address-card__address a:not(.button):focus {
+      color: black; }
+    .address-card__address h2 {
+      color: black; }
 
 .page--blog__article p:first-of-type {
   font-weight: 500; }

@@ -1,0 +1,32 @@
+.address-card {
+	position: relative;
+	margin: $spacing-double 0 $spacing 0;
+
+	img {
+		display: block;
+	}
+
+	&__address {
+		background-color: rgba($color-text-blue-light, .9);
+		padding: $spacing-double $spacing-double 0 $spacing-double;
+
+		@media only screen and (min-width: $lap-wide) {
+			position: absolute;
+			top: -$spacing;
+			right: $spacing;
+		}
+
+		a:not(.button) {
+			//color: $color-black;
+
+			&:hover, &:focus {
+				color: $color-black;
+			}
+		}
+
+		h2 {
+			color: $color-black;
+		}
+	}
+
+}

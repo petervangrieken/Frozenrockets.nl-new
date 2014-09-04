@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://frozenrockets.nl/</loc>
+  <lastmod>2014-09-01T15:02:24+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/projecten</loc>
+  <lastmod>2014-09-01T15:00:48+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/over-frozen-rockets</loc>
+  <lastmod>2014-09-01T15:00:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/contact</loc>
+  <lastmod>2014-09-01T15:04:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/credits</loc>
+  <lastmod>2014-09-01T15:02:24+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/project-nuon20</loc>
+  <lastmod>2014-09-01T15:00:49+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/project-nos</loc>
+  <lastmod>2014-09-01T15:00:48+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/project-karwei</loc>
+  <lastmod>2014-09-01T15:00:49+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/project-werkenvoornederland</loc>
+  <lastmod>2014-09-01T15:00:47+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/project-prinsjesdag</loc>
+  <lastmod>2014-09-01T15:00:49+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/project-eredivisielive-sidekick</loc>
+  <lastmod>2014-09-01T15:02:23+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/diverse-projecten</loc>
+  <lastmod>2014-09-01T15:00:49+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/contact.php</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://frozenrockets.nl/index</loc>
+  <lastmod>2014-09-01T15:02:24+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>

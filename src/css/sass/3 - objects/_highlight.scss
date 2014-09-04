@@ -40,37 +40,8 @@
 			margin-bottom: 2em;
 		}
 
-	}
 
-	&--bg {
-		@media only screen and (min-width: $lap-wide) { 
-			background-color: $color-text-blue-light;
-			padding-top: 0;
-			background-image: none;
-			border: none;
-			padding: $spacing-half $spacing-half 0 $spacing-half;
 
-			h2 {
-				color: $color-black;
-			}
-		}
-
-		h2 {
-			margin-top: $spacing;
-			margin-bottom: $spacing-half;
-
-			&:first-child {
-				margin-top: 0;
-			}
-		}
-
-		.button {
-			width: 100%;
-
-			&:hover, &:focus {
-				color: $color-white;
-			}
-		}
 	}
 
 
