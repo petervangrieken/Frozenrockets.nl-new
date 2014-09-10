@@ -20,6 +20,11 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
+  <loc>http://frozenrockets.nl/project-eredivisielive-sidekick</loc>
+  <lastmod>2014-09-01T15:02:23+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
   <loc>http://frozenrockets.nl/contact</loc>
   <lastmod>2014-09-01T15:04:50+00:00</lastmod>
   <changefreq>monthly</changefreq>
@@ -55,22 +60,8 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://frozenrockets.nl/project-eredivisielive-sidekick</loc>
-  <lastmod>2014-09-01T15:02:23+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
   <loc>http://frozenrockets.nl/diverse-projecten</loc>
   <lastmod>2014-09-01T15:00:49+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://frozenrockets.nl/contact.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://frozenrockets.nl/index</loc>
-  <lastmod>2014-09-01T15:02:24+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 </urlset>
