@@ -1,15 +1,16 @@
 .mainnav {
 	position: relative;
-	z-index: 5;
+	//z-index: 5;
 	list-style: none;
 	padding: 0;
-	margin: .5rem 0 0 0;
+	margin: 0;
+	background-color: rgba($color-text-green, .8);
 
 	@media only screen and (min-width: $lap) { 
-		position: absolute;
-		bottom: 1rem;
-		left: .5rem;
-		right: .5rem;
+		//position: absolute;
+		//bottom: 1rem;
+		//left: .5rem;
+		//right: .5rem;
 		margin-top: 0;
 	}
 }
@@ -18,8 +19,8 @@
 		position: relative;
 		height: $spacing-double;
 		margin-bottom: 0;
-		overflow: hidden;
-		border-bottom: 1px solid $color-text-green;
+		//overflow: hidden;
+		//border-bottom: 1px solid $color-text-green;
 		font-size: $font-size-small;
 
 
@@ -35,15 +36,16 @@
 			z-index: 2;
 			padding: .5rem;
 
-			color: $color-text-green;
+			color: $color-black;
 			text-decoration: none;
 			border:none;
-
 
 			@include vendor(transition, all .2s linear);
 
 			&:hover, &:focus {
-				color: $color-white;
+				//color: $color-white;
+				//padding-left: 1rem;
+
 			}
 		}
 
@@ -51,24 +53,27 @@
 			content: '';
 
 			position: absolute;
-			top: 100%;
+			top: $spacing;
 
 			display: block;
 			width: 100%;
-			height: 100%;
-			padding: $spacing-half;
+			height: $spacing-double;
+			//padding: $spacing-half;
 
 			//background: rgba($color-black, .8);
-			background: rgba($color-text-green, .8);
-			@include vendor(transition, none);
+			background: rgba($color-white, .8);
+			opacity: 0;
+			//@include vendor(transition, none);
+			@include vendor(transition, all .5s ease-in);
 			
 		}
 
 		&:hover {
 
 			&::after {
-				@include vendor(transform, translateY(-210%));
-				@include vendor(transition, all .3s linear);
+				opacity: 1;
+				@include vendor(transform, translateY(-$spacing));
+				
 			}
 		}
 
