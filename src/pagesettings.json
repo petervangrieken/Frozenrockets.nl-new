@@ -8,52 +8,52 @@
     "projecten": {
         "title": "Projecten van Frozen Rockets",
         "pageclass": "page--projecten",
-        "sidebarclass": "",
+        "sidebarclass": "screen--projecten",
         "uri": "projecten"
     },
     "project": {
         "title": "Project",
         "pageclass": "page--single-project",
-        "sidebarclass": "",
+        "sidebarclass": "screen--single-project",
         "uri": "project"
     },
     "project-nuon20": {
         "title": "Een nieuwe website voor Nuon",
         "pageclass": "page--single-project",
-        "sidebarclass": "",
+        "sidebarclass": "screen--single-project",
         "ctatitle": "Wilt u ook profiteren van een snellere en beter onderhoudbare website?",
         "uri": "project-nuon20"
     },
     "project-werkenvoornederland": {
         "title": "Werken voor Nederland voor iedereen toegankelijk",
         "pageclass": "page--single-project",
-        "sidebarclass": "",
+        "sidebarclass": "screen--single-project",
         "ctatitle": "Wilt u ook een website die voldoet aan de Webrichtlijnen?",
         "uri": "project-werkenvoornederland"
     },
     "project-karwei": {
         "title": "Frontend design voor Karwei",
         "pageclass": "page--single-project",
-        "sidebarclass": "",
+        "sidebarclass": "screen--single-project",
         "ctatitle": "Door mijn brede inzetbaarheid, kan ik in meedere rollen uw Scrumteam versterken.",
         "uri": "project-karwei"
     },
     "project-nos": {
         "title": "Diverse projecten voor NOS",
         "pageclass": "page--single-project",
-        "sidebarclass": "",
+        "sidebarclass": "screen--single-project",
         "uri": "project-nos"
     },
     "project-prinsjesdag": {
         "title": "Prinsjesdag gaat digitaal",
         "pageclass": "page--single-project",
-        "sidebarclass": "",
+        "sidebarclass": "screen--single-project",
         "uri": "project=Prinsjesdag"
     },
     "project-sidekick": {
         "title": "Eredivisie Live Sidekick",
         "pageclass": "page--single-project",
-        "sidebarclass": "",
+        "sidebarclass": "screen--single-project",
         "uri": "project-sidekick"
     },
     "project-diverse": {
@@ -65,7 +65,7 @@
     "about": {
         "title": "Over Frozen Rockets",
         "pageclass": "page--about",
-        "sidebarclass": "",
+        "sidebarclass": "screen--about",
         "uri": "over-frozen-rockets"
     },
     "about-detail": {
@@ -77,7 +77,7 @@
     "contact": {
         "title": "Neem contact op met Frozen Rockets",
         "pageclass": "page--contact",
-        "sidebarclass": "",
+        "sidebarclass": "screen--contact",
         "uri": "contact"
     },
     "credits": {

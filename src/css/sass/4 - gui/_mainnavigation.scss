@@ -4,13 +4,13 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	background-color: rgba($color-text-green, .8);
+	//background-color: rgba($color-text-green, .8);
 
 	@media only screen and (min-width: $lap) { 
-		//position: absolute;
-		//bottom: 1rem;
-		//left: .5rem;
-		//right: .5rem;
+		position: absolute;
+		bottom: 2rem;
+		left: .5rem;
+		right: .5rem;
 		margin-top: 0;
 	}
 }
@@ -19,12 +19,12 @@
 		position: relative;
 		height: $spacing-double;
 		margin-bottom: 0;
-		//overflow: hidden;
-		//border-bottom: 1px solid $color-text-green;
+		overflow: hidden;
+		border-bottom: 1px solid $color-text-green;
 		font-size: $font-size-small;
 
 
-		//@include vendor(transition, all .5s linear);
+		@include vendor(transition, all .5s linear);
 
 		a {
 			position: absolute;
@@ -36,15 +36,15 @@
 			z-index: 2;
 			padding: .5rem;
 
-			color: $color-black;
+			color: $color-text-green;
 			text-decoration: none;
 			border:none;
 
 			@include vendor(transition, all .2s linear);
 
 			&:hover, &:focus {
-				//color: $color-white;
-				//padding-left: 1rem;
+				color: $color-text-green;
+				padding-left: 1rem;
 
 			}
 		}
@@ -61,7 +61,7 @@
 			//padding: $spacing-half;
 
 			//background: rgba($color-black, .8);
-			background: rgba($color-white, .8);
+			background: rgba($color-white, .3);
 			opacity: 0;
 			//@include vendor(transition, none);
 			@include vendor(transition, all .5s ease-in);

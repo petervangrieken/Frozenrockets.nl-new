@@ -5,7 +5,7 @@
 	//background-color: $color-black;
 
 	@media only screen and (min-width: $lap) { 
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top: 0;
 		bottom: 0;
@@ -14,7 +14,7 @@
 		width: 35%;
 		margin: 0;
 		padding: 0 1rem 1rem 1rem;
-		//backface-visibility: hidden;
+		backface-visibility: hidden;
 	}
 
 	@media only screen and (min-width: $lap-wide) { 
@@ -22,17 +22,17 @@
 	}
 
 	&::after {
-		//content: '';
+		content: '';
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		//background-image: linear-gradient(transparent 0%, rgba($color-black,.50) 96%);
+		background-image: linear-gradient(transparent 0%, rgba($color-black,.50) 96%);
 
 		@media only screen and (min-width: $lap) { 
-			//background-image: linear-gradient(transparent 0%, transparent 40%, rgba($color-black,.75) 96%);
-			//z-index: -1;
+			background-image: linear-gradient(transparent 0%, transparent 40%, rgba($color-black,.75) 96%);
+			z-index: -1;
 		}
 	}
 

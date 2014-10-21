@@ -609,23 +609,30 @@ li {
   position: relative; }
   @media only screen and (min-width: 30em) {
     .sidebar {
-      position: absolute;
+      position: fixed;
       left: 0;
       top: 0;
       bottom: 0;
       z-index: 30;
       width: 35%;
       margin: 0;
-      padding: 0 1rem 1rem 1rem; } }
+      padding: 0 1rem 1rem 1rem;
+      backface-visibility: hidden; } }
   @media only screen and (min-width: 50em) {
     .sidebar {
       width: 25%; } }
   .sidebar::after {
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0; }
+    right: 0;
+    background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 96%); }
+    @media only screen and (min-width: 30em) {
+      .sidebar::after {
+        background-image: linear-gradient(transparent 0%, transparent 40%, rgba(0, 0, 0, 0.75) 96%);
+        z-index: -1; } }
   .page--blog .sidebar {
     margin-bottom: 0; }
 
@@ -788,7 +795,6 @@ li {
   top: 0;
   z-index: 5;
   display: block;
-  background-color: rgba(103, 196, 210, 0.8);
   padding: 1rem .5rem; }
 
 .blocks {
@@ -1337,17 +1343,27 @@ li {
   position: relative;
   list-style: none;
   padding: 0;
-  margin: 0;
-  background-color: rgba(103, 196, 210, 0.8); }
+  margin: 0; }
   @media only screen and (min-width: 30em) {
     .mainnav {
+      position: absolute;
+      bottom: 2rem;
+      left: .5rem;
+      right: .5rem;
       margin-top: 0; } }
 
 .mainnav__item {
   position: relative;
   height: 3em;
   margin-bottom: 0;
-  font-size: 0.8em; }
+  overflow: hidden;
+  border-bottom: 1px solid #67c4d2;
+  font-size: 0.8em;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
   .mainnav__item a {
     position: absolute;
     top: 0;
@@ -1356,7 +1372,7 @@ li {
     height: 100%;
     z-index: 2;
     padding: .5rem;
-    color: black;
+    color: #67c4d2;
     text-decoration: none;
     border: none;
     -webkit-transition: all 0.2s linear;
@@ -1364,6 +1380,9 @@ li {
     -ms-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear; }
+    .mainnav__item a:hover, .mainnav__item a:focus {
+      color: #67c4d2;
+      padding-left: 1rem; }
   .mainnav__item::after {
     content: '';
     position: absolute;
@@ -1371,7 +1390,7 @@ li {
     display: block;
     width: 100%;
     height: 3em;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
     opacity: 0;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;

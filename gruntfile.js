@@ -47,12 +47,6 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        validation: {
-            options: {
-                stoponerror: false,
-                remoteFiles: ['public/*.html'], 
-            }
-        },
         stylestats: {
             src: ['public/css/style.min.css']
         },
@@ -63,16 +57,27 @@ module.exports = function(grunt) {
             },
             html: {
                 files: ['src/**/*.html'],
-                tasks: ['bake', 'validation']
+                tasks: ['bake']
             },
             image: {
                 files: ['src/**/*.{png,jpg,gif}'],
                 tasks: ['imagemin']
+            }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    port: 9010,
+                    hostname: '0.0.0.0',
+                    base: './public',
+                    open: true
+                }
             }
         }
 
     });
 
     grunt.registerTask('default', ['imagemin','watch']);
-    grunt.registerTask('validate', ['validation']);
+    grunt.registerTask('serve', ['connect:server','default']);
 };
