@@ -4,16 +4,3 @@ ul, ol {
 	li {
 		margin-bottom: $spacing-half;
 	}
-
-.list--unstyled {
-	list-style: none;
-	padding-left: 0;
-}
-
-.list--inline {
-	li {
-		display: inline-block;
-		max-width: 40%;
-		margin-right: $spacing/4;
-	}
-}

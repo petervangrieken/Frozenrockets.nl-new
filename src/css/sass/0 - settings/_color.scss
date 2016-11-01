@@ -1,15 +1,16 @@
 $color-white: rgb(255,255,255);
 $color-black: rgb(0,0,0);
+$color-off-black: rgb(25,25,35);
 $color-gray: rgb(89, 82, 82);
 
 
 $color-gray-dark: rgb(62, 56, 56);
 
 $color-text-blue-light: rgb(176, 196, 216);
-$color-text-green: rgb(103, 196, 210);
+$color-text-green: darken(rgb(103, 196, 210), 14%);
 $color-text-pink-dark: rgb(133, 51, 113);
 $color-text-pink-light: rgb(227, 77, 189);
 
 
-$color-page-background: $color-white;
-$color-text-base: $color-gray;
+$color-page-background: white;
+$color-text-base: $color-off-black;

@@ -6,48 +6,34 @@
   margin: 0;
 }
 
-
 html {
   height: 100%;
 	font-size: 100%;
 	background-color: $color-page-background;
+
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-
-  @media only screen and (min-width: $lap-wide) { 
-    //font-size: 100%;
-  }
+  text-rendering: optimizeLegibility;
 }
 
 
 body {
 	margin: 0;
-
-  &.normal {
-    padding: 3em 1em;
-  }
+  padding: 0;
 }
 
 html,body {
     min-height: 100%;
     margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
 }
 
 
 article,
-aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-hgroup,
 main,
 nav,
-section,
-summary {
+section {
   display: block;
 }
 
@@ -55,24 +41,8 @@ summary {
   display: none;
 }
 
-b,
-strong {
-  font-weight: bold;
-}
 
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-img {
+img, svg {
 	border: none;
 	max-width: 100%;
 }
@@ -87,21 +57,8 @@ figure {
 	margin-bottom: $spacing;
 }
 
-hr {
-  display: block;
-  border: none;
-  margin: $spacing-double auto;
-  height: 1px;
-  width: 50%;
-  background-color: $color-text-pink-dark;
-}
 
-code {
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  
-}
 
 .borderless {
   border: none;
 }
-

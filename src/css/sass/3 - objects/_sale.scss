@@ -1,0 +1,68 @@
+.sale {
+	font-size: 1.4em;
+	font-weight: 300;
+	border-bottom: 1px solid rgba(255,255,255,.8);
+
+	h1 {
+		font-weight: 700;
+	}
+
+	h2 {
+		position: relative;
+		font-weight: 500;
+		font-size: 1.1em;
+		line-height: 1.8;
+		margin: 3.4em 0;
+		//padding: .7em;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -.4em;
+			left: 0;
+			width: $spacing;
+			border-bottom: 3px solid $color-white;
+		}
+	}
+
+	a[href="#new-address"] {
+		border-bottom: none;
+	}
+
+	a[href*="mailto:"] {
+		font-weight: 500;
+	}
+
+	p:last-child {
+		line-height: 1.2em;
+	}
+
+	small {
+		font-size: .6em;
+	}
+
+	.subscribe {
+		text-align: center;
+		padding: 2em 0;
+	}
+
+	.cta {
+		display: block;
+		@media only screen and (min-width: 40em) {
+			display: inline-block;
+		}
+		padding: .5em 1em;
+		background-color: $color-text-pink-dark;
+		border: none;
+		border-radius: 4px;
+		font-weight: 400;
+		letter-spacing: .03em;
+	}
+
+	[itemprop="address"] {
+		@media only screen and (min-width: 40em) {
+			text-align: right;	
+		}
+		
+	}
+}

@@ -5,9 +5,21 @@
  * 
  */
 @mixin vendor($property, $value) {
-    -webkit-#{$property}: $value;
-       -moz-#{$property}: $value;
-        -ms-#{$property}: $value;
-         -o-#{$property}: $value;
+    // -webkit-#{$property}: $value;
+    //    -moz-#{$property}: $value;
+    //     -ms-#{$property}: $value;
+    //      -o-#{$property}: $value;
             #{$property}: $value;
+}
+
+@mixin display-flex {
+	// display: -webkit-box;
+	// display: -moz-box;
+	// display: -ms-flexbox;
+	// display: -webkit-flex;
+	display: flex;
+}
+
+@mixin defaultOffset {
+  margin: $spacing;
 }

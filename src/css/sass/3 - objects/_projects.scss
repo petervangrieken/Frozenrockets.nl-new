@@ -1,0 +1,19 @@
+.project {
+	position: relative;
+	min-height: 30vh;
+	@include display-flex;
+
+	@include vendor(justify-content, space-between);
+
+	&__image {
+		flex-basis: 25%;
+		background: url(./../images/projects/logo-aardewerk.png) no-repeat left top;
+		background-size: 100%;
+	}
+
+	&__description {
+		flex-basis: 70%;
+	}
+}
+
+	

@@ -1,4 +1,5 @@
 $font-family: 'Whitney SSm A', 'Whitney SSm B', Helvetica, Arial, sans-serif;
+//$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 $font-weight-base: 			300; 
 $font-weight-bold: 			500;
@@ -6,18 +7,19 @@ $font-weight-extra-bold:	700;
 
 
 $font-size-base: 			1em;
-//$line-height-base:			1.4;
-$line-height-base:			1.5;
-$font-size-mobile:			1.2em; 
+$line-height-base:			1.6;
+$font-size-mobile:			1em; 
 
 $font-size-small: 			0.8em;
 $line-height-small: 		$line-height-base;
 
-$font-size-header-main: 	2.1em;
-$font-weight-header-main: 	$font-weight-base;
+$font-size-header-main: 	3.85em;
+$font-weight-header-main: 	$font-weight-extra-bold;
 
-$font-size-header:			1.6em;
-$font-weight-header:		$font-weight-extra-bold;
+$font-size-header-large:	2em;
+
+$font-size-header:			2em;
+$font-weight-header:		$font-weight-bold;
 $line-height-header:		1.2;
 
-$font-size-huge: 			4rem;
+$font-size-huge: 			4em;

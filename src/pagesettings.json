@@ -2,7 +2,7 @@
     "home": {
         "title": "Frozen Rockets - Ontwerpbureau voor responsive design",
         "pageclass": "page--home",
-        "sidebarclass": "sidebar--home",
+        "sidebarclass": "screen--home",
         "uri": ""
     },
     "projecten": {
@@ -112,5 +112,19 @@
         "pageclass": "page--article",
         "sidebarclass": "screen--article",
         "uri": "article"
+    },
+    "howwework": {
+        "title": "Aanpak",
+        "pageclass": "page--howwework",
+        "sidebarclass": "screen--howwework",
+        "uri": "aanpak"
+    },
+    "christmas": {
+        "title": "Merry Christmas from Frozen Rockets",
+        "pageclass": "page--christmas",
+        "sidebarclass": "sidebar--christmas",
+        "uri": ""
     }
+
+
 }

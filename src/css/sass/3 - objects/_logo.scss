@@ -1,8 +1,83 @@
-.logo {
-	position: relative;
-	top: 0;
-	z-index: 5;
-	display: block;
-	//background-color: rgba($color-text-green, .8);
-	padding: 1rem .5rem;
+.logos {
+	background-color: black;
+	padding: $spacing-half;
+
+	@media only screen and (min-width: 56em) {
+		padding: $spacing;
+	}
+
+	h2 {
+		//margin: auto;
+		color: white;
+		text-align: center;
+		font-weight: 700;
+		//color: $color-text-blue-light;
+		//font-size: .8rem;
+		//margin-bottom: .2em;
+	}
+
+	ul {
+		//border-top: 1px solid rgba($color-white, .8);
+		padding: $spacing/4 0 0 0;
+		//max-width: 40em;
+		//margin: auto;
+		list-style: none;
+
+		display: block;
+		text-align: center;
+		@include display-flex;
+		flex-wrap: wrap;
+		//align-items: center;
+		justify-content: center;
+
+
+	}
+
+	li {
+		position: relative;
+		flex-basis: 19%;
+		flex-shrink: 0;
+		flex-grow: 0;
+		padding: $spacing 0;
+		margin-right: 4%;
+		max-height: 8em;
+		height: auto;
+		max-width: 10em;
+//		border-radius: 8px;
+		vertical-align: middle;
+		// background-color: rgba(black, .4);
+		display: flex;
+		align-items: center;
+
+		&:nth-of-type(4n) {
+			margin-right: 0;
+		}
+
+		@media only screen and (min-width: 50em) {
+			flex-basis: 16%;
+			margin-right: 7%;
+		}
+
+		@media only screen and (min-width: 56em) {
+			flex-basis: 9%;
+			margin-right: 3%;
+			max-width: 6em;
+
+			&:nth-of-type(4n) {
+				margin-right: 3%;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+		}
+	}
+
+	.logo {
+		//margin: auto;
+		width: 100%;
+		max-height: 100%;
+		//height: auto;
+	}
 }

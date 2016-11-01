@@ -65,9 +65,126 @@
 
   </main>
 
+  <!--footer>
+
+    <div class="container--centered">
+
+      <div class="grid">
+        <div class="grid__column grid__column--1of3 inset">
+          <h2>Frozen Rockets</h2>
+          <p>
+            Frozen Rockets ontwerpt de best mogelijk website voor &aacute;l uw klanten. Wij vinden namelijk dat toegankelijke websites niet saai hoeven te zijn.
+          </p>
+
+
+          <nav>
+            <ul class="list--unstyled">
+              <li><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
+              <li><a href="./projecten">Projecten</a></li>
+              <li><a href="http://blog.frozenrockets.nl">Artikelen</a></li>
+              <li><a href="./contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="grid__column grid__column--1of3 inset">
+
+        </div>
+
+        <div class="grid__column grid__column--1of3 inset">
+          <h2>Adres</h2>
+
+          <p>
+            Frozen Rockets BV<br>
+            Binckhorstlaan 36<br>
+            2516 BE Den Haag
+          </p>
+          <p>
+            <a href="https://www.google.nl/maps/place/Binckhorstlaan+36,+Binckhorst,+2516+BE+Den+Haag/@52.0734802,4.3325885,15z/data=!4m2!3m1!1s0x47c5b71cb450ceaf:0x991f40e24ede6d44?hl=nl">Google Maps</a>
+          </p>
+
+          <h2>Snel contact?</h2>
+          <p>
+          Bel Peter: 06 1424 2551
+          </p>
+
+          <p>
+          
+            <a href="mailto:hi@frozenrockets.nl" class="button">Mail ons!</a>
+          </p>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </footer-->
+
+<script defer type="text/javascript">
+function loadCSS( href, media ){
+  "use strict";
+
+  var ss = window.document.createElement( "link" );
+  var ref = window.document.getElementsByTagName( "head" )[ 0 ];
+  var sheets = window.document.styleSheets;
+  ss.rel = "stylesheet";
+  ss.href = href;
+  ss.media = "only x";
+
+  // inject link
+  ref.appendChild( ss, ref );
+
+  function toggleMedia(){
+    var defined;
+    for( var i = 0; i < sheets.length; i++ ){
+      if( sheets[ i ].href && sheets[ i ].href.indexOf( ss.href ) > -1 ){
+        defined = true;
+      }
+    }
+    if( defined ){
+      ss.media = media || "all";
+    }
+    else {
+      setTimeout( toggleMedia );
+    }
+  }
+  toggleMedia();
+  return ss;
+}
+
+loadCSS("//cloud.typography.com/7599872/689164/css/fonts.css", "all");
+</script>
+<noscript><link rel="stylesheet" href="//cloud.typography.com/7599872/689164/css/fonts.css"></noscript>
+
+<script defer type="text/javascript">
+  var scrollTop= window.scrollY;
+  var mainNavigation= document.querySelector(".mainnavigation");
+  var siteHeader= document.querySelector(".siteheader");
+  var headerBounds= siteHeader.getBoundingClientRect();
+  var headerPosition= headerBounds.height;
+
+    if(scrollTop > headerPosition) {
+      mainNavigation.classList.add("logo-visible");
+    } else {
+      mainNavigation.classList.remove("logo-visible");
+    }
+
+  window.onscroll = function (event) {
+      scrollTop = window.scrollY;
+
+      if(scrollTop > headerPosition * .8) {
+        mainNavigation.classList.add("logo-visible");
+      } else {
+        mainNavigation.classList.remove("logo-visible");
+      }
+  }
+</script>
 
 <!-- Piwik -->
-<script type="text/javascript">
+<script async type="text/javascript">
   var _paq = _paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);

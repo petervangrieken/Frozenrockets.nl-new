@@ -1,29 +1,56 @@
 .media-object {
 	margin-bottom: $spacing-half;
 
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: flex;
+	@media only screen and (min-width: $lap) {
+		@include display-flex;
+		@include vendor(justify-content, space-between);
+		width: 100%;
+	}
+
+	& + & {
+		margin-top: $spacing-double ;
+	}
 }
 
 .media-object__body {
 	@include vendor(flex-grow, 0);
-	margin: auto 0;
+
+	&--alt {
+		order: -1;
+		margin: auto $spacing auto 0;
+	}
+
+	@media only screen and (min-width: $lap-wide) {
+		margin: auto 0 auto $spacing;
+
+		&--alt {
+			margin: auto $spacing-double auto 0;
+		}
+
+	}
+
 
 }
 
 	.media-object__img {
-		display: inline-block;
-		margin: auto $spacing auto 0;
-		max-width: 100px;
-		@include vendor(flex-basis, 20%);
-		@include vendor(flex-grow, 0);
-		@include vendor(flex-shrink, 0);
+		display: block;
+		margin: 0 auto $spacing;
+		max-width: 10em;
+		width: 50%;
 
-		&--top {
-			margin: 0 $spacing auto 0;
+		@media only screen and (min-width: $lap) {
+			display: inline-block;
+			margin: auto 0;
+			@include vendor(flex-basis, 30%);
+			@include vendor(flex-grow, 0);
+			@include vendor(flex-shrink, 0);
+
+
+			&--top {
+				margin: 0 $spacing auto 0;
+			}
 		}
+
 
 		.round {
 			border-radius: 50%;

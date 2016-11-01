@@ -1,6 +1,6 @@
 .sidebar {
-	padding: 6%;
-	margin: -6% -6% $spacing-double;
+	//padding: 6%;
+	//margin: -6% -6% $spacing-double;
 	position: relative;
 	//background-color: $color-black;
 
@@ -11,15 +11,11 @@
 		bottom: 0;
 		z-index: 30;
 
-		width: 35%;
+		width: $spacing * 3;
 		margin: 0;
-		padding: 0 1rem 1rem 1rem;
 		backface-visibility: hidden;
 	}
 
-	@media only screen and (min-width: $lap-wide) { 
-		width: 25%;
-	}
 
 	&::after {
 		content: '';

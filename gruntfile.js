@@ -6,54 +6,61 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         sass: {
-            dist: {
-                options: {
-                    style: 'nested'
-                },
-                files: {
-                    'src/css/style.css': 'src/css/sass/style.scss'
-                }
-            },
+            // dist: {
+            //     options: {
+            //         style: 'nested'
+            //     },
+            //     files: {
+            //         'src/css/style.css': 'src/css/sass/style.scss'
+            //     }
+            // },
             build: {
                 options: {
-                    style: 'compressed'
+                    outputStyle: 'nested',
+                    sourcemap: 'none'
                 },
                 files: {
-                    'public/css/style.min.css': 'src/css/sass/style.scss'
+                    'public/css/style-2016.min.css': 'src/css/sass/style.scss',
+                    'public/css/full-2016.min.css': 'src/css/sass/full.scss'
                 }
+            }
+        },
+        autoprefixer: {
+            options: {
+                browsers: ['IE > 9', '> 1% in NL', 'last 2 versions']
+            },
+            dist: {
+                src: 'public/css/style-2016.min.css'
             }
         },
         imagemin: {
             dynamic: {
-              files: [{
-                expand: true,
-                cwd: 'src/images',
-                src: ['**/*.{png,jpg,gif}'],
-                dest: 'public/images'
-              }]
+                options: {
+                    optimizationLevel: 5
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'src/images',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'public/images'
+                }]
             }
         },
         bake: {
             build: {
-                options: {
-                    content: "src/pagesettings.json"
-                },
                 files: [{
                     expand: true,
                     cwd: './src',
-                    src: ['*.html', 'articles/*.html'],
+                    src: ['index.html', 'actie.html', 'english.html', 'over-frozen-rockets.html', 'contact.html', 'accessibility/accessibility-101.html', 'accessibility/alfabet-van-accessibility.html'],
                     dest: './public',
                     ext: '.html'
                 }]
             }
         },
-        stylestats: {
-            src: ['public/css/style.min.css']
-        },
         watch: {
             css: {
                 files: ['**/*.scss'],
-                tasks: ['sass:dist', 'sass:build', 'stylestats']
+                tasks: ['sass:build', 'autoprefixer']
             },
             html: {
                 files: ['src/**/*.html'],
@@ -71,7 +78,7 @@ module.exports = function(grunt) {
                     port: 9010,
                     hostname: '0.0.0.0',
                     base: './public',
-                    open: true
+                    open: false
                 }
             }
         }
@@ -80,4 +87,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['imagemin','watch']);
     grunt.registerTask('serve', ['connect:server','default']);
+    grunt.registerTask('package', ['bake','sass:build','imagemin']);
 };

@@ -1,98 +1,61 @@
-.mainnav {
-	position: relative;
-	//z-index: 5;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	//background-color: rgba($color-text-green, .8);
+[role="navigation"] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	padding: $spacing-half;
+	background-color: rgba($color-black, .5);
 
-	@media only screen and (min-width: $lap) { 
-		position: absolute;
-		bottom: 2rem;
-		left: .5rem;
-		right: .5rem;
-		margin-top: 0;
+	ol {
+		@include display-flex;
+		@include vendor(align-items, stretch);
+		@include vendor(flex-wrap, wrap);
+		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
-}
 
-	.mainnav__item {
+	li {
+		margin: 0;
+	}
+
+	a {
 		position: relative;
-		height: $spacing-double;
-		margin-bottom: 0;
-		overflow: hidden;
-		border-bottom: 1px solid $color-text-green;
-		font-size: $font-size-small;
+		display: block;
+		height: 100%;
+		margin-right: $spacing-half;
+		border: none;
+		color: $color-white;
+		font-weight: 500;
 
-
-		@include vendor(transition, all .5s linear);
-
-		a {
-			position: absolute;
-			top: 0;
-
-			display: block;
-			width: 100%;
-			height: 100%;
-			z-index: 2;
-			padding: .5rem;
-
-			color: $color-text-green;
-			text-decoration: none;
-			border:none;
-
-			@include vendor(transition, all .2s linear);
-
-			&:hover, &:focus {
-				color: $color-text-green;
-				padding-left: 1rem;
-
-			}
-		}
+		@include vendor(transition, all .1s ease-out);
 
 		&::after {
 			content: '';
-
 			position: absolute;
-			top: $spacing;
+			left: 0;
+			top: 50%;
+			z-index: -1;
 
-			display: block;
+			height: 0%;
 			width: 100%;
-			height: $spacing-double;
-			//padding: $spacing-half;
 
-			//background: rgba($color-black, .8);
-			background: rgba($color-white, .3);
 			opacity: 0;
-			//@include vendor(transition, none);
-			@include vendor(transition, all .5s ease-in);
-			
+
+			border-bottom: 1px solid $color-white;
+
+			@include vendor(transition, all .1s ease-out);
 		}
 
+
 		&:hover {
+			color: $color-white;
 
 			&::after {
 				opacity: 1;
-				@include vendor(transform, translateY(-$spacing));
-				
+				top: 80%;
 			}
 		}
 
-		&:last-child {
-			border-bottom: none;
-		}
 	}
-
-	.mainnav__item--secondary {
-		border-bottom: 1px solid $color-text-pink-dark;
-
-		a {
-			color: $color-text-pink-dark;
-			text-decoration: none;
-		}
-
-		&:hover {
-			a {
-				color: $color-black;
-			} 
-		}
-	}
+}

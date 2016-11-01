@@ -1,0 +1,16 @@
+.cicada {
+	$cicada-color: $color-text-pink-dark;
+
+	border: none;
+	background-color: $color-text-green;
+	background-image: linear-gradient(90deg, darken($cicada-color, 20%) 50%, transparent 50%), linear-gradient(90deg, darken($cicada-color, 40%) 50%, transparent 50%), linear-gradient(90deg, $cicada-color 50%, transparent 50%);
+	background-size: 13%, 17%, 37%;
+
+	height: $spacing / 4;
+
+	margin: $spacing-double 0;
+}
+
+	.cicada--alternate {
+		background-size: 7%, 29%, 57%;
+	}

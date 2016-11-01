@@ -1,0 +1,78 @@
+// @import "0 - settings/all";
+
+// [role="banner"] {
+// 	background-image: url('./../images/screens/pillars-of-creation-small.jpg');
+
+// 	@media only screen and (min-width: $lap-wide) { 
+// 		background-image: url('./../images/screens/pillars-of-creation.jpg');
+// 	}
+// }
+
+// .page-sale [role="banner"] {
+// 	background-image: url('./../images/screens/pluto-charon-small.jpg');
+
+// 	@media only screen and (min-width: $lap-wide) { 
+// 		background-image: url('./../images/screens/pluto-charon.jpg');
+// 	}
+// }
+
+// .screen {
+
+
+// 	// &:nth-child(2n) {
+// 	// 	background-image: url('./../images/screens/pluto-charon.jpg');
+
+// 	// 	@media only screen and (min-width: $lap-wide) { 
+// 	// 		background-image: url('./../images/screens/pluto-charon.jpg');
+// 	// 	}
+// 	// }
+
+// 	// &:nth-child(2n+1) {
+// 	// 	background-image: url('./../images/screens/pillars-of-creation-small.jpg');
+
+// 	// 	@media only screen and (min-width: $lap-wide) { 
+// 	// 		background-image: url('./../images/screens/pillars-of-creation.jpg');
+// 	// 	}
+// 	// }
+
+// 	&.mission-objective {
+// 		//background-image: url('./../images/screens/moon-view-small.jpg');
+
+// 		@media only screen and (min-width: $lap-wide) { 
+// 			//background-image: url('./../images/screens/moon-view.jpg');
+// 		}
+
+// 		&::before {
+// 			//background-color: rgba(darken($color-text-green, 30%), .8);
+// 		}
+// 	}
+
+
+// 	&.sale {
+// 		background-image: url('./../images/screens/pluto-charon.jpg');
+
+// 		@media only screen and (min-width: $lap) {
+// 			background-image: url('./../images/screens/pluto-charon.jpg');
+// 		}  
+// 	}
+
+// 	&.section--usp {
+// 		background-image: none;
+
+// 		@media only screen and (min-width: $lap-wide) { 
+// 			background-image: none;
+// 		}
+// 	}
+
+// }
+
+// .page--contact {
+// 	section {
+// 		background-image: url('./../images/screens/GPN-2000-001124.jpg');
+// 		border-bottom: none;
+
+// 		@media only screen and (min-width: $lap-wide) { 
+// 			background-image: url('./../images/screens/GPN-2000-001124.jpg');
+// 		}
+// 	}
+// }

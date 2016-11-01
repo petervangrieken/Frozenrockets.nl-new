@@ -1,151 +1,31 @@
 a, .link {
-	color: darken($color-text-pink-light,20%);
-	color: $color-text-pink-dark;
+	//color: $color-white;
+	color: black;
 	text-decoration: none;
 	border-bottom: 1px solid;
 	cursor: pointer;
 
-	&[href^="http"] {
-		//color: $color-text-pink-dark;
-	}
-}
-
-a:hover, a:active, a:focus {
-	color: $color-text-green;
-}
-
-
-.link--unstyled {
-	border-bottom: none;
-}
-
-.linkblock {
-	display: block;
-	color: inherit;
-	border: none;
-
-	&:hover, &:active {
-		color: inherit;
-	}
-
- 	&:focus {
- 		color: $color-text-pink-dark;
- 	}
-
-
-	&:visited {
-		color: inherit;
+	&:hover, &:focus {
+		//color: $color-text-green;
+		//border-bottom: none;
 	}
 }
 
 .button {
 	display: inline-block;
-	padding: $spacing-half $spacing;
-	margin: 0 $spacing-half $spacing 0;
+	padding: 0 $spacing-half;
+	margin-bottom: $spacing / 8;
 
-	background-color: $color-text-pink-light;
-	background-image: linear-gradient(transparent 0%,  rgba(0,0,0,.1) 100%);
+	background-color: $color-text-pink-dark;
 	color: $color-white;
-	text-shadow: 0 0 5px 0px rgba(0,0,0,.3);
-	border: none;
-	border-radius: 3px;
-	transition: all .2s linear;
-	cursor: pointer;
-	width: auto;
+	font-weight: 700;
+	font-size: 3em;
+
+	border-bottom: none;
+	border-radius: 2px;
+	transition: background-color .1s linear;
 
 	&:hover, &:focus {
-		color: $color-white;
-		background-color: darken($color-text-blue-light, 10%);
-	}
-
-	&--unstyled {
-		background-color: transparent;
-		background-image: none;
-		border: none;
-		font-size: $font-size-base;
-		color: $color-black;
-		padding: 0;
-		margin: 0;
-		font-weight: $font-weight-base;
-
-		&:hover, &:focus {
-			background-image: none;
-			background-color: transparent;
-			color: $color-black;
-			text-decoration: underline;
-		}
-	}
-}
-
-	.button--secondary {
-		background-color: $color-text-green;
-		color: $color-black;
-
-		&[href^="http"] {
-			color: $color-black;
-		}
-		
-		&:hover, &:focus {
-			background-color: darken($color-text-blue-light, 10%);
-		}
-	}
-
-
-	.button--tertiairy {
-		background-color: $color-text-pink-dark;
-		color: $color-white;
-		padding: $spacing / 4 $spacing;
-
-		&[href^="http"] {
-			color: $color-white;
-		}
-		
-		&:hover, &:focus {
-			background-color: darken($color-text-pink-dark, 10%);
-			color: $color-white;
-		}
-	}
-
-
-
-a[href*="linkedin.com"] {
-	background: transparent url(./../images/linkedin.png) no-repeat 0 0;
-	background-size: $spacing $spacing;
-	height: $spacing-double;
-	//width: $spacing-double;
-	border: 0;
-	display: inline-block;
-	padding-left: $spacing * 1.5;
-	margin-right: $spacing * 1.5;
-	span {
-		//display: none;
-	}
-}
-
-a[href*="twitter.com"] {
-	background: transparent url(./../images/twitter.png) no-repeat 0 0;
-	background-size: $spacing $spacing;
-	height: $spacing-double;
-	//width: $spacing-double;
-	border: 0;
-	display: inline-block;
-	padding-left: $spacing * 1.5;
-	margin-right: $spacing * 1.5;
-	span {
-		//display: none;
-	}
-}
-
-a.mailto{
-	background: transparent url(./../images/envelope.png) no-repeat 0 .25em;
-	background-size: $spacing auto;
-	height: $spacing-double;
-	//width: $spacing-double;
-	border: 0;
-	display: inline-block;
-	padding-left: $spacing * 1.5;
-	margin-right: $spacing * 1.5;
-	span {
-		//display: none;
-	}
+		background-color: darken($color-text-pink-dark, 20%);
+	}	
 }

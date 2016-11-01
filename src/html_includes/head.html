@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" itemscope itemtype="http://schema.org/Organization">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="uWUoxdqy5iSmx95AoEesJEtG5tyh3ur7iEHuEBcocr8" />
-	<meta name="description" property="og:description" content="Frozen Rockets is een ontwerpbureau in Den Haag gespecialiseerd in responsive design. Wij helpen u graag om uw website op alle apparaten te laten werken.">
+	<meta name="description" property="og:description" content="Frozen Rockets ontwerpt toegankelijke websites. Wij helpen u graag om uw online dienstverlening voor iedereen toegankelijk te maken." itemprop="description">
 	<meta property="og:title" content="{{ title }}" />
-	<meta property="og:url" content="http://frozenrockets.nl/{{uri}}" />
-	<meta property="og:image" content="http://frozenrockets.nl/images/fr-logo-mask-small.jpg" />
+	<meta property="og:url" content="https://frozenrockets.nl/" itemprop="url" />
+	<meta property="og:image" content="https://frozenrockets.nl/images/fr-logo-mask-small.jpg" />
 
 	<meta property="og:locale" content="nl_NL" />
 	<meta property="og:type" content="website" />
@@ -16,26 +16,25 @@
 
 	<title>{{ title }}</title>
 
+	<!--[if lt IE 9]>
+		<script  src="./js/html5shiv.js"></script>
+	<![endif]-->
+
 	<link rel="stylesheet" href="./css/style.min.css">
-	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<link rel="preload" as="style" href="https://cloud.typography.com/7599872/689164/css/fonts.css">
+    <link rel="preload" as="style" href="./css/full.min.css">
 </head>
 
-<body class="page {{ pageclass }}">
+<body class="{{page}}">
 
+	<a href="./" class="toplink" aria-label="Terug naar homepage">&times;</a>
 
-	<header role="banner" class="sidebar {{ sidebarclass }}">
+	<header role="banner">
 
-		<a href="./" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
+		<div class="maintitle" lang="en">
+			<a href="./"><img src="./images/fr-logo.svg" alt="Frozen Rockets"></a>
+		</div>
 
-		<nav role="navigation">
-			<ol class="mainnav">
-				<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
-				<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
-				<li class="mainnav__item"><a href="http://blog.frozenrockets.nl">Artikelen</a></li>
-				<li class="mainnav__item"><a href="./contact">Contact</a></li>
-			</ol>
-		</nav>
 	</header>
-
-	<main role="main">

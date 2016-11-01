@@ -1,10 +1,7 @@
 .aboutblock {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: flex;
-
+	@include display-flex;
 	@include vendor(flex-direction, column);
+	
 	overflow: hidden;
 
 	border: 1px solid rgba($color-black, .1);
@@ -15,11 +12,7 @@
 
 	&__header {
 		@include vendor(flex-basis, $spacing * 3);
-
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: flex;
+		@include display-flex;
 
 		background-color: $color-text-green;
 		color: $color-black;

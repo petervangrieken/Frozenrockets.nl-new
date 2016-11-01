@@ -1,0 +1,113 @@
+.article {
+	max-width: 69em;
+	// font-size: 1.4em;
+	// font-weight: 300;
+	// border-bottom: 1px solid rgba(255,255,255,.8);
+	// background-color: rgba(darken($color-text-green, 30%), .98);
+
+	h1 {
+		margin-bottom: 1rem;
+		//margin-top: -2em;
+		transform: rotate(-1deg);
+
+		font-size: 1.8em;
+		font-weight: 300;
+		line-height: 1.4;
+		//text-align: left;
+		color: black;
+		
+		span {	
+			$color: lighten(#01D7C4, 8%);
+			$color: yellow;
+			background-color: $color; 
+			box-shadow: 10px 0 0 $color, -10px 0 0 $color;
+		}
+	}
+
+	a {
+		color: $color-text-pink-dark;
+	}
+
+
+	small:last-of-type {
+		display: block;
+		padding: $spacing-double 0;
+		margin-top: $spacing-double;
+		margin-bottom: $spacing;
+		border-top: 1px solid black;
+	}
+}
+
+.like-article {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 4em;
+	margin-top: $spacing-double;
+
+	h2 {
+		position: absolute;
+		top: -$spacing * 1.5;
+
+		span {	
+			$color: lighten(#01D7C4, 8%);
+			background-color: $color; 
+			box-shadow: 10px 0 0 $color, -10px 0 0 $color;
+		}
+	}
+}
+
+[id='toggle-heart'] {
+  position: absolute;
+  left: -100vw;
+    
+    &:checked + label {
+        color: #e2264d;
+        text-shadow: none;
+        will-change: font-size;
+        animation: heart .3s cubic-bezier(.17, .89, .32, 1.49);
+    }
+}
+
+[for='toggle-heart'] {
+    //align-self: center;
+    color: rgba(0,0,0,.6);
+    color: white;
+    text-shadow: 0 0 1px rgba(black, 1);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@keyframes heart {
+    0%, 15% { font-size: 0; }
+}
+
+@keyframes heart { 0%, 17.5% { font-size: 0; } }
+
+
+
+article + aside {
+	max-width: 69em;
+
+	h2 {
+		//display: none;
+		//max-width: 400px;
+		margin-bottom: 1rem;
+		margin-top: -2em;
+		transform: rotate(-1deg);
+
+		font-size: 1.4em;
+		font-weight: 300;
+		line-height: 1.4;
+		text-align: center;
+		color: black;
+		
+		span {	
+			$color: lighten(#01D7C4, 8%);
+			$color: yellow;
+			background-color: $color; 
+			box-shadow: 10px 0 0 $color, -10px 0 0 $color;
+		}
+	}
+}

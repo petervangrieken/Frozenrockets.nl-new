@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="uWUoxdqy5iSmx95AoEesJEtG5tyh3ur7iEHuEBcocr8" />
-	<meta name="description" property="og:description" content="Frozen Rockets is een ontwerpbureau in Den Haag gespecialiseerd in responsive design. Wij helpen u graag om uw website op alle apparaten te laten werken.">
+	<meta name="description" property="og:description" content="Frozen Rockets is een ontwerpbureau in Den Haag gespecialiseerd in toegankelijker websites. Wij helpen u graag om uw website op alle apparaten en voor iedereen te laten werken.">
 	<meta property="og:title" content="Over Frozen Rockets" />
 	<meta property="og:url" content="http://frozenrockets.nl/about-detail" />
 	<meta property="og:image" content="http://frozenrockets.nl/images/fr-logo-mask-small.jpg" />
@@ -17,26 +17,32 @@
 	<title>Over Frozen Rockets</title>
 
 	<link rel="stylesheet" href="./css/style.min.css">
-	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7599872/689164/css/fonts.css" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
-<body class="page page--about-detail">
+<body class="">
 
+	<header role="banner">
+		<div class="maintitle" lang="en">
+			<h1 class="logo"><a href="./" class="borderless "><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a></h1>
 
-	<header role="banner" class="sidebar screen--about-detail">
+			<!--p>Toegankelijke websites hoeven niet saai te zijn.</p-->
 
-		<a href="./" class="borderless logo"><img src="./images/fr-logo.svg" alt="Frozen Rockets" id="main-logo-image"></a>
-
-		<nav role="navigation">
-			<ol class="mainnav">
-				<li class="mainnav__item"><a href="./projecten">Projecten</a></li>
-				<li class="mainnav__item"><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
-				<li class="mainnav__item"><a href="http://blog.frozenrockets.nl">Artikelen</a></li>
-				<li class="mainnav__item"><a href="./contact">Contact</a></li>
-			</ol>
-		</nav>
+			<!--span class="maintitle__subtitle">
+				&ldquo;To go places and do things that have never been done before&rdquo;<br>
+				<i>Michael Collins &ndash; Apollo 11</i>
+			</span-->
+		</div>
 	</header>
+
+	<!--nav role="navigation">
+		<ol>
+			<li><a href="#filosofie"><span>Filosofie</span></a></li>
+			<li><a href="./projecten"><span>Projecten</span></a></li>
+			<li><a href="./over-frozen-rockets"><span>Over Frozen Rockets</span></a></li>
+			<li><a href="./contact">Contact</a></li>
+		</ol>
+	</nav-->
 
 	<main role="main">
 
@@ -79,9 +85,126 @@
 
   </main>
 
+  <!--footer>
+
+    <div class="container--centered">
+
+      <div class="grid">
+        <div class="grid__column grid__column--1of3 inset">
+          <h2>Frozen Rockets</h2>
+          <p>
+            Frozen Rockets ontwerpt de best mogelijk website voor &aacute;l uw klanten. Wij vinden namelijk dat toegankelijke websites niet saai hoeven te zijn.
+          </p>
+
+
+          <nav>
+            <ul class="list--unstyled">
+              <li><a href="./over-frozen-rockets">Over Frozen Rockets</a></li>
+              <li><a href="./projecten">Projecten</a></li>
+              <li><a href="http://blog.frozenrockets.nl">Artikelen</a></li>
+              <li><a href="./contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="grid__column grid__column--1of3 inset">
+
+        </div>
+
+        <div class="grid__column grid__column--1of3 inset">
+          <h2>Adres</h2>
+
+          <p>
+            Frozen Rockets BV<br>
+            Binckhorstlaan 36<br>
+            2516 BE Den Haag
+          </p>
+          <p>
+            <a href="https://www.google.nl/maps/place/Binckhorstlaan+36,+Binckhorst,+2516+BE+Den+Haag/@52.0734802,4.3325885,15z/data=!4m2!3m1!1s0x47c5b71cb450ceaf:0x991f40e24ede6d44?hl=nl">Google Maps</a>
+          </p>
+
+          <h2>Snel contact?</h2>
+          <p>
+          Bel Peter: 06 1424 2551
+          </p>
+
+          <p>
+          
+            <a href="mailto:hi@frozenrockets.nl" class="button">Mail ons!</a>
+          </p>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </footer-->
+
+<script defer type="text/javascript">
+function loadCSS( href, media ){
+  "use strict";
+
+  var ss = window.document.createElement( "link" );
+  var ref = window.document.getElementsByTagName( "head" )[ 0 ];
+  var sheets = window.document.styleSheets;
+  ss.rel = "stylesheet";
+  ss.href = href;
+  ss.media = "only x";
+
+  // inject link
+  ref.appendChild( ss, ref );
+
+  function toggleMedia(){
+    var defined;
+    for( var i = 0; i < sheets.length; i++ ){
+      if( sheets[ i ].href && sheets[ i ].href.indexOf( ss.href ) > -1 ){
+        defined = true;
+      }
+    }
+    if( defined ){
+      ss.media = media || "all";
+    }
+    else {
+      setTimeout( toggleMedia );
+    }
+  }
+  toggleMedia();
+  return ss;
+}
+
+loadCSS("//cloud.typography.com/7599872/689164/css/fonts.css", "all");
+</script>
+<noscript><link rel="stylesheet" href="//cloud.typography.com/7599872/689164/css/fonts.css"></noscript>
+
+<script defer type="text/javascript">
+  var scrollTop= window.scrollY;
+  var mainNavigation= document.querySelector(".mainnavigation");
+  var siteHeader= document.querySelector(".siteheader");
+  var headerBounds= siteHeader.getBoundingClientRect();
+  var headerPosition= headerBounds.height;
+
+    if(scrollTop > headerPosition) {
+      mainNavigation.classList.add("logo-visible");
+    } else {
+      mainNavigation.classList.remove("logo-visible");
+    }
+
+  window.onscroll = function (event) {
+      scrollTop = window.scrollY;
+
+      if(scrollTop > headerPosition * .8) {
+        mainNavigation.classList.add("logo-visible");
+      } else {
+        mainNavigation.classList.remove("logo-visible");
+      }
+  }
+</script>
 
 <!-- Piwik -->
-<script type="text/javascript">
+<script async type="text/javascript">
   var _paq = _paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);

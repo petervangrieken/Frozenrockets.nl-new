@@ -28,29 +28,10 @@ input, textarea {
 	color: $color-black;
 	outline: none;
 
-	border: 1px solid currentColor;
-	box-shadow: 0 0 10px rgba($color-text-pink-dark, 0);
+	border: 1px solid $color-black;
+	//box-shadow: 0 0 10px rgba($color-text-pink-dark, 0);
 	transition: all .2s linear;
 
-	&:empty {
-		border: 1px solid rgba(0,0,0,.4);
-	}
-
-	&:valid {
-		border: none;
-		padding-left: $spacing;
-
-
-		& + .validation::after {
-			content: '✓ ';
-		}
-	}
-
-	&:focus {
-		color: $color-text-pink-dark;
-		border: 1px solid currentColor;
-		box-shadow: 0 0 14px -4px rgba($color-text-pink-dark, .8);
-	}
 }
 
 textarea {

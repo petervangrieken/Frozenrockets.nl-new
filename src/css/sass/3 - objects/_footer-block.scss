@@ -1,28 +1,42 @@
-.footer-block {
-	padding: $spacing $spacing 0 $spacing;
-	margin: $spacing-double 0;
-	background-color: $color-text-blue-light;
-	border-radius: 6px;
-	font-size: 80%;
+footer {
+	display: flex;
+	//justify-content: space-between;
+	flex-wrap: wrap;
+	font-size: .8em;
+	color: rgba(0,0,0,.7);
+	padding: $spacing $spacing $spacing-half;
+	max-width: 66rem;
+	margin: auto;
+	pointer-events: none;
 
-	&__header {
-		color: $color-black;
-		padding-bottom: $spacing-half;
+	> * { 
+		line-height: 1.2;
 	}
 
-	&__list {
-		list-style-position: inside;
-		list-style-type: square;
-		padding-left: 0;
-		padding-bottom: $spacing;
+	a {
+		text-decoration: none !important;
+		color: inherit !important;
 	}
 
-	a:hover {
-		color: $color-black;
+	h2 {
+		font-weight: 500;
+		font-size: 1em;
+		margin-right: $spacing;
+		margin-bottom: $spacing / 6;
 	}
+
+	p {
+		margin-bottom: $spacing / 6;
+		margin-right: $spacing;
+	}
+
+	p > span {
+		display: inline-block;
+		margin: 0 $spacing-half 0 0;
+	}
+
+
+
+
+
 }
-
-	.footer-block__secondary {
-		background-color: $color-text-pink-dark;
-		color: $color-white;
-	}

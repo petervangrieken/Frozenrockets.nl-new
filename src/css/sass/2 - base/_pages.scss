@@ -1,45 +1,438 @@
-.page {
-	padding: 2%;
-	//max-width: 80em;
-	background-color: rgba($color-text-blue-light, .1);
-
-	@media only screen and (min-width: $lap) { 
-		padding-left: 37%;
-	}
-
-	@media only screen and (min-width: $lap-wide) { 
-		padding-left: 27%;
-	}
+body {
+	//padding-bottom: $spacing-double;
+	background-color: rgb(240,240,240);
+	scroll-behavior: smooth;
 }
 
 main {
-	//padding: $spacing;
-	//background-color: rgba($color-white,.95);
-	//box-shadow: 0 0 2px rgba($color-black, .1);
-	//border-radius: 5px;
+	position: relative;
+	z-index: 1;
 }
 
-
-.page--home {
-	@extend .screen--home;
-	min-height: 0;
-	height: 100%;
-	max-width: none;
-
-	@media only screen and (min-width: $lap) { 
-		padding-top: 10%;
-	}
-
-	header {
-		color: $color-white;
-	}
-
-	main {
-		background-color: transparent;
-		box-shadow: none;
-		border-radius: none;
-		padding: 0;
-	}
+.screen {
+	position: relative;
+	padding: $spacing;
 
 }
 
+.services {
+	overflow: hidden;
+	min-height: 40em;
+	padding-top: $spacing * 4;
+	padding-bottom: $spacing * 4;
+	flex-direction: column;
+	justify-content: center;
+	
+	background-image: linear-gradient(white, lighten($color-text-green, 40%) );	
+	border-bottom: 1px solid rgba($color-text-green, .5);
+
+	> div:first-child {
+		position: relative;
+		z-index: 1;
+	}
+
+	h2 {
+		margin-bottom: $spacing;
+
+		padding-top: $spacing / 3;
+		background: linear-gradient(black 4px, transparent 4px);
+		background-size: $spacing * 1.5 4px;
+		background-repeat: no-repeat;
+
+		font-size: 2em;
+		font-weight: 700;
+
+		color: black;
+
+	}
+
+	h2 + p {
+		font-size: 1em;
+		font-weight: 100;
+		font-weight: 500;
+	}
+
+	p {
+		font-size: .8em;
+		font-weight: 100;
+	}
+
+	a {
+		display: block;
+		text-align: center;
+		font-weight: 500;
+		padding: $spacing / 3;
+		margin-top: $spacing;
+		transition: all .1s linear;
+		border: 3px solid black;
+		//color: black;
+		background-color: lighten($color-text-pink-light, 36%);
+
+		@media only screen and (min-width: 44em) {
+			display: inline-block;
+		}
+
+		&:focus, &:hover {
+			color: lighten($color-text-pink-light, 36%);
+			background-color: black;
+		}
+	}
+
+	img {
+		display: none;
+		transform: rotate(90deg);
+		position: relative;
+		left: 20%;
+		filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+	}
+
+	
+	@media only screen and (min-width: 44em) {
+		padding-left: 6%;
+		padding-right: 54%;
+		background-image: linear-gradient(90deg, rgb(250,250,250) 50%, lighten($color-text-pink-light, 36%) 50%, lighten($color-text-green, 40%) 100%);	
+		border-bottom: none;
+
+		img {
+			transform: rotate(0deg);
+			position: absolute;
+			left: 55%;
+			top: $spacing * 2;
+			height: auto;
+			width: 40%;
+		}
+	}
+
+	@media only screen and (min-width: 60em) {
+		padding-left: 10%;
+		padding-right: 60%;
+	}
+
+	&:nth-child(2n+1) {
+		a {
+			background-color: lighten($color-text-green, 48%);
+
+			&:focus, &:hover {
+				color: lighten($color-text-green, 48%);
+				background-color: black;
+			}
+		}
+
+		background-image: linear-gradient(white, lighten($color-text-pink-light, 36%) );
+		border-bottom: 1px solid rgba($color-text-pink-light, .4);
+
+		@media only screen and (min-width: 44em) {	
+			padding-right: 6%;
+			padding-left: 54%;
+			background-image: linear-gradient(90deg, lighten($color-text-pink-light, 36%) 0%, lighten($color-text-green, 48%) 50%, white 50%);	
+			border-bottom: none;
+
+			img {
+				right: 55%;
+				left: auto;
+			}
+		}
+
+		@media only screen and (min-width: 60em) {
+			padding-right: 10%;
+			padding-left: 60%;
+		}
+	}
+
+
+	& + hr {
+		border: none;
+		height: $spacing * 10;
+		//background-image: linear-gradient(90deg, lighten($color-text-green, 48%), lighten($color-text-pink-light, 36%));
+	}
+
+}
+
+	.deco {
+		position: absolute;
+		
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		opacity: .08;
+
+		@media only screen and (min-width: 44em) {
+			right: 0;
+			left: auto;
+			width: 50%;
+			opacity: .1;
+
+			&--left {
+				right: auto;
+				left: 0;
+			}
+		}
+
+
+		&:before {
+			content: '';
+			height: 5px;
+			width: 5px;
+			border-radius: 50%;
+			background-color: $color-text-green;
+
+			position: absolute;
+			right: 50%;
+			top: 50%;
+			box-shadow:-4em 4em 0 0 $color-text-pink-light,
+						1.4em -4.4em 0 0 $color-text-pink-dark, 
+						6em -2em 0 0 $color-text-pink-dark,
+						-8em -11em 0 4px $color-text-green,
+						8em -6em 0 2px $color-text-blue-light,
+						10em 10em 0 0 black;
+
+			$star-number: 6;
+			$current-stars: ;
+			$star-colors: $color-text-green, $color-text-pink-dark, $color-text-pink-light, $color-text-blue-light;
+
+			  @while $star-number > 0 {
+			  	$current-color: random(4);
+			  	$current-star-color: nth($star-colors, $current-color);
+
+			    $current-stars: $current-stars
+			                    + (random(60) - 30 +em) (random(60) - 30 +vh) 0 (random(3) +px) +  $current-star-color
+			                    + unquote(", ");
+
+			    @if $star-number == 1 {
+			      $current-stars: $current-stars
+			                      + (random(60) - 30 +em) (random(60) - 30 +vh) 0 (random(3) +px) + $current-star-color;
+			      box-shadow: $current-stars;
+			    }
+
+			    $star-number: $star-number - 1;
+			  }
+
+			animation: solarsystem 50s infinite linear;
+		}
+		
+		&:after {
+			content: '';
+			height: 5px;
+			width: 5px;
+			border-radius: 50%;
+			background-color: $color-text-green;
+
+			position: absolute;
+			right: 50%;
+			top: 50%;
+			box-shadow:-4em 4em 0 0 $color-text-pink-light,
+						1.4em -4.4em 0 0 $color-text-pink-dark, 
+						6em -2em 0 0 $color-text-pink-dark,
+						-8em -11em 0 4px $color-text-green,
+						8em -6em 0 2px $color-text-blue-light,
+						10em 10em 0 0 black;
+
+			$star-number: 5;
+			$current-stars: ;
+			$star-colors: $color-text-green, $color-text-pink-dark, $color-text-pink-light, $color-text-blue-light;
+
+			  @while $star-number > 0 {
+			  	$current-color: random(4);
+			  	$current-star-color: nth($star-colors, $current-color);
+
+			    $current-stars: $current-stars
+			                    + (random(60) - 30 +em) (random(60) - 30 +vh) 0 (random(3) +px) +  $current-star-color
+			                    + unquote(", ");
+
+			    @if $star-number == 1 {
+			      $current-stars: $current-stars
+			                      + (random(60) - 30 +em) (random(60) - 30 +vh) 0 (random(3) +px) + $current-star-color;
+			      box-shadow: $current-stars;
+			    }
+
+			    $star-number: $star-number - 1;
+			  }
+
+			animation: solarsystem 60s infinite linear;
+		}
+	}
+
+
+
+@keyframes solarsystem {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+
+
+.deco--stars {
+  transform-style: preserve-3d;
+  perspective: 100px;
+  opacity: .1;
+
+	@media only screen and (min-width: 44em) {
+		opacity: .3;
+	}
+
+  &:before, &:after { content: none;}
+}
+.star:before, .star:after {
+	content: '';
+  //background: $color-text-green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+$total: 25;
+$time: 20;
+$star-colors: $color-text-green, $color-text-pink-dark, $color-text-pink-light, $color-text-blue-light;
+
+@function posOrNeg(){
+  @return random() * 2 - 1;
+}
+
+@for $i from 1 through $total {
+	$size: random(5) + 2;
+	$x: (random(1000) + 200) * posOrNeg();
+	$y: (random(1000) + 200) * posOrNeg();
+	$z: random(500) * -1;
+
+	$current-color: random(4);
+	$current-star-color: nth($star-colors, $current-color);
+
+	.star:nth-child(#{$i}):before{
+		height: $size+px;
+		width: $size+px;
+
+		background-color: $current-star-color;
+		margin-top: -$size/2+px;
+		margin-left: -$size/2+px;
+		transform: translate3d($x+px, $y+px, $z+px);
+		animation: flybefore#{$i} $time+s infinite linear;
+		animation-delay: ($time/$total * $i)+s;
+	}
+
+
+
+
+  @keyframes flybefore#{$i}{
+    100% {
+      opacity: 1;
+      transform: translate3d($x+px, $y+px, 100px);
+    }
+  }
+}
+
+@for $i from 1 through $total {
+	$size: random(3) + 2;
+	$x: (random(1000) + 200) * posOrNeg();
+	$y: (random(1000) + 200) * posOrNeg();
+	$z: random(500) * -1;
+
+	$current-color: random(4);
+	$current-star-color: nth($star-colors, $current-color);
+
+	.star:nth-child(#{$i}):after{
+		height: $size+px;
+		width: $size+px;
+
+		background-color: $current-star-color;
+		margin-top: -$size/2+px;
+		margin-left: -$size/2+px;
+		transform: translate3d($x+px, $y+px, $z+px);
+		animation: flyafter#{$i} $time+s infinite linear;
+		animation-delay: ($time/$total * $i)+s;
+	}
+
+
+
+
+  @keyframes flyafter#{$i}{
+    100% {
+      opacity: 1;
+      transform: translate3d($x+px, $y+px, 100px);
+    }
+  }
+}
+
+
+.contact {
+	max-width: 66rem;
+	//overflow: hidden;
+	margin: $spacing * 4 auto $spacing * 4;
+	background-color: lighten($color-text-green, 48%);
+	background-image: linear-gradient(45deg, lighten($color-text-green, 48%), lighten($color-text-pink-light, 36%));
+	
+	padding: $spacing;
+	border: $spacing solid white;
+
+	@media only screen and (min-width: 46em) {
+		padding: $spacing-double;
+		border: $spacing-double solid white;
+	}
+
+	>div {
+		display: flex;
+		align-items: center;
+	}
+
+	h2 {
+		padding-top: $spacing / 2;
+		margin-bottom: $spacing;
+		background-image: linear-gradient(black 4px, transparent 4px);
+		background-size: $spacing * 1.5 4px;
+		background-position: left top;
+		background-repeat: no-repeat;
+		//font-size: 2em;
+		font-weight: 700;
+
+		color: black;
+	}
+
+	h3 {
+		font-weight: 700;
+	}
+
+	p {
+		margin-bottom: 0;
+		font-size: .9em;
+
+		@media only screen and (min-width: 46em) {
+			font-size: 1em;
+		}
+	}
+
+	span {
+		text-transform: uppercase;
+		font-weight: 500;
+		display: inline-block;
+		min-width: 4em;
+	}
+
+	img {
+		max-width: 4em;
+		border-radius: 50%;
+		clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+		//float: left;
+		margin-right: $spacing-half;
+
+		@media only screen and (max-width: 24em) {
+			display: none;
+		}
+
+
+		@media only screen and (min-width: 46em) {
+			max-width: 8em;
+			margin-right: $spacing;
+		}
+	}
+
+	a {
+		border-bottom: none;
+	}
+	a:hover, a:focus {
+		text-decoration: underline;
+	}
+}

@@ -1,124 +1,142 @@
-.screen--home {
-	background-image: url('./../images/screens/baustelle_blau-small.jpg');
+// .screen--home {
+// 	background-image: url('./../images/screens/earth.jpeg');
 
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/baustelle_blau.jpg');
-	}
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/earth.jpeg');
+// 	}
 
-	background-repeat: no-repeat;
-	background-position: 100% 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);        
-}
-
-.screen--projecten {
-	background-image: url('./../images/screens/launch-2-small.jpg');
-
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/launch-2.jpg');
-	}
-
-	background-repeat: no-repeat;
-	background-position: 60% 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);
-}
-
-.screen--single-project {
-	background-image: url('./../images/screens/horizon-small.jpg');
-
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/horizon.jpg');
-	}
-
-	background-repeat: no-repeat;
-	background-position: 60% 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);
-}
-
-.screen--about {
-	background-image: url('./../images/screens/lander-small.jpg');
-
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/lander.jpg');
-	}
-	background-repeat: no-repeat;
-	background-position: 30% 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);
-}
-
-.screen--about-detail {
-	background-image: url('./../images/screens/crab-nebula-small.jpg');
-
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/crab-nebula.jpg');
-	}
-
-	background-repeat: no-repeat;
-	background-position: 30% 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);
-}
-
-.screen--about-detail-1 {
-	background-image: url('./../images/screens/starsinthesky-small.jpg');
-
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/starsinthesky.jpg');
-	}
-
-	background-repeat: no-repeat;
-	background-position: 30% 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);
-}
-.screen--about-detail-2 {
-	background-image: url('./../images/screens/nebula-small.jpg');
-
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/nebula.jpg');
-	}
-
-	background-repeat: no-repeat;
-	background-position: 30% 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);
-}
-
-.screen--contact {
-	background-image: url('./../images/screens/capsule-small.jpg');
-
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/capsule.jpg');
-	}
-
-	background-repeat: no-repeat;
-	background-position: 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);
-}
+// 	background-repeat: no-repeat;
+// 	background-position: 100% 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);  
+// 	background-attachment: fixed;      
+// }
 
 
-.screen--credits {
-	background-image: url('./../images/screens/clouds-small.jpg');
+// .screen--projecten {
+// 	background-image: url('./../images/screens/launch-2-small.jpg');
 
-	@media only screen and (min-width: $lap) {
-		background-image: url('./../images/screens/clouds.jpg');
-	}
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/launch-2.jpg');
+// 	}
 
-	background-repeat: no-repeat;
-	background-position: 50%;
-	background-size: cover;
-	background-color: rgb(0,0,0);
-}
+// 	background-repeat: no-repeat;
+// 	background-position: 60% 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);
+// }
+
+// .screen--single-project {
+// 	background-image: url('./../images/screens/horizon-small.jpg');
+
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/horizon.jpg');
+// 	}
+
+// 	background-repeat: no-repeat;
+// 	background-position: 60% 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);
+// }
+
+// .screen--about {
+// 	background-image: url('./../images/screens/starsinthesky-2.jpg');
+
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/starsinthesky-2.jpg');
+// 	}
+// 	background-repeat: no-repeat;
+// 	background-position: 30% 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);
+// 	background-attachment: fixed;   
+// }
+
+// .screen--about-detail {
+// 	background-image: url('./../images/screens/crab-nebula-small.jpg');
+
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/crab-nebula.jpg');
+// 	}
+
+// 	background-repeat: no-repeat;
+// 	background-position: 30% 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);
+// }
+
+// .screen--about-detail-1 {
+// 	background-image: url('./../images/screens/starsinthesky-small.jpg');
+
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/starsinthesky.jpg');
+// 	}
+
+// 	background-repeat: no-repeat;
+// 	background-position: 30% 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);
+// }
+// .screen--about-detail-2 {
+// 	background-image: url('./../images/screens/nebula-small.jpg');
+
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/nebula.jpg');
+// 	}
+
+// 	background-repeat: no-repeat;
+// 	background-position: 30% 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);
+// }
+
+// .screen--contact {
+// 	background-image: url('./../images/screens/capsule-small.jpg');
+
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/capsule.jpg');
+// 	}
+
+// 	background-repeat: no-repeat;
+// 	background-position: 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);
+// }
 
 
-.screen--article {
-	background-color: $color-white;
+// .screen--credits {
+// 	background-image: url('./../images/screens/clouds-small.jpg');
 
-	&::after {
-		content: none;
-	}
-}
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/clouds.jpg');
+// 	}
+
+// 	background-repeat: no-repeat;
+// 	background-position: 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);
+// }
+
+
+// .screen--article {
+// 	background-color: $color-white;
+
+// 	&::after {
+// 		content: none;
+// 	}
+// }
+
+
+// .screen--christmas {
+// 	background-image: url('./../images/screens/aurora-small.jpg');
+
+// 	@media only screen and (min-width: $lap) {
+// 		background-image: url('./../images/screens/aurora.jpg');
+// 	}
+
+// 	background-repeat: no-repeat;
+// 	background-position: 50% 50%;
+// 	background-size: cover;
+// 	background-color: rgb(0,0,0);        
+// }
+

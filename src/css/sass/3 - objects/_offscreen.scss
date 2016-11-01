@@ -1,0 +1,33 @@
+.offscreen {
+	position: relative;
+
+	@media only screen and (min-width: $lap-wide) {
+		margin-left: -5vw;
+		width: 110vw;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+
+			height: 100%;
+			width: 40vh;
+			background-image: linear-gradient(90deg, $color-page-background 20%, rgba($color-page-background, 0) 100%);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+
+			height: 100%;
+			width: 40vh;
+			background-image: linear-gradient(90deg, rgba($color-page-background, 0) 0%, $color-page-background 80%);
+		}
+
+	}
+}

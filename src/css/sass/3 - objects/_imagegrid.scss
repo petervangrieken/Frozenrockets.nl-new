@@ -1,0 +1,106 @@
+.imagegrid {
+	width: 100%;
+	margin: none;
+	padding: 0;
+	border: 6px solid $color-white;
+	overflow: hidden;
+	box-shadow: 0 12px 5px -10px rgba($color-black, .5);
+
+	li {
+		position: relative;
+		float: left;
+		width: 50%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		border: 6px solid $color-white;
+
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 0;
+			height: 0;
+			border: $spacing-half solid transparent;
+			border-top: $spacing-half solid $color-white;
+			border-left: $spacing-half solid $color-white;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+			width: 0;
+			height: 0;
+			border: $spacing-half solid transparent;
+			border-right: $spacing-half solid $color-white;
+			border-bottom: $spacing-half solid $color-white;
+		}
+
+		&:nth-child(1) {
+			width: 100%;
+			order: 3;
+		}
+
+		@media only screen and (min-width: $lap) { 
+			width: 33.333%;
+
+			&:nth-child(6n+4) {
+				clear: left;
+			}
+
+			&:nth-child(n+4) {
+				width: 16.667%;
+
+				&::before,
+				&::after {
+					border-width: $spacing-half / 2;
+				}
+			}
+
+			&:nth-child(1) {
+				width: 66.667%;
+				order: auto;
+			}
+		}
+
+		@media only screen and (min-width: $lap-wide) { 
+			width: 16.667%;
+
+			&:nth-child(6n+4) {
+				clear: none;
+			}
+
+			&:nth-child(n+4) {
+				width: 16.667%;
+
+				&::before,
+				&::after {
+					border-width: $spacing-half;
+				}
+
+
+			}
+
+			&:nth-child(1) {
+				width: 33.333%;
+
+				&::before,
+				&::after {
+					border-width: $spacing;
+				}
+			}
+		}
+
+	}
+
+	img {
+		width: 100%;
+		display: block;
+	}
+}

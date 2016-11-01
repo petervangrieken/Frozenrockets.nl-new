@@ -6,10 +6,23 @@
 
 	&--cloud {
 		background-image: url('./../images/screens/above-clouds.jpg');
-
-		@media only screen and (min-width: $lap) {
-			background-image: url('./../images/screens/above-clouds.jpg');
-		}
 	}
-	
+
+	&--earth {
+		background-image: url('./../images/screens/moon-view.jpg');
+	}
+
+	&--moon {
+		background-image: url('./../images/screens/238403main_moon.jpg');
+	}
+
+	&--stars {
+		background-image: url('./../images/screens/starsinthesky-2.jpg');
+	}
+
+
+	&--space {
+		background-image: url('./../images/screens/nebula-2.png');
+	}
+
 }

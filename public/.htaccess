@@ -1,8 +1,13 @@
 RewriteEngine on  
-RewriteCond %{REQUEST_FILENAME} !-d  
-RewriteCond %{REQUEST_FILENAME}\.html -f  
-RewriteRule ^(.*)$ $1.html
 
+# RedirectMatch 302 /contact.html /
+# RedirectMatch 302 /contact /
+# RedirectMatch 302 /over-frozen-rockets.html /
+# RedirectMatch 302 /over-frozen-rockets /
+# RedirectMatch 302 /projecten.html /
+# RedirectMatch 302 /projecten /
+
+ErrorDocument 404 /
 
 #for html, php
 AddDefaultCharset UTF-8
@@ -18,9 +23,9 @@ AddType 'application/x-javascript; charset=UTF-8' js
   FileETag None
 </FilesMatch>
  
-# cache html/htm/xml/txt files for 1 day
+# cache html/htm/xml/txt files for 10 days
 <FilesMatch "\.(html|htm|xml|txt|xsl)$">
-  Header set Cache-Control "max-age=86400, must-revalidate"
+  Header set Cache-Control "max-age=864000, must-revalidate"
 </FilesMatch>
 
 # cache css/jss files for 7 days

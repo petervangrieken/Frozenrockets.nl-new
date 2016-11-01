@@ -1,0 +1,89 @@
+// .reasons-holder {
+// 	height: 100vh;
+// 	width: 100vw;
+// 	overflow: hidden;
+// } 
+
+.reasons {
+	position: relative;
+	@include display-flex;
+	flex-wrap: wrap;
+	list-style: none;
+	//min-height: 100vh;
+	max-width: 100%;
+	margin: 0;
+
+	padding: 0;
+;
+	//border-top: 1px solid rgba(255,255,255,.8);
+	//background-color: white;
+	color: black;
+
+	> li {
+		position: relative;
+		@include display-flex;
+		flex: 1 0 100%;
+		//min-height: 100vh;
+		padding: 2em;
+		padding: 2em 0;
+		margin: 0;
+		font-weight: 300;
+		
+		background-size: cover;
+		background-position: 50%;
+
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			//z-index: 0;
+			width: 100%;
+			height: 100%;
+			//background-color: rgba(darken($color-text-blue-light, 42%), .95);
+		}
+
+		&:nth-child(1)::before,
+		&:nth-child(3)::before {
+			//background-color: rgba(darken($color-text-pink-dark, 26%), .9);
+		}
+
+		&:last-child {
+			//border-bottom: 1px solid rgba(255,255,255,.8);
+		}
+
+		> div {
+			position: relative;
+			//margin: auto;
+			max-width: 60vh;
+		}
+	}
+
+
+}
+
+
+.reason {
+	//font-size: 1.6em;
+	line-height: 1.6;
+	margin-bottom: .625em;
+	//color: $color-white;
+	text-decoration: none;
+	border: none;
+
+	//font-weight: $font-weight-header-main;
+
+
+	@media only screen and (min-width: $lap) { 
+		//font-size: $font-size-header-large;
+	}
+
+	@media only screen and (min-width: $lap-wide) { 
+		//font-size: 3.1em;
+	}
+
+	&:hover, &:focus {
+		//color: $color-white;
+	}
+}
