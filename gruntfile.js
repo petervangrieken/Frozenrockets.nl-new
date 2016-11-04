@@ -16,7 +16,7 @@ module.exports = function(grunt) {
             // },
             build: {
                 options: {
-                    outputStyle: 'nested',
+                    outputStyle: 'compressed',
                     sourcemap: 'none'
                 },
                 files: {
@@ -87,5 +87,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['imagemin','watch']);
     grunt.registerTask('serve', ['connect:server','default']);
-    grunt.registerTask('package', ['bake','sass:build','imagemin']);
+    grunt.registerTask('package', ['bake','sass:build','autoprefixer','imagemin']);
 };

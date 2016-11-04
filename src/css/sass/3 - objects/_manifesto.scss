@@ -21,10 +21,18 @@
 	box-shadow: 0 0 10px rgba(0,0,0,.6) inset;
 	//flex-wrap: no-wrap;
 
-	background-image: url('./../images/screens/starsinthesky.jpg');
-	background-size: cover;
+	background-image: url('./../images/screens/pillars.jpg');
+	background-size:  cover;
 	background-position: 50%;
 	background-repeat: no-repeat;
+	background-color: darken(rgb(78, 109, 160), 26%);
+	// background-image: 
+	// 	linear-gradient(30deg, transparent 70%, rgba(white, .2)),
+	// 	linear-gradient(60deg, rgba(black, .5), rgba(black, .1), rgba(black, .3)),
+	// 	linear-gradient(60deg, rgba(black, 0), rgba(black, 0), rgba(black, .7)),
+	// 	radial-gradient(circle, #7F6652, transparent 40%),
+	// 	radial-gradient(circle, white, transparent 40%);
+
 
 
 	&:focus {
@@ -36,21 +44,26 @@
 	}
 
 	ul {
-		width: calc((82.5vw * 3) + 2.5vw);
+		position: relative;
+		width: calc((80vw + $spacing) * 3 + $spacing);
 		height: 100%;
 		margin: 0;
-		padding: 0 0 0 2.5vw;
+		padding: 0 0 0 $spacing;
 		list-style: none;
 		display: flex;
 
 		@media only screen and (min-width: 40em) {
-			width: calc((42.5vw * 3) + 2.5vw);
+			width: calc((40vw + $spacing) * 3 + $spacing);
+		}
+
+		@media only screen and (min-width: 76em) {
+			width: 100%;
 		}
 	}
 
 	li {
 		flex: 0 0 80vw;
-		margin: 2.5vw 2.5vw 2.5vw 0;
+		margin: $spacing $spacing $spacing 0;
 		//min-height: 50vh;
 		padding: $spacing * 1.5;
 		//margin: 0;
@@ -87,6 +100,11 @@
 
 		@media only screen and (min-width: 50em) {
 			padding: $spacing * 3 $spacing * 2;
+		}
+
+		@media only screen and (min-width: 76em) {
+			flex-basis: 30vw;
+			flex-grow: 1;
 		}
 	}
 
