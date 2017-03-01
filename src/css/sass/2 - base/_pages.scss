@@ -2,6 +2,10 @@ body {
 	//padding-bottom: $spacing-double;
 	background-color: rgb(240,240,240);
 	scroll-behavior: smooth;
+
+	&.page-chat {
+		background-color: white;
+	}
 }
 
 main {
@@ -386,6 +390,10 @@ $star-colors: $color-text-green, $color-text-pink-dark, $color-text-pink-light, 
 		color: black;
 	}
 
+	h2 + p {
+		margin-bottom: $spacing;
+	}
+
 	h3 {
 		font-weight: 700;
 	}
@@ -396,6 +404,15 @@ $star-colors: $color-text-green, $color-text-pink-dark, $color-text-pink-light, 
 
 		@media only screen and (min-width: 46em) {
 			font-size: 1em;
+		}
+	}
+
+	p + p {
+		margin-top: $spacing-half;
+		font-weight: 500;
+
+		a {
+			text-decoration: underline;
 		}
 	}
 

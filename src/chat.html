@@ -1,0 +1,287 @@
+<!--(bake html_includes/head-chat.html page="page-chat" title="Frozen Rockets &ndash; Studio voor Inclusive Design")-->
+<main role="main">	
+
+	<div class="chat"></div>
+
+</main>
+
+<script>
+var chatContainer,
+	conversation, 
+	controlsContainer, 
+	chatControls, 
+	activeMessage, 
+	session,
+	Responses = new Map();
+
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'chat.json');
+xhr.responseType = 'json';
+
+xhr.onload = function() {
+	initChat();
+
+	data = xhr.response;
+
+	activeMessage = data.welcome;
+	processMessage();
+};
+
+xhr.onerror = function() {
+  console.log("Unable to get responses.");
+};
+
+xhr.send();
+
+initChat = function() {
+	session = makeId();
+
+	chatContainer = document.querySelector('.chat');
+	chatContainer.innerHTML ='<ul></ul>';
+	conversation = chatContainer.querySelector("ul");
+	conversation.setAttribute('aria-live', 'polite');
+	conversation.setAttribute('aria-relevant', 'additions');
+
+	controlsContainer = document.createElement("div");
+	controlsContainer.classList.add("chatControls");
+	chatContainer.append(controlsContainer);
+
+	chatControls = document.querySelector('.chatControls');
+}
+
+processMessage = function() {
+	newResponse = document.createElement("li");
+	conversation.append(newResponse);	
+
+	if(/\[\[(\w+)\]\]/g.test(activeMessage.response)) {
+		var matches = activeMessage.response.match(/\[\[(\w+)\]\]/g);
+
+		for (var match of matches) {
+			needle = match.replace("[[", "");
+			needle = needle.replace("]]", "");
+			activeMessage.response = activeMessage.response.replace(match, Responses.get( needle ));
+		}
+	}
+
+	timeout = (Math.random(700) + activeMessage.response.length) * 25;
+	//timeout = 0;
+
+	setTimeout(function() {
+		newResponse.innerHTML = activeMessage.response;
+
+		if(activeMessage.type) {
+			setChatControls();
+		} else {
+			setNextMessage();
+		}
+
+		document.body.scrollTop = chatContainer.scrollHeight;
+
+	}, timeout);
+}
+
+setChatControls = function() {
+
+	switch(activeMessage.type) {
+		case 'Text':
+		case 'Number': 
+		case 'Email': 
+
+			replyInput = document.createElement("input");
+			replyInput.type = activeMessage.type.toLowerCase();
+			replyInput.name = activeMessage.store;
+
+			if(activeMessage.type == "Number") {
+				replyInput.pattern = "[0-9]*";
+			}
+
+			if(activeMessage.placeholder) {
+				replyInput.placeholder = activeMessage.placeholder;
+				replyInput.setAttribute('aria-label', activeMessage.placeholder);
+			} else {
+				replyInput.setAttribute('aria-label', activeMessage.response);
+			}
+
+			var submitted= false;
+
+			replyInput.addEventListener('keyup', function(event) {
+				if(event.keyCode == 13){
+					event.preventDefault();
+					submitted= true;
+					handleSubmit(event);	
+				}
+			});
+
+			replyInput.addEventListener('blur', function(event) {
+				if(event.target.value != "" && !submitted) {
+					handleSubmit(event);	
+				}
+			});
+
+			chatControls.innerHTML = "";
+			chatControls.append(replyInput);
+			replyInput.focus();
+
+			break;
+
+		case 'Select':
+
+			var selectSize = 0;
+
+			for (var key of Object.keys(activeMessage.options)) {
+
+				newReply = document.createElement("button");
+				newReply.value = activeMessage.options[key].answer;
+				newReply.setAttribute('data-next',activeMessage.options[key].next);
+				newReply.innerHTML = activeMessage.options[key].answer;
+
+				//console.log(activeMessage.options[key]);
+
+				newReply.addEventListener('click', function(event) {
+					event.preventDefault();
+
+					Responses.set(activeMessage.store, event.target.value);
+					sendChat(activeMessage.store, event.target.value);
+
+					insertReply(event.target.value);
+					chatControls.innerHTML = "";
+
+        			setNextMessage(event.target.getAttribute('data-next'));
+				});
+
+				chatControls.append(newReply);
+
+				selectSize++;
+			}
+
+			//chatControls.innerHTML = "";
+
+			replyInput.size = selectSize;
+			//chatControls.append(replyInput);
+
+
+			break;
+		case 'Textarea': 
+
+			replyInput = document.createElement("textarea");
+			console.log(replyInput);
+
+			if(activeMessage.placeholder) {
+				replyInput.placeholder = activeMessage.placeholder;	
+			}
+
+			replyInputSubmit = document.createElement("button");
+			replyInputSubmit.innerHTML = "Verstuur";
+			replyInputSubmit.setAttribute('data-next',activeMessage.next);
+
+
+			replyInputSubmit.addEventListener('click', function(event) {
+				theText = event.target.previousSibling.value;
+
+				Responses.set(activeMessage.store, theText);
+				sendChat(activeMessage.store, theText);
+
+				insertReply(theText);
+				chatControls.innerHTML = "";
+
+    			setNextMessage(event.target.getAttribute('data-next'));
+			});
+
+			chatControls.innerHTML = "";
+			chatControls.append(replyInput);
+			chatControls.append(replyInputSubmit);
+			replyInput.focus();
+
+			break;
+
+
+		default:
+
+			break;
+
+	}
+}
+
+handleSubmit = function(event) {
+	if(event.target.name == "Name") {
+		event.target.value = event.target.value.replace(/met/i, "");
+	}
+	
+	event.target.value = event.target.value.trim();
+
+	Responses.set(activeMessage.store, event.target.value);
+	sendChat(activeMessage.store, event.target.value);
+
+	insertReply(event.target.value);
+
+	chatControls.innerHTML = "";
+	setNextMessage();
+
+	return true;
+}
+
+insertReply = function(reply) {
+	newResponse = document.createElement("li");
+	newResponse.classList.add("reply");
+	newResponse.append(reply);
+	conversation.append(newResponse);
+}
+
+setNextMessage = function(nextMessage) {
+	followUp = false;
+
+	if(typeof nextMessage == "undefined") {
+
+		if(activeMessage.followUp) {
+			nextMessage = activeMessage.followUp;
+			followUp = true;
+		} else {
+			nextMessage = activeMessage.next;
+		}
+	}
+	
+	if(nextMessage) { 
+		if(followUp) {
+			activeMessage = nextMessage;
+		} else {
+			activeMessage = eval("data."+nextMessage);
+		}
+		processMessage();
+		return true;
+	}
+
+	if(activeMessage.final) { sendChat('done', 'done'); return false; }
+
+	return true;
+}
+
+
+sendChat = function(label, value) {
+	var chatReq = new XMLHttpRequest();
+	chatReq.open('POST', '/chats/saveChat.php');
+	chatReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	chatReq.onload = function() {
+
+	};
+
+	chatReq.onerror = function() {
+
+	};
+
+	chatReq.send("chatsession=chat-"+session+"&label="+label+"&value="+value);
+}
+
+makeId = function() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 8; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+</script>
+<!--(bake html_includes/footer.html)-->

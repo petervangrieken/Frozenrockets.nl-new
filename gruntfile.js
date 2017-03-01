@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: './src',
-                    src: ['index.html', 'actie.html', 'english.html', 'over-frozen-rockets.html', 'contact.html', 'accessibility/accessibility-101.html', 'accessibility/alfabet-van-accessibility.html'],
+                    src: ['index.html', 'team.html', 'chat.html', 'actie.html', 'english.html', 'over-frozen-rockets.html', 'contact.html', 'accessibility/accessibility-101.html', 'accessibility/alfabet-van-accessibility.html', 'articles/frozen-rockets-gaat-de-wereld-verbeteren.html'],
                     dest: './public',
                     ext: '.html'
                 }]

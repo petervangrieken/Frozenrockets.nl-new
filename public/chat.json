@@ -1,0 +1,305 @@
+{
+	"welcome" : {
+		"response" : "Hallo! Ik ben Buzz, de digitale assistent bij Frozen Rockets.",
+		"next" : "introduce"
+	},
+	"introduce" : {
+		"response" : "Hoe heet jij?",
+		"type" : "Text",
+		"placeholder": "Voornaam",
+		"store" : "Name",
+		"next" : "opening"
+	},
+	"opening": {
+		"response" : "Hallo [[Name]], hoe kan ik je helpen?",
+		"type" : "Select",
+		"options" : {
+			"moreInfo" : {
+				"answer" : "Ik wil meer weten over Frozen Rockets.",
+				"next" : "aboutResponse"
+			},
+			"makeAppointment" : {
+				"answer" : "Ik wil graag een afspraak maken.",
+				"next" : "appointmentResponse"
+			},
+			"other" : {
+				"answer" : "Iets anders...",
+				"next" : "otherResponse"
+			}			
+		},
+		"store" : "questionType"
+	},
+	"aboutResponse" : {
+		"response" : "Wat sympathiek :)",
+		"followUp" : {
+			"response" : "Wat wil je precies weten?",
+			"type" : "Select",
+			"options" : {
+				"optionAboutPeople" : {
+					"answer" : "Wie zijn jullie?",
+					"next" : "aboutPeople"
+				},
+				"optionAboutPortfolio" : {
+					"answer" : "Ik ben benieuwd naar jullie werk.",
+					"next" : "aboutPortfolio"
+				},
+				"optionAboutContactinfo" : {
+					"answer" : "Wat zijn jullie contactgegevens?",
+					"next" : "contactinfo"
+				},
+				"optionAboutVisit" : {
+					"answer" : "Ik zoek een routebeschrijving naar jullie kantoor",
+					"next" : "visit"
+				}
+			},
+			"store" : "aboutSelect"
+		}
+	},
+	"aboutPortfolio" : {
+		"response" : "We zijn een studio voor inclusive design, dat betekent dat we websites en apps maken die door iedereen gebruikt kunnen worden. Bijvoorbeeld ook door mensen die kleurenblind zijn of met dyslexie.",
+		"next" : "aboutPortfolioResponse"
+	},
+	"aboutPortfolioResponse" : {
+		"response" : "We werken het liefst voor organisaties die net als wij de wereld beter willen maken. Sterker nog, die <a href='https://frozenrockets.nl/articles/frozen-rockets-gaat-de-wereld-verbeteren.html' target='_new'>krijgen tegenwoordig zelfs een korting</a>.",
+		"followUp" : {
+			"response" : "Momenteel werken we bijvoorbeeld voor een organisatie die software maakt voor humanitaire projecten.",
+			"followUp" : {
+				"response" : "Wil je nog meer weten?",
+				"type" : "Select",
+				"options" : {
+					"optionAboutPortfolio" : {
+						"answer" : "Wie zijn jullie?",
+						"next" : "aboutPeople"
+					},
+					"makeAppointment" : {
+						"answer" : "Ik wil graag een afspraak maken.",
+						"next" : "appointmentResponse"
+					},
+					"other" : {
+						"answer" : "Iets anders...",
+						"next" : "otherResponse"
+					},
+					"no" : {
+						"answer" : "Nee, dat was het", 
+						"next": "endPoint"
+					}
+				},
+				"store" : "aboutSelectPortfolio"
+			}
+		}
+	},
+	"aboutPeople" : {
+		"response" : "Frozen Rockets is opgericht door Peter van Grieken en we werken in wisselende samenstellingen.",
+		"followUp" : {
+			"response" : "Elk project vraagt namelijk om andere expertises of kennis van specifieke doelgroepen.",
+			"followUp" : {
+				"response" : "Zo zijn we nu bezig met een project waar we werken met een aantal designers die veel ervaring hebben met complexe interacties in apps",
+				"followUp" : {
+					"response" : "We werken bijvoorbeeld vaak met frontend developer <a href='http://imakewebsites.hk'>Charis Rooda</a>, met grafisch ontwerper <a href='http://stephancsikos.nl'>Stephan Csikós</a> en onze nieuwbrieven-heldin <a href='https://annekesinnema.nl'>Anneke Sinnema</a>.",
+					"followUp" : {
+						"response" : "Wil je nog meer weten?",
+						"type" : "Select",
+						"options" : {
+							"optionAboutPortfolio" : {
+								"answer" : "Ik ben benieuwd naar jullie werk.",
+								"next" : "aboutPortfolio"
+							},
+							"makeAppointment" : {
+								"answer" : "Ik wil graag een afspraak maken.",
+								"next" : "appointmentResponse"
+							},
+							"other" : {
+								"answer" : "Iets anders...",
+								"next" : "otherResponse"
+							},
+							"no" : {
+								"answer" : "Nee, dat was het", 
+								"next": "endPoint"
+							}
+						},
+						"store" : "aboutSelectPeople"
+					}
+				}
+			}
+		}
+	},
+	"appointmentResponse" : {
+		"response" : "Wat leuk! We hebben heerlijke koffie en thee. En natuurlijk iets lekker er bij 🍪",
+		"followUp" : {
+			"response" : "Telefonisch kan natuurlijk ook. Wat heeft je voorkeur?",
+			"type" : "Select",
+			"options" : {
+				"optionAppointment" : {
+					"answer" : "Ik wil langskomen",
+					"next" : "appointmentOfficeResponse"
+				},
+				"optionAboutPeople" : {
+					"answer" : "Telefonisch",
+					"next" : "appointmentPhone"
+				}		
+			},
+			"store" : "appointmentType"
+		}
+	},
+	"appointmentOfficeResponse" : {
+		"response" : "Gezellig! :)",
+		"followUp" : {
+			"response" : "We zijn momenteel bezig met een mooi systeem waarmee je zelf je afspraak kunt inplannen. Dat is alleen nog niet af 🤔",
+			"followUp" : {
+				"response" : "Maar als je me je telefoonnummer geeft, dan zorg ik dat Peter je terugbelt.",
+				"type" : "Number",
+				"store" : "Phone",
+				"next" : "appointmentPhoneCheck"
+			}	
+		}
+	},
+	"appointmentPhone" : {
+		"response" : "Dat kan. Als je me je telefoonnummer geeft, dan zorg ik dat Peter je terugbelt.",
+		"type" : "Number",
+		"store" : "Phone",
+		"next" : "appointmentPhoneCheck"
+	},
+	"appointmentPhoneCheck" : {
+		"response" : "Even een dubbele check... [[Phone]], klopt dat?",
+		"type" : "Select",
+		"options" : {
+			"appointmentCheckYes" : {
+				"answer" : "Ja",
+				"next" : "appointmentPhoneLastname"
+			},
+			"appointmentCheckNo" : {
+				"answer" : "Nee",
+				"next" : "appointmentPhoneChange"
+			}	
+		}
+	},
+	"appointmentPhoneLastname" : {
+		"response" : "Dank je wel. En nog voor de volledigheid, [[Name]], wat is je achternaam?",
+		"type" : "Text",
+		"placeholder" : "Achternaam",
+		"store" : "Lastname",
+		"next" : "appointmentPhoneCompany"
+	},
+	"appointmentPhoneCompany" : {
+		"response" : "En van welk bedrijf of organisatie ben je?",
+		"type" : "Text",
+		"store" : "Company",
+		"next" : "appointmentPhoneCallback"
+	},
+	"appointmentPhoneCallback" : {
+		"response" : "Ok, [[Name]] [[Lastname]] :) Ik zal zorgen dat er zo snel mogelijk contact met je opgenomen wordt.",
+		"next" : "finishedQuestion"
+	},
+	"appointmentPhoneChange" : {
+		"response" : "Ok, geen probleem... Wat is je nummer?",
+		"type" : "Number",
+		"store" : "Phone",
+		"next" : "appointmentPhoneCheck"
+	},
+	"finishedQuestion" : {
+		"response" : "Kan ik verder nog iets voor je doen?",
+		"type" : "Select",
+		"options" : {
+			"moreInfo" : {
+				"answer" : "Ik wil meer weten over Frozen Rockets.",
+				"next" : "aboutResponse"
+			},
+			"other" : {
+				"answer" : "Iets anders...",
+				"next" : "otherResponse"
+			},
+			"no" : {
+				"answer" : "Nee, dat was het", 
+				"next": "endPoint"
+			}
+		}
+	},
+	"otherResponse" : {
+		"response" : "Ok, vertel...",
+		"type" : "Select",
+		"options" : {
+			"moreContactinfo" : {
+				"answer" : "Wat zijn jullie contactgegevens?",
+				"next" : "contactinfo"
+			},
+			"moreVisit" : {
+				"answer" : "Hoe kan ik het beste op jullie kantoor komen?",
+				"next" : "visit"
+			},
+			"other" : {
+				"answer" : "Kun je me terugbellen?",
+				"next" : "appointmentPhone"
+			},
+			"question" : {
+				"answer" : "Ik heb een vraag...",
+				"next" : "openQuestion"
+			}			
+		},
+		"store" : "MoreQuestion"
+	},
+	"contactinfo" : {
+		"response" : "Je kunt ons bellen op 070-2210604 en ons e-mailadres is <a href='mailto:hi@frozenrockets.nl'>hi@frozenrockets.nl</a>",
+		"followUp" : {
+			"response" : "Je mag ook een kaartje sturen 😊 ons adres is <br>Stadhouderslaan 9<br>2517 HV Den Haag",
+			"next" : "finishedQuestion"	
+		}
+	},
+	"openQuestion" : {
+		"response" : "Ok, ga je gang",
+		"type" : "Textarea",
+		"store" : "Question",
+		"placeholder" : "Stel je vraag...",
+		"next" : "openQuestionResponse"
+	},
+	"openQuestionResponse" : {
+		"response" : "Ik ga je vraag even doorsturen. Als je me je e-mailadres geeft, dan zorg ik dat iemand contact met je opneemt hierover.",
+		"type" : "Email",
+		"store" : "Emailadres",
+		"placeholder" : "Je e-mailadres",
+		"next" : "appointmentPhoneLastname"
+	},
+	"appointmentPhone" : {
+		"response" : "Dat kan. Als je me je telefoonnummer geeft, dan zorg ik dat Peter je terugbelt.",
+		"type" : "Number",
+		"store" : "Phone",
+		"next" : "appointmentPhoneCheck"
+	},
+	"visit" : {
+		"response" : "Dat ligt er aan. Kom je met het OV of met eigen vervoer?",
+		"type" : "Select",
+		"options" : {
+			"moreInfo" : {
+				"answer" : "Met het OV",
+				"next" : "visitOV"
+			},
+			"other" : {
+				"answer" : "Met eigen vervoer",
+				"next" : "visitOwn"
+			}			
+		}
+	},
+	"visitOV" : {
+		"response" : "Vanaf zowel Den Haag Centraal als Den Haag HS kun je tram 16 pakken. Je stapt dan uit bij halte Groot Hertoginnelaan en loopt dan verder op de Stadhouderslaan",
+		"followUp" : {
+			"response" : "(in dezelfde richting als de tram)",
+			"followUp" : {
+				"response" : "Na ongeveer 3 minuten lopen zie je op nummer 9 aan de rechterkant gebouw ‘De Stadhouder’. Bel daar aan, de receptioniste wijst je vervolgens de weg.",
+				"next" : "finishedQuestion"
+			}
+		}
+	},
+	"visitOwn" : {
+		"response" : "Ons adres is <a href='http://osm.org/go/0E4Bmi6XA--?layers=T&m=' target='_new'>Stadhouderslaan 9 in Den Haag</a>.",
+		"followUp" : {
+			"response" : "Als je met de auto komt, dan kun je achter het gebouw (genaamd ‘De Stadhouder’) gratis parkeren. Kom je met de fiets, dan kun je die voor het gebouw neerzetten.",
+			"followUp" : {
+				"response" : "De receptioniste wijst je de weg als je binnen bent.",
+				"next" : "finishedQuestion"
+			}
+		}
+	},
+	"endPoint" : {
+		"response" : "Ok, dank je wel voor je tijd. Fijne dag! 👋",
+		"final" : true
+	}
+}

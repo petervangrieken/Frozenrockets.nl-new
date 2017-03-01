@@ -1,0 +1,217 @@
+.chat {
+	//position: fixed;
+	margin: auto;
+	max-width: 40em;
+	padding-bottom: .5em;
+	padding-top: 1em;
+	//overflow: scroll;
+	//max-height: 60em;
+	//max-width: 30em;
+	//position: relative;
+	// display: flex;
+	// justify-content: space-between;
+	// flex-direction: column;
+	background-color: white;
+	font-family: $font-family-native;
+	font-size: 1.1em;
+}
+
+.chat ul {
+	list-style: none;
+	//overflow: scroll;
+	//flex: 1 1 20em;
+	padding: .5em;
+	//height: 30em;
+}
+
+.chat li {
+	position: relative;
+	background: darken($color-text-pink-dark, 20%);
+	color: white;
+	//font-size: .9em;
+	border-radius: 5px;
+	padding: .5em;
+	margin-left: 30px;
+	max-width: 60%;
+	float: left;
+	clear: both;
+	margin-bottom: .5em;
+
+	&:after {
+		content: '';
+		background: url("./../images/profile-buzz.png");
+		background-position: 50%;
+		background-size: 25px 25px;
+		background-color: black;
+		position: absolute;
+		left: -30px;
+		right: auto;
+		top: 0;
+		
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+	}
+}
+
+
+.chat li:empty {
+	display: inline-block;
+	width: 3.4em;
+	height: 2.4em;
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: .5em;
+		top: .8em;
+		height: calc(100% - 1em);
+		width: 2.4em;
+		//background-color: white;
+		
+		background-image: radial-gradient(rgba(white, .8) .25em, transparent .25em);
+		background-repeat: repeat-x;
+		background-size: .8em .8em;
+
+		animation: 2s linear 0s infinite typing;
+	}
+}
+
+@keyframes typing {
+	0% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.chat li.reply {
+	float: right;
+	margin-right: 30px;
+	margin-left: 0;
+	background: darken($color-text-green, 30%);
+
+	&:after {
+		content: '';
+		background: url("./../images/icon-user.png");
+		background-position: 50%;
+		background-size: 25px 25px;
+		background-color: rgba(black, .2);
+		position: absolute;
+		right: -30px;
+		left: auto;
+		top: 0;
+		
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+	}
+}
+
+.chat a {
+	color: white;
+}
+
+.chatControls {
+	//position: absolute;
+	//bottom: 0;
+	//left: 0;
+	//right: 0;
+	background: darken($color-text-green, 30%);
+	//min-height: 2em;
+	//padding: .5em;
+	border-radius: 5px;
+	//padding: .5em;
+	margin: .5em;
+	//width: 30em;
+	float: right;
+	clear: both;
+	margin-bottom: .5em;
+
+	[type="text"],
+	[type="email"],
+	[type="number"] {
+		max-width: 100%;
+		//width: 100%;
+		padding: .5em;
+		margin: .2em;
+		font-size: inherit;
+		//font-size: 1.1em;
+		
+		border: 1px solid black;
+		border-radius: 4px;
+		background-color: rgba(white, .9);
+
+		-moz-appearance: textfield;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+
+	select {
+		display: block;
+		margin: 0;
+		max-width: 100%;
+		width: 100%;
+		min-width: 4em;
+		background-color: rgba(white, .9);
+		border: 1px solid black;
+		border-radius: 4px;
+		font-size: inherit;
+	}
+
+	option {
+		padding: .5em;
+		width: 100%;
+		font-family: inherit;
+		font-size: inherit;
+		//font-size: 1.1em;
+		background-color: transparent;
+	}
+
+	button {
+		background: linear-gradient(rgba(white, .9), rgba(white, .7));
+		border: 1px solid rgba(black, .5);
+		border-top: none;
+		display: block;
+		margin: 0;
+		max-width: 100%;
+		width: 100%;
+		padding: .5em;
+		font-family: inherit;
+		font-size: inherit;
+		//font-size: .9em;
+		text-align: left;
+
+		&:first-child {
+			border-radius: 4px 4px 0 0;
+			border-top: 1px solid rgba(black, .5);
+		}
+
+		&:last-child {
+			border-radius: 0 0 4px 4px;
+		}
+	}
+
+	textarea {
+		display: block;
+		//max-width: 20em;
+		width: 20em;
+		height: 10em;
+		padding: .5em;
+		margin: .2em;
+		font-size: inherit;
+		//font-size: 1.1em;
+		
+		border: 1px solid black;
+		border-radius: 4px;
+		background-color: rgba(white, .9);
+	}
+}

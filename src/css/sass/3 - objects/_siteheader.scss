@@ -14,10 +14,20 @@
 		display: block;
 	}
 
+	.page-chat & {
+		background-color: rgb(240,240,240);
+		padding: $spacing-half;
+	}
+
 
 	h1 {
 		@media screen and (min-width: 20em) {
 			max-width: 10em;
+		}
+
+		.page-chat & {
+			max-width: 5em;
+			margin-bottom: 0;
 		}
 
 		@media screen and (min-width: 40em) {
@@ -31,6 +41,10 @@
 			max-width: 10em;
 			max-width: 14rem;
 			height: auto;
+		}
+
+		a {
+			border: none;
 		}
 
 	}
